@@ -14,10 +14,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package de.pro.preferences;
+package de.pro.lib.preferences;
 
-import de.pro.logger.api.LoggerFactory;
-import de.pro.preferences.api.IPreferences;
+import de.pro.lib.logger.api.LoggerFactory;
+import de.pro.lib.preferences.api.IPreferences;
 import java.io.File;
 import java.util.prefs.Preferences;
 

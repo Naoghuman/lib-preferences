@@ -1,4 +1,4 @@
-PRo-Preferences
+Lib-Preferences
 ===============
 
 A library for `easy` storing simple data to a Preferences[.properties](http://en.wikipedia.org/wiki/.properties) file in a [JavaFX](http://docs.oracle.com/javase/8/javase-clienttechnologies.htm) &amp; [Maven](http://maven.apache.org/) application.
