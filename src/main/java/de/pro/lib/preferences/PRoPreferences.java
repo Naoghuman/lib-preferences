@@ -29,23 +29,11 @@ public final class PRoPreferences implements IPreferences {
     
     private static IPreferencesProvider PREFS_IMPL = null;
     
-    @Override
-    public Preferences forApplication() {
+    private Preferences forApplication() {
         return PREFS_IMPL.preferencesForModule(this.getClass());
     }
-
-    /**
-     * Returns user preference node. {@link Preferences#absolutePath} of such
-     * a node depends whether class provided as a parameter was loaded as a part
-     * of any module or not. If so, then absolute path corresponds to slashified
-     * code name base of module.
-     * If not, then absolute path corresponds to class's package.
-     *
-     * @param clazz the class for which a user preference node is desired.
-     * @return the user preference node
-     */
-    @Override
-    public Preferences forModule(Class clazz) {
+    
+    private Preferences forModule(Class clazz) {
         return PREFS_IMPL.preferencesForModule(clazz);
     }
 
@@ -211,11 +199,7 @@ public final class PRoPreferences implements IPreferences {
         };
     }
     
-    /**
-     * Implementation of {@link PreferencesManager} methods.
-     * Not intended for use outside the NetBeans Platform.
-     */
-    public interface IPreferencesProvider {
+    interface IPreferencesProvider {
 
         /**
          * Returns user preference node. {@link Preferences#absolutePath} of such

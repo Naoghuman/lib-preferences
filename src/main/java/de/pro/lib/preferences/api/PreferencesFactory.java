@@ -19,13 +19,22 @@ package de.pro.lib.preferences.api;
 import de.pro.lib.preferences.PRoPreferences;
 
 /**
+ * The factory <code>de.pro.lib.preferences.api.PreferencesFactory</code> provides a 
+ * singleton instance of the Interface <code>de.pro.lib.preferences.api.IPreferences</code>.
  *
  * @author PRo
+ * @see de.pro.lib.preferences.api.IPreferences
  */
 public final class PreferencesFactory {
     
     private static IPreferences instance = null;
     
+    /**
+     * Provides a singleton instance from the Interface <code>de.pro.lib.preferences.api.IPreferences</code>.
+     * 
+     * @return A singleton instance of <code>de.pro.lib.preferences.api.IPreferences</code>.
+     * @see de.pro.lib.preferences.api.IPreferences
+     */
     public static IPreferences getDefault() {
         
         if (instance == null) {

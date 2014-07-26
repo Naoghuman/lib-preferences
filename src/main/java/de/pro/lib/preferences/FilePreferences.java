@@ -33,7 +33,6 @@ import java.util.prefs.Preferences;
  * http://www.davidc.net/programming/java/java-preferences-using-file-backing-store
  *
  * @author David Croft (<a href="http://www.davidc.net">www.davidc.net</a>)
- * @author Peter Rogge (PRo) <rogge-peter@gmx.de>
  * @version $Id: FilePreferences.java 283 2009-06-18 17:06:58Z david $
  */
 final class FilePreferences extends AbstractPreferences {
