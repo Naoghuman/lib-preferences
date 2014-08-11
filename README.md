@@ -157,6 +157,6 @@ You can reach me under <peter.rogge@yahoo.de>.
 [Maven]:http://maven.apache.org/
 [NetBeans]:https://netbeans.org/
 [Pull Request]:https://help.github.com/articles/using-pull-requests
-[properties]:(http://en.wikipedia.org/wiki/.properties)
+[properties]:http://en.wikipedia.org/wiki/.properties
 
 
