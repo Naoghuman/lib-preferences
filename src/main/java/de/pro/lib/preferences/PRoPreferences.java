@@ -29,11 +29,13 @@ public final class PRoPreferences implements IPreferences {
     
     private static IPreferencesProvider PREFS_IMPL = null;
     
-    private Preferences forApplication() {
+    @Override
+    public Preferences forApplication() {
         return PREFS_IMPL.preferencesForModule(this.getClass());
     }
-    
-    private Preferences forModule(Class clazz) {
+
+    @Override
+    public Preferences forModule(Class clazz) {
         return PREFS_IMPL.preferencesForModule(clazz);
     }
 

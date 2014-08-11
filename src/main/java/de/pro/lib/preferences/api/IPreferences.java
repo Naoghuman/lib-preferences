@@ -16,6 +16,8 @@
  */
 package de.pro.lib.preferences.api;
 
+import java.util.prefs.Preferences;
+
 /**
  * The <code>Interface</code> for the class <code>de.pro.lib.preferences.PRoPreferences</code>.
  * Over the factory <code>de.pro.lib.preferences.api.PreferencesFactory</code> you can 
@@ -189,4 +191,23 @@ public interface IPreferences {
      * interesting during developement.
      */
     public void init(Boolean shouldDeletePreferences);
+    
+    /**
+     * Allowed access to the <code>Preferences</code> in application context. You can
+     * for example add a {@link java.util.prefs.PreferenceChangeListener PreferenceChangeListener}
+     * to listen for changes in specific preferences.
+     * 
+     * @return The <code>Preferences</code> in application context.
+     */
+    public Preferences forApplication();
+    
+    /**
+     * Allowed access to the <code>Preferences</code> in module context. You can
+     * for example add a {@link java.util.prefs.PreferenceChangeListener PreferenceChangeListener}
+     * to listen for changes in specific preferences.
+     * 
+     * @param clazz The class in which defined the module.
+     * @return The <code>Preferences</code> in module context.
+     */
+    public Preferences forModule(Class clazz);
 }
