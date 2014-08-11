@@ -1,7 +1,7 @@
 Lib-Preferences
 ===============
 
-A library for `easy` storing simple data to a Preferences[.properties] file in a [JavaFX] &amp; [Maven] application.
+A library for `easy` storing simple data to a Preferences.[properties] file in a [JavaFX] &amp; [Maven] application.
 
 Current `version` is `0.0.1-SNAPSHOT` (07.2014).
 
@@ -157,6 +157,6 @@ You can reach me under <peter.rogge@yahoo.de>.
 [Maven]:http://maven.apache.org/
 [NetBeans]:https://netbeans.org/
 [Pull Request]:https://help.github.com/articles/using-pull-requests
-[.properties]:(http://en.wikipedia.org/wiki/.properties)
+[properties]:(http://en.wikipedia.org/wiki/.properties)
 
 
