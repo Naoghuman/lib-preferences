@@ -3,7 +3,7 @@ Lib-Preferences
 
 A library for `easy` storing simple data to a Preferences.[properties] file in a [JavaFX] &amp; [Maven] application.
 
-Current `version` is `0.0.1-SNAPSHOT` (07.2014).
+Current `version` is `0.0.2-SNAPSHOT` (08.2014).
 
 
 
