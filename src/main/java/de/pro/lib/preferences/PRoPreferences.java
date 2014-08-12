@@ -22,8 +22,10 @@ import java.io.File;
 import java.util.prefs.Preferences;
 
 /**
- *
+ * The implementation from the Interface <code>de.pro.lib.preferences.api.IPreferences</code>.
+ * 
  * @author PRo
+ * @see de.pro.lib.preferences.api.IPreferences
  */
 public final class PRoPreferences implements IPreferences {
     
