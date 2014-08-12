@@ -85,8 +85,8 @@ Requirements<a name="Requirements" />
 ------------
 
 * On your system you need [JRE 8] or [JDK 8] installed.
-* The library [Lib-Preferences-0.0.1-SNAPSHOT.jar](#Installation).
-* The library [Lib-Logger-0.0.1-SNAPSHOT.jar](#Installation).
+* The library [Lib-Preferences-0.0.2-SNAPSHOT.jar](#Installation).
+* The library [Lib-Logger-0.0.2-SNAPSHOT.jar](#Installation).
   * Included is the [log4j-api-2.0.jar].
   * Included is the [log4j-core-2.0.jar].
 
