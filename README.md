@@ -3,7 +3,7 @@ Lib-Preferences
 
 A library for `easy` storing simple data to a Preferences.[properties] file in a [JavaFX] &amp; [Maven] application.
 
-Current `version` is `0.0.2-SNAPSHOT` (08.2014).
+Current `version` is `0.0.2` (09.2014).
 
 
 
@@ -85,7 +85,7 @@ Requirements<a name="Requirements" />
 ------------
 
 * On your system you need [JRE 8] or [JDK 8] installed.
-* The library [Lib-Preferences-0.0.2-SNAPSHOT.jar](#Installation).
+* The library [Lib-Preferences-0.0.2.jar](#Installation).
 * The library [Lib-Logger-0.0.3.jar](#Installation).
   * Included is the [log4j-api-2.0.2.jar].
   * Included is the [log4j-core-2.0.2.jar].
