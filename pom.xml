@@ -1,19 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    
     <groupId>de.pro</groupId>
     <artifactId>Lib-Preferences</artifactId>
     <version>0.0.2-SNAPSHOT.</version>
     <packaging>jar</packaging>
+    <description>A library for easy storing simple data in a Preferences.properties file in a JavaFx &amp; Maven application. See https://github.com/Naoghuman/lib-preferences for more details.</description>
+    <name>Lib-Preferences</name>
+    <inceptionYear>2014</inceptionYear>
+    <url>https://github.com/Naoghuman/lib-preferences.git</url>
+    
+    <developers>
+        <developer>
+            <email>peter.rogge@yahoo.de</email>
+            <id>Naoghuman</id>
+            <name>Peter Rogge</name>
+            <timezone>+1</timezone>
+            <url>https://github.com/Naoghuman/lib-preferences.git</url>
+        </developer>
+    </developers>
+    
+    <licenses>
+        <license>
+            <name>The GNU General Public License, Version 3.0</name>
+            <url>http://www.gnu.org/licenses/gpl-3.0.en.html</url>
+            <distribution>repo</distribution>
+            <comments>The GNU General Public License is a free, copyleft license for software and other kinds of works.</comments>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:ssh://github.com:Naoghuman/lib-preferences.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:Naoghuman/lib-preferences.git</developerConnection>
+        <url>https://github.com/Naoghuman/lib-preferences.git</url>
+    </scm>
+    
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
-    <description>A library for easy storing simple data in a Preferences.properties file in a JavaFx &amp; Maven application. See https://github.com/Naoghuman/lib-preferences for more details.</description>
-    <name>Lib-Preferences</name>
+    
     <build>
         <plugins>
+            <!-- for RELEASE
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.3</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
@@ -21,14 +66,26 @@
                 <configuration>
                     <additionalparam>-Xdoclint:none</additionalparam>
                 </configuration>
+                <!-- for RELEASE
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                -->
             </plugin>
         </plugins>
     </build>
+    
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>Lib-Logger</artifactId>
-            <version>0.0.2-SNAPSHOT</version>
+            <version>0.0.3</version>
+            <type>jar</type>
         </dependency>
     </dependencies>
 </project>

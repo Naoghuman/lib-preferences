@@ -16,16 +16,18 @@
  */
 package de.pro.lib.preferences;
 
-import de.pro.lib.logger.api.LoggerFactory;
+import de.pro.lib.logger.api.LoggerFacade;
 import de.pro.lib.preferences.api.IPreferences;
 import java.io.File;
 import java.util.prefs.Preferences;
 
 /**
- * The implementation from the Interface <code>de.pro.lib.preferences.api.IPreferences</code>.
+ * The implementation from the Interface {@link de.pro.lib.preferences.api.IPreferences}.<br />
+ * Access to this class is over the facade {@link de.pro.lib.preferences.api.PreferencesFacade}.
  * 
  * @author PRo
  * @see de.pro.lib.preferences.api.IPreferences
+ * @see de.pro.lib.preferences.api.PreferencesFacade
  */
 public final class PRoPreferences implements IPreferences {
     
@@ -44,7 +46,7 @@ public final class PRoPreferences implements IPreferences {
     @Override
     public Boolean getBoolean(String key, Boolean def) {
         final Boolean value = this.forApplication().getBoolean(key, def);
-        LoggerFactory.getDefault().debug(this.getClass(),
+        LoggerFacade.getDefault().debug(this.getClass(),
                 String.format("Load " + key + "=%b", value));// NOI18N
         
         return value;
@@ -53,7 +55,7 @@ public final class PRoPreferences implements IPreferences {
     @Override
     public Boolean getBoolean(Class clazz, String key, Boolean def) {
         final Boolean b = this.forModule(clazz).getBoolean(key, def);
-        LoggerFactory.getDefault().debug(clazz,
+        LoggerFacade.getDefault().debug(clazz,
                 String.format("Load " + key + "=%b", b));// NOI18N
         
         return b;
@@ -62,21 +64,21 @@ public final class PRoPreferences implements IPreferences {
     @Override
     public void putBoolean(String key, Boolean value) {
         this.forApplication().putBoolean(key, value);
-        LoggerFactory.getDefault().debug(this.getClass(),
+        LoggerFacade.getDefault().debug(this.getClass(),
                 String.format("Save " + key + "=%b", value)); // NOI18N
     }
 
     @Override
     public void putBoolean(Class clazz, String key, Boolean value) {
         this.forModule(clazz).putBoolean(key, value);
-        LoggerFactory.getDefault().debug(clazz,
+        LoggerFacade.getDefault().debug(clazz,
                 String.format("Save " + key + "=%b", value)); // NOI18N
     }
 
     @Override
     public String get(String key, String def) {
         final String value = this.forApplication().get(key, def);
-        LoggerFactory.getDefault().debug(this.getClass(),
+        LoggerFacade.getDefault().debug(this.getClass(),
                 String.format("Load " + key + "=%s", value));// NOI18N
         
         return value;
@@ -85,7 +87,7 @@ public final class PRoPreferences implements IPreferences {
     @Override
     public String get(Class clazz, String key, String def) {
         final String value = this.forModule(clazz).get(key, def);
-        LoggerFactory.getDefault().debug(clazz,
+        LoggerFacade.getDefault().debug(clazz,
                 String.format("Load " + key + "=%s", value));// NOI18N
         
         return value;
@@ -94,21 +96,21 @@ public final class PRoPreferences implements IPreferences {
     @Override
     public void put(String key, String value) {
         this.forApplication().put(key, value);
-        LoggerFactory.getDefault().debug(this.getClass(),
+        LoggerFacade.getDefault().debug(this.getClass(),
                 String.format("Save " + key + "=%s", value)); // NOI18N
     }
 
     @Override
     public void put(Class clazz, String key, String value) {
         this.forModule(clazz).put(key, value);
-        LoggerFactory.getDefault().debug(clazz,
+        LoggerFacade.getDefault().debug(clazz,
                 String.format("Save " + key + "=%s", value)); // NOI18N
     }
 
     @Override
     public Double getDouble(String key, Double def) {
         final Double value = this.forApplication().getDouble(key, def);
-        LoggerFactory.getDefault().debug(this.getClass(),
+        LoggerFacade.getDefault().debug(this.getClass(),
                 String.format("Load " + key + "=%s", value));// NOI18N
         
         return value;
@@ -117,7 +119,7 @@ public final class PRoPreferences implements IPreferences {
     @Override
     public Double getDouble(Class clazz, String key, Double def) {
         final Double value = this.forModule(clazz).getDouble(key, def);
-        LoggerFactory.getDefault().debug(clazz,
+        LoggerFacade.getDefault().debug(clazz,
                 String.format("Load " + key + "=%f", value));// NOI18N
         
         return value;
@@ -126,21 +128,21 @@ public final class PRoPreferences implements IPreferences {
     @Override
     public void putDouble(String key, Double value) {
         this.forApplication().putDouble(key, value);
-        LoggerFactory.getDefault().debug(this.getClass(),
+        LoggerFacade.getDefault().debug(this.getClass(),
                 String.format("Save " + key + "=%f", value)); // NOI18N
     }
 
     @Override
     public void putDouble(Class clazz, String key, Double value) {
         this.forModule(clazz).putDouble(key, value);
-        LoggerFactory.getDefault().debug(clazz,
+        LoggerFacade.getDefault().debug(clazz,
                 String.format("Save " + key + "=%f", value)); // NOI18N
     }
 
     @Override
     public Integer getInt(String key, Integer def) {
         final Integer value = this.forApplication().getInt(key, def);
-        LoggerFactory.getDefault().debug(this.getClass(),
+        LoggerFacade.getDefault().debug(this.getClass(),
                 String.format("Load " + key + "=%d", value));// NOI18N
         
         return value;
@@ -149,7 +151,7 @@ public final class PRoPreferences implements IPreferences {
     @Override
     public Integer getInt(Class clazz, String key, Integer def) {
         final Integer value = this.forModule(clazz).getInt(key, def);
-        LoggerFactory.getDefault().debug(clazz,
+        LoggerFacade.getDefault().debug(clazz,
                 String.format("Load " + key + "=%d", value));// NOI18N
         
         return value;
@@ -158,20 +160,20 @@ public final class PRoPreferences implements IPreferences {
     @Override
     public void putInt(String key, Integer value) {
         this.forApplication().putInt(key, value);
-        LoggerFactory.getDefault().debug(this.getClass(),
+        LoggerFacade.getDefault().debug(this.getClass(),
                 String.format("Save " + key + "=%d", value)); // NOI18N
     }
 
     @Override
     public void putInt(Class clazz, String key, Integer value) {
         this.forModule(clazz).putInt(key, value);
-        LoggerFactory.getDefault().debug(clazz,
+        LoggerFacade.getDefault().debug(clazz,
                 String.format("Save " + key + "=%d", value)); // NOI18N
     }
 
     @Override
     public void init(Boolean shouldDeletePreferences) {
-        LoggerFactory.getDefault().debug(PRoPreferences.class,
+        LoggerFacade.getDefault().debug(PRoPreferences.class,
                 "Init preferences factory and delete preferences file: " + shouldDeletePreferences); // NOI18N
         
         if (shouldDeletePreferences) {
@@ -179,7 +181,7 @@ public final class PRoPreferences implements IPreferences {
                     + File.separator + "Preferences.properties"; // NOI18N
             final File preferences = new File(path);
             if (preferences.exists()) {
-                LoggerFactory.getDefault().debug(PRoPreferences.class,
+                LoggerFacade.getDefault().debug(PRoPreferences.class,
                         "  Delete file Preferences.properties at program start"); // NOI18N
                 preferences.delete();
             }

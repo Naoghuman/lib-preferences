@@ -19,13 +19,13 @@ package de.pro.lib.preferences.api;
 import java.util.prefs.Preferences;
 
 /**
- * The <code>Interface</code> for the class <code>de.pro.lib.preferences.PRoPreferences</code>.
- * Over the factory <code>de.pro.lib.preferences.api.PreferencesFactory</code> you can 
+ * The <code>Interface</code> for the class {@link de.pro.lib.preferences.PRoPreferences}.
+ * Over the facade {@link de.pro.lib.preferences.api.PreferencesFacade} you can 
  * access the methods in this <code>Interface</code>.
  *
  * @author PRo
  * @see de.pro.lib.preferences.PRoPreferences
- * @see de.pro.lib.preferences.api.PreferencesFactory
+ * @see de.pro.lib.preferences.api.PreferencesFacade
  */
 public interface IPreferences {
     /**

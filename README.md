@@ -26,13 +26,13 @@ Example<a name="Example" />
 
 ```java
 /**
- * The factory <code>de.pro.lib.preferences.api.PreferencesFactory</code> provides a 
- * singleton instance of the Interface <code>de.pro.lib.preferences.api.IPreferences</code>.
+ * The facade {@link de.pro.lib.preferences.api.PreferencesFacade} provides a 
+ * singleton instance of the Interface {@link de.pro.lib.preferences.api.IPreferences}.
  *
  * @author PRo
  * @see de.pro.lib.preferences.api.IPreferences
  */
-public final class PreferencesFactory
+public final class PreferencesFacade
 ```
 
 ```java
@@ -43,7 +43,7 @@ public final class PreferencesFactory
  * @param def The default value if the key isn't stored.
  * @return The <code>String</code> which is associated with the key or the default value.
  */
-PreferencesFactory.getDefault().get(String key, String def);
+PreferencesFacade.getDefault().get(String key, String def);
 ```
 
 ```java
@@ -53,7 +53,7 @@ PreferencesFactory.getDefault().get(String key, String def);
  * @param key The key for the saved <code>String</code>.
  * @param value The value which will associated with the key.
  */
-PreferencesFactory.getDefault().put(String key, String value);
+PreferencesFacade.getDefault().put(String key, String value);
 ```
 
 ```java
@@ -65,7 +65,7 @@ PreferencesFactory.getDefault().put(String key, String value);
  * @param def The default value if the key isn't stored.
  * @return The <code>String</code> which is associated with the key or the default value.
  */
-PreferencesFactory.getDefault().get(Class clazz, String key, String def);
+PreferencesFacade.getDefault().get(Class clazz, String key, String def);
 ```
 
 ```java
@@ -76,7 +76,7 @@ PreferencesFactory.getDefault().get(Class clazz, String key, String def);
  * @param key The key for the to saved <code>String</code>.
  * @param value The value which will associated with the key.
  */
-PreferencesFactory.getDefault().put(Class clazz, String key, String value);
+PreferencesFacade.getDefault().put(Class clazz, String key, String value);
 ```
 
 
@@ -86,9 +86,9 @@ Requirements<a name="Requirements" />
 
 * On your system you need [JRE 8] or [JDK 8] installed.
 * The library [Lib-Preferences-0.0.2-SNAPSHOT.jar](#Installation).
-* The library [Lib-Logger-0.0.2-SNAPSHOT.jar](#Installation).
-  * Included is the [log4j-api-2.0.jar].
-  * Included is the [log4j-core-2.0.jar].
+* The library [Lib-Logger-0.0.3.jar](#Installation).
+  * Included is the [log4j-api-2.0.2.jar].
+  * Included is the [log4j-core-2.0.2.jar].
 
 
 
@@ -114,7 +114,7 @@ Momentary only the [JavaDoc] in the library itself is available.
 Contribution<a name="Contribution" />
 ------------
 
-* If you find a bug I will be glad if you will report an [Issue].
+* If you find a `Bug` I will be glad if you could report an [Issue].
 * If you want to contribute to the project plz fork the project and do a [Pull Request].
 
 
@@ -122,14 +122,14 @@ Contribution<a name="Contribution" />
 License<a name="License" />
 -------
 
-PRo-Preferences is licensed under [General Public License 3.0].
+The project `PRo-Preferences` is licensed under [General Public License 3.0].
 
 
 
 Autor<a name="Autor" />
 ----
 
-Pro-Preferences is maintained by me, Peter Rogge. See [Contact](#Contact).
+The project `Pro-Preferences` is maintained by me, Peter Rogge. See [Contact](#Contact).
 
 
 
@@ -152,8 +152,8 @@ You can reach me under <peter.rogge@yahoo.de>.
 [JRE 8]:http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
 [Lib-Preferences]:https://github.com/Naoghuman/lib-preferences
 [Lib-Logger]:https://github.com/Naoghuman/lib-logger
-[log4j-api-2.0.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
-[log4j-core-2.0.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
+[log4j-api-2.0.2.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
+[log4j-core-2.0.2.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
 [Maven]:http://maven.apache.org/
 [NetBeans]:https://netbeans.org/
 [Pull Request]:https://help.github.com/articles/using-pull-requests
