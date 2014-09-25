@@ -32,7 +32,7 @@ public final class PreferencesFacade {
     /**
      * Provides a singleton instance from the Interface {@link de.pro.lib.preferences.api.IPreferences}.
      * 
-     * @return A singleton instance of{@link de.pro.lib.preferences.api.IPreferences}.
+     * @return A singleton instance of {@link de.pro.lib.preferences.api.IPreferences}.
      * @see de.pro.lib.preferences.api.IPreferences
      */
     public static IPreferences getDefault() {

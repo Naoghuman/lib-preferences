@@ -122,18 +122,18 @@ Contribution<a name="Contribution" />
 License<a name="License" />
 -------
 
-The project `PRo-Preferences` is licensed under [General Public License 3.0].
+The project `Lib-Preferences` is licensed under [General Public License 3.0].
 
 
 
 Autor<a name="Autor" />
 ----
 
-The project `Pro-Preferences` is maintained by me, Peter Rogge. See [Contact](#Contact).
+The project `Lib-Preferences` is maintained by me, Peter Rogge. See [Contact](#Contact).
 
 
 
-Contact
+Contact<a name="Contact" />
 -------
 
 You can reach me under <peter.rogge@yahoo.de>.
