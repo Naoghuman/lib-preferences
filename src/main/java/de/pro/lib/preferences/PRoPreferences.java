@@ -172,24 +172,15 @@ public final class PRoPreferences implements IPreferences {
     }
 
     @Override
-    public void init(Boolean shouldDeletePreferences) {
-        LoggerFacade.getDefault().debug(PRoPreferences.class,
-                "Init preferences factory and delete preferences file: " + shouldDeletePreferences); // NOI18N
+    public void init() {
+        this.init(IPreferences.SYSTEM_PREFERENCES__FILE_DEFAULT_VALUE);
+    }
+
+    @Override
+    public void init(String preferences) {
+        LoggerFacade.getDefault().debug(PRoPreferences.class, "  Init preferences file"); // NOI18N
         
-        if (shouldDeletePreferences) {
-            final String path = System.getProperty("user.dir")
-                    + File.separator + "Preferences.properties"; // NOI18N
-            final File preferences = new File(path);
-            if (preferences.exists()) {
-                LoggerFacade.getDefault().debug(PRoPreferences.class,
-                        "  Delete file Preferences.properties at program start"); // NOI18N
-                preferences.delete();
-            }
-        }
-        
-        System.setProperty(
-                IPreferences.SYSTEM_PREFERENCES__FILE,
-                IPreferences.SYSTEM_PREFERENCES__FILE_DEFAULT_VALUE);
+        System.setProperty(IPreferences.SYSTEM_PREFERENCES__FILE, preferences);
         
         PREFS_IMPL = new IPreferencesProvider() {
 
@@ -204,6 +195,27 @@ public final class PRoPreferences implements IPreferences {
             }
         };
     }
+
+    @Override
+    public void drop() {
+        if (FilePreferences.getPreferencesFile().exists()) {
+            LoggerFacade.getDefault().debug(PRoPreferences.class,
+                    "  Delete file Preferences.properties"); // NOI18N
+            
+            FilePreferences.getPreferencesFile().delete();
+        }
+//        final String path = System.getProperty("user.dir")
+//                + File.separator + "Preferences.properties"; // NOI18N
+//        final File preferences = new File(path);
+//        if (preferences.exists()) {
+//            LoggerFacade.getDefault().debug(PRoPreferences.class,
+//                    "  Delete file Preferences.properties"); // NOI18N
+//            
+//            preferences.delete();
+//        }
+    }
+    
+    
     
     interface IPreferencesProvider {
 

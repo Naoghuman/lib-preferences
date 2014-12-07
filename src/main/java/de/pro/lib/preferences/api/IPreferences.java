@@ -182,15 +182,30 @@ public interface IPreferences {
     public void putInt(Class clazz, String key, Integer value);
     
     /**
-     * Set a <code>System.setProperty(IPreferences.SYSTEM_PREFERENCES__FILE, IPreferences.SYSTEM_PREFERENCES__FILE_DEFAULT_VALUE)</code>.
-     * If a <code>Preferences.Value</code> is saved then the file will be created
-     * under <code>System.getProperty("user.dir")</code> if isn't exists.
-     * 
-     * @param shouldDeletePreferences Defined if the <code>Preferences.properties</code>
-     * file should delete immediatly after the application is start. The parameter is
-     * interesting during developement.
+     * Initialize the <code>Preferences.properties</code> file.<br />
+     * Use the <code>IPreferences.SYSTEM_PREFERENCES__FILE_DEFAULT_VALUE</code>
+     * as default value. That means that the <code>Preferences.properties</code>
+     * file will created under <code>System.getProperty("user.dir")
+     * + File.separator + "Preferences.properties"</code>.
      */
-    public void init(Boolean shouldDeletePreferences);
+    public void init();
+    
+    /**
+     * Initialize the <code>Preferences.properties</code> file.<br />
+     * Stores the parameter <code>preferences</code> as
+     * <code>System.setProperty(IPreferences.SYSTEM_PREFERENCES__FILE, preferences);</code>.
+     * That means the file will create under <code>System.getProperty("user.dir")
+     * + File.separator + preferences</code>.
+     * 
+     * @param preferences
+     */
+    public void init(String preferences);
+    
+    /**
+     * Delete the <code>Preferences.properties</code> file.<br />
+     * This method is interesting during developement.
+     */
+    public void drop();
     
     /**
      * Allowed access to the <code>Preferences</code> in application context. You can

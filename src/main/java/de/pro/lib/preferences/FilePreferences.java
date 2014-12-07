@@ -74,6 +74,7 @@ final class FilePreferences extends AbstractPreferences {
 
         return "/" + packageName.replace('.', '/'); // NOI18N
     }
+    
     private boolean isRemoved = Boolean.FALSE;
     private Map<String, String> root = null;
     private Map<String, FilePreferences> children = null;
@@ -82,8 +83,7 @@ final class FilePreferences extends AbstractPreferences {
         this(null, "");
     }
 
-    private FilePreferences(
-            final AbstractPreferences parent, final String name) {
+    private FilePreferences(final AbstractPreferences parent, final String name) {
         super(parent, name);
 
         log.finest("Instantiating node " + name); // NOI18N
