@@ -172,15 +172,24 @@ public final class PRoPreferences implements IPreferences {
     }
 
     @Override
-    public void init() {
-        this.init(IPreferences.SYSTEM_PREFERENCES__FILE_DEFAULT_VALUE);
-    }
-
-    @Override
-    public void init(String preferences) {
+    public void init(boolean drop) {
+        if (drop) {
+            final String path = System.getProperty("user.dir") + File.separator // NOI18N
+                    + IPreferences.SYSTEM_PREFERENCES__FILE_DEFAULT_VALUE;
+            final File file = new File(path);
+            if (file.exists()) {
+                LoggerFacade.getDefault().debug(PRoPreferences.class,
+                    "  Delete file Preferences.properties"); // NOI18N
+                
+                file.delete();
+            }
+        }
+        
         LoggerFacade.getDefault().debug(PRoPreferences.class, "  Init preferences file"); // NOI18N
         
-        System.setProperty(IPreferences.SYSTEM_PREFERENCES__FILE, preferences);
+        System.setProperty(
+                IPreferences.SYSTEM_PREFERENCES__FILE,
+                IPreferences.SYSTEM_PREFERENCES__FILE_DEFAULT_VALUE);
         
         PREFS_IMPL = new IPreferencesProvider() {
 
@@ -195,27 +204,6 @@ public final class PRoPreferences implements IPreferences {
             }
         };
     }
-
-    @Override
-    public void drop() {
-        if (FilePreferences.getPreferencesFile().exists()) {
-            LoggerFacade.getDefault().debug(PRoPreferences.class,
-                    "  Delete file Preferences.properties"); // NOI18N
-            
-            FilePreferences.getPreferencesFile().delete();
-        }
-//        final String path = System.getProperty("user.dir")
-//                + File.separator + "Preferences.properties"; // NOI18N
-//        final File preferences = new File(path);
-//        if (preferences.exists()) {
-//            LoggerFacade.getDefault().debug(PRoPreferences.class,
-//                    "  Delete file Preferences.properties"); // NOI18N
-//            
-//            preferences.delete();
-//        }
-    }
-    
-    
     
     interface IPreferencesProvider {
 

@@ -183,29 +183,13 @@ public interface IPreferences {
     
     /**
      * Initialize the <code>Preferences.properties</code> file.<br />
-     * Use the <code>IPreferences.SYSTEM_PREFERENCES__FILE_DEFAULT_VALUE</code>
-     * as default value. That means that the <code>Preferences.properties</code>
-     * file will created under <code>System.getProperty("user.dir")
-     * + File.separator + "Preferences.properties"</code>.
-     */
-    public void init();
-    
-    /**
-     * Initialize the <code>Preferences.properties</code> file.<br />
-     * Stores the parameter <code>preferences</code> as
-     * <code>System.setProperty(IPreferences.SYSTEM_PREFERENCES__FILE, preferences);</code>.
-     * That means the file will create under <code>System.getProperty("user.dir")
-     * + File.separator + preferences</code>.
+     * That means that the <code>Preferences.properties</code> file will created
+     * under <code>System.getProperty("user.dir") + File.separator
+     * + "Preferences.properties"</code>.
      * 
-     * @param preferences
+     * @param drop Should the existing file dropped at frist?
      */
-    public void init(String preferences);
-    
-    /**
-     * Delete the <code>Preferences.properties</code> file.<br />
-     * This method is interesting during developement.
-     */
-    public void drop();
+    public void init(boolean drop);
     
     /**
      * Allowed access to the <code>Preferences</code> in application context. You can
