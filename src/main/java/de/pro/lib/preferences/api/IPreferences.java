@@ -58,7 +58,7 @@ public interface IPreferences {
     public Boolean getBoolean(Class clazz, String key, Boolean def);
     
     /**
-     * Store a <code>Boolean</code> which is associated with the key in application context.
+     * Stores a <code>Boolean</code> which is associated with the key in application context.
      * 
      * @param key The key for the saved <code>Boolean</code>.
      * @param value The value which will associated with the key.
@@ -66,7 +66,7 @@ public interface IPreferences {
     public void putBoolean(String key, Boolean value);
     
     /**
-     * Store a <code>Boolean</code> which is associated with the key in module context.
+     * Stores a <code>Boolean</code> which is associated with the key in module context.
      * 
      * @param clazz Defined the module context.
      * @param key The key for the to saved <code>Boolean</code>.
@@ -94,7 +94,7 @@ public interface IPreferences {
     public String get(Class clazz, String key, String def);
     
     /**
-     * Store a <code>String</code> which is associated with the key in application context.
+     * Stores a <code>String</code> which is associated with the key in application context.
      * 
      * @param key The key for the saved <code>String</code>.
      * @param value The value which will associated with the key.
@@ -102,7 +102,7 @@ public interface IPreferences {
     public void put(String key, String value);
     
     /**
-     * Store a <code>String</code> which is associated with the key in module context.
+     * Stores a <code>String</code> which is associated with the key in module context.
      * 
      * @param clazz Defined the module context.
      * @param key The key for the to saved <code>String</code>.
@@ -130,7 +130,7 @@ public interface IPreferences {
     public Double getDouble(Class clazz, String key, Double def);
     
     /**
-     * Store a <code>Double</code> which is associated with the key in application context.
+     * Stores a <code>Double</code> which is associated with the key in application context.
      * 
      * @param key The key for the saved <code>Double</code>.
      * @param value The value which will associated with the key.
@@ -138,7 +138,7 @@ public interface IPreferences {
     public void putDouble(String key, Double value);
     
     /**
-     * Store a <code>Double</code> which is associated with the key in module context.
+     * Stores a <code>Double</code> which is associated with the key in module context.
      * 
      * @param clazz Defined the module context.
      * @param key The key for the to saved <code>Double</code>.
@@ -165,7 +165,7 @@ public interface IPreferences {
     public Integer getInt(Class clazz, String key, Integer def);
     
     /**
-     * Store a <code>Integer</code> which is associated with the key in application context.
+     * Stores a <code>Integer</code> which is associated with the key in application context.
      * 
      * @param key The key for the saved <code>Integer</code>.
      * @param value The value which will associated with the key.
@@ -173,13 +173,48 @@ public interface IPreferences {
     public void putInt(String key, Integer value);
     
     /**
-     * Store a <code>Integer</code> which is associated with the key in module context.
+     * Stores a <code>Integer</code> which is associated with the key in module context.
      * 
      * @param clazz Defined the module context.
      * @param key The key for the to saved <code>Integer</code>.
      * @param value The value which will associated with the key.
      */
     public void putInt(Class clazz, String key, Integer value);
+    
+    /**
+     * Get a <code>Long</code> which is associated with the key in application context.
+     * 
+     * @param key The key which value is searched for.
+     * @param def The default value if the key isn't stored.
+     * @return The <code>Long</code> which is associated with the key or the default value.
+     */
+    public Long getLong(String key, Long def);
+    /**
+     * Get a <code>Long</code> which is associated with the key in module context.
+     * 
+     * @param clazz Defined the module context.
+     * @param key The key which value is searched for.
+     * @param def The default value if the key isn't stored.
+     * @return The <code>Long</code> which is associated with the key or the default value.
+     */
+    public Long getLong(Class clazz, String key, Long def);
+    
+    /**
+     * Stores a <code>Long</code> which is associated with the key in application context.
+     * 
+     * @param key The key for the saved <code>Long</code>.
+     * @param value The value which will associated with the key.
+     */
+    public void putLong(String key, Long value);
+    
+    /**
+     * Stores a <code>Long</code> which is associated with the key in module context.
+     * 
+     * @param clazz Defined the module context.
+     * @param key The key for the to saved <code>Long</code>.
+     * @param value The value which will associated with the key.
+     */
+    public void putLong(Class clazz, String key, Long value);
     
     /**
      * Initialize the <code>Preferences.properties</code> file.<br />

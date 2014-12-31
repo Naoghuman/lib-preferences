@@ -172,6 +172,38 @@ public final class PRoPreferences implements IPreferences {
     }
 
     @Override
+    public Long getLong(String key, Long def) {
+        final Long value = this.forApplication().getLong(key, def);
+        LoggerFacade.getDefault().debug(this.getClass(),
+                String.format("Load " + key + "=%d", value));// NOI18N
+        
+        return value;
+    }
+
+    @Override
+    public Long getLong(Class clazz, String key, Long def) {
+        final Long value = this.forModule(clazz).getLong(key, def);
+        LoggerFacade.getDefault().debug(clazz,
+                String.format("Load " + key + "=%d", value));// NOI18N
+        
+        return value;
+    }
+
+    @Override
+    public void putLong(String key, Long value) {
+        this.forApplication().putLong(key, value);
+        LoggerFacade.getDefault().debug(this.getClass(),
+                String.format("Save " + key + "=%d", value)); // NOI18N
+    }
+
+    @Override
+    public void putLong(Class clazz, String key, Long value) {
+        this.forModule(clazz).putLong(key, value);
+        LoggerFacade.getDefault().debug(clazz,
+                String.format("Save " + key + "=%d", value)); // NOI18N
+    }
+
+    @Override
     public void init(boolean drop) {
         if (drop) {
             final String path = System.getProperty("user.dir") + File.separator // NOI18N
