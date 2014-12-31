@@ -64,8 +64,6 @@ public class PRoPreferencesTest {
     
     @Test
     public void initDefaultAndDropTrue() {
-//        PreferencesFacade.getDefault().init(true);
-
         final File file = new File(NORMAL_PATH);
         assertFalse(NORMAL_PATH + " mustn't exists", file.exists());
         
@@ -75,16 +73,12 @@ public class PRoPreferencesTest {
     
     @Test
     public void getStringInApplicationContext() {
-//        PreferencesFacade.getDefault().init(true);
-
         final String x = PreferencesFacade.getDefault().get("my.string.key", "x");
         assertEquals("x", x);
     }
     
     @Test
     public void putStringInApplicationContext() {
-//        PreferencesFacade.getDefault().init(true);
-
         PreferencesFacade.getDefault().put("my.string.key", "y");
         final String y = PreferencesFacade.getDefault().get("my.string.key", "x");
         assertEquals("y", y);
@@ -92,16 +86,12 @@ public class PRoPreferencesTest {
     
     @Test
     public void getBooleanInApplicationContext() {
-//        PreferencesFacade.getDefault().init(true);
-
         final boolean x = PreferencesFacade.getDefault().getBoolean("my.boolean.key", true);
         assertEquals(true, x);
     }
     
     @Test
     public void putBooleanInApplicationContext() {
-//        PreferencesFacade.getDefault().init(true);
-
         PreferencesFacade.getDefault().putBoolean("my.boolean.key", false);
         final boolean y = PreferencesFacade.getDefault().getBoolean("my.boolean.key", true);
         assertEquals(false, y);
@@ -109,16 +99,12 @@ public class PRoPreferencesTest {
     
     @Test
     public void getDoubleInApplicationContext() {
-//        PreferencesFacade.getDefault().init(true);
-
         final double x = PreferencesFacade.getDefault().getDouble("my.double.key", 1.23d);
         assertTrue(1.23d == x);
     }
     
     @Test
     public void putDoubleInApplicationContext() {
-//        PreferencesFacade.getDefault().init(true);
-
         PreferencesFacade.getDefault().putDouble("my.double.key", 0.0d);
         final double y = PreferencesFacade.getDefault().getDouble("my.double.key", 1.23d);
         assertTrue(0.0d == y);
@@ -126,16 +112,12 @@ public class PRoPreferencesTest {
     
     @Test
     public void getIntInApplicationContext() {
-//        PreferencesFacade.getDefault().init(true);
-
         final int x = PreferencesFacade.getDefault().getInt("my.int.key", 1);
         assertTrue(1 == x);
     }
     
     @Test
     public void putIntInApplicationContext() {
-//        PreferencesFacade.getDefault().init(true);
-
         PreferencesFacade.getDefault().putInt("my.int.key", 0);
         final int y = PreferencesFacade.getDefault().getInt("my.int.key", 1);
         assertTrue(0 == y);
@@ -143,16 +125,12 @@ public class PRoPreferencesTest {
     
     @Test
     public void getLongInApplicationContext() {
-//        PreferencesFacade.getDefault().init(true);
-
         final long x = PreferencesFacade.getDefault().getLong("my.long.key", 1L);
         assertTrue(1L == x);
     }
     
     @Test
     public void putLongInApplicationContext() {
-//        PreferencesFacade.getDefault().init(true);
-
         PreferencesFacade.getDefault().putLong("my.long.key", 0L);
         final long y = PreferencesFacade.getDefault().getLong("my.long.key", 1L);
         assertTrue(0L == y);
@@ -163,16 +141,12 @@ public class PRoPreferencesTest {
     
     @Test
     public void getStringInModuleContext() {
-//        PreferencesFacade.getDefault().init(true);
-
         final String x = PreferencesFacade.getDefault().get(DummyModuleContext.class, "my.string.key", "x");
         assertEquals("x", x);
     }
     
     @Test
     public void putStringInModuleContext() {
-//        PreferencesFacade.getDefault().init(true);
-
         PreferencesFacade.getDefault().put(DummyModuleContext.class, "my.string.key", "y");
         final String y = PreferencesFacade.getDefault().get(DummyModuleContext.class, "my.string.key", "x");
         assertEquals("y", y);
@@ -180,16 +154,12 @@ public class PRoPreferencesTest {
     
     @Test
     public void getBooleanInModuleContext() {
-//        PreferencesFacade.getDefault().init(true);
-
         final boolean x = PreferencesFacade.getDefault().getBoolean(DummyModuleContext.class, "my.boolean.key", true);
         assertEquals(true, x);
     }
     
     @Test
     public void putBooleanInModuleContext() {
-//        PreferencesFacade.getDefault().init(true);
-
         PreferencesFacade.getDefault().putBoolean(DummyModuleContext.class, "my.boolean.key", false);
         final boolean y = PreferencesFacade.getDefault().getBoolean(DummyModuleContext.class, "my.boolean.key", true);
         assertEquals(false, y);
@@ -197,16 +167,12 @@ public class PRoPreferencesTest {
     
     @Test
     public void getDoubleInModuleContext() {
-//        PreferencesFacade.getDefault().init(true);
-
         final double x = PreferencesFacade.getDefault().getDouble(DummyModuleContext.class, "my.double.key", 1.23d);
         assertTrue(1.23d == x);
     }
     
     @Test
     public void putDoubleInModuleContext() {
-//        PreferencesFacade.getDefault().init(true);
-
         PreferencesFacade.getDefault().putDouble(DummyModuleContext.class, "my.double.key", 0.0d);
         final double y = PreferencesFacade.getDefault().getDouble(DummyModuleContext.class, "my.double.key", 1.23d);
         assertTrue(0.0d == y);
@@ -214,16 +180,12 @@ public class PRoPreferencesTest {
     
     @Test
     public void getIntInModuleContext() {
-//        PreferencesFacade.getDefault().init(true);
-
         final int x = PreferencesFacade.getDefault().getInt(DummyModuleContext.class, "my.int.key", 1);
         assertTrue(1 == x);
     }
     
     @Test
     public void putIntInModuleContext() {
-//        PreferencesFacade.getDefault().init(true);
-
         PreferencesFacade.getDefault().putInt(DummyModuleContext.class, "my.int.key", 0);
         final int y = PreferencesFacade.getDefault().getInt(DummyModuleContext.class, "my.int.key", 1);
         assertTrue(0 == y);
@@ -231,16 +193,12 @@ public class PRoPreferencesTest {
     
     @Test
     public void getLongInModuleContext() {
-//        PreferencesFacade.getDefault().init(true);
-
         final long x = PreferencesFacade.getDefault().getLong(DummyModuleContext.class, "my.long.key", 1L);
         assertTrue(1L == x);
     }
     
     @Test
     public void putLongInModuleContext() {
-//        PreferencesFacade.getDefault().init(true);
-
         PreferencesFacade.getDefault().putLong(DummyModuleContext.class, "my.long.key", 0L);
         final long y = PreferencesFacade.getDefault().getLong(DummyModuleContext.class, "my.long.key", 1L);
         assertTrue(0L == y);
