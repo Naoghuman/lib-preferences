@@ -3,7 +3,7 @@ Lib-Preferences
 
 A library for `easy` storing simple data to a Preferences.[properties] file in a [JavaFX] &amp; [Maven] application.
 
-Current `version` is `0.0.3` (12.2014).
+Current `version` is `0.0.4` (01.2015).
 
 
 
@@ -48,7 +48,7 @@ PreferencesFacade.getDefault().get(String key, String def);
 
 ```java
 /**
- * Store a <code>String</code> which is associated with the key in application context.
+ * Stores a <code>String</code> which is associated with the key in application context.
  * 
  * @param key The key for the saved <code>String</code>.
  * @param value The value which will associated with the key.
@@ -70,7 +70,7 @@ PreferencesFacade.getDefault().get(Class clazz, String key, String def);
 
 ```java
 /**
- * Store a <code>String</code> which is associated with the key in module context.
+ * Stores a <code>String</code> which is associated with the key in module context.
  * 
  * @param clazz Defined the module context.
  * @param key The key for the to saved <code>String</code>.
@@ -85,7 +85,7 @@ Requirements<a name="Requirements" />
 ------------
 
 * On your system you need [JRE 8] or [JDK 8] installed.
-* The library [Lib-Preferences-0.0.3.jar](#Installation).
+* The library [Lib-Preferences-0.0.4.jar](#Installation).
 * The library [Lib-Logger-0.0.5.jar](#Installation).
   * Included is the [log4j-api-2.1.jar].
   * Included is the [log4j-core-2.1.jar].
