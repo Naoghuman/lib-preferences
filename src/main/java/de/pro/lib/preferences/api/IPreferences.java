@@ -222,7 +222,7 @@ public interface IPreferences {
      * under <code>System.getProperty("user.dir") + File.separator
      * + "Preferences.properties"</code>.
      * 
-     * @param drop Should the existing file dropped at frist?
+     * @param drop Should an existing file dropped at frist?
      */
     public void init(boolean drop);
     
