@@ -4,7 +4,7 @@
     
     <groupId>de.pro</groupId>
     <artifactId>Lib-Preferences</artifactId>
-    <version>0.1.0</version> <!-- -SNAPSHOT -->
+    <version>0.1.1-SNAPSHOT</version> <!-- -SNAPSHOT -->
     <packaging>jar</packaging>
     <description>A library for easy storing simple data in a Preferences.properties file in a JavaFx &amp; Maven application. See https://github.com/Naoghuman/lib-preferences for more details.</description>
     <name>Lib-Preferences</name>
@@ -44,7 +44,7 @@
     
     <build>
         <plugins>
-            <!-- for RELEASE -->
+            <!-- for RELEASE
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
@@ -58,7 +58,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <!--  -->
+            -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
@@ -66,7 +66,7 @@
                 <configuration>
                     <additionalparam>-Xdoclint:none</additionalparam>
                 </configuration>
-                <!-- for RELEASE -->
+                <!-- for RELEASE
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
@@ -75,7 +75,7 @@
                         </goals>
                     </execution>
                 </executions>
-                <!--  -->
+                -->
             </plugin>
         </plugins>
     </build>
