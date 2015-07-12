@@ -19,15 +19,15 @@ package de.pro.lib.preferences.api;
 import java.util.prefs.Preferences;
 
 /**
- * The <code>Interface</code> for the class {@link de.pro.lib.preferences.PRoPreferences}.<br />
+ * The <code>Interface</code> for the class {@link de.pro.lib.preferences.LibPreferences}.<br />
  * Over the facade {@link de.pro.lib.preferences.api.PreferencesFacade} you can 
  * access the methods in this <code>Interface</code>.
  *
  * @author PRo
- * @see de.pro.lib.preferences.PRoPreferences
+ * @see de.pro.lib.preferences.LibPreferences
  * @see de.pro.lib.preferences.api.PreferencesFacade
  */
-public interface IPreferences {
+public interface ILibPreferences {
     /**
      * Key constant for accessing the system preferfence file.
      */

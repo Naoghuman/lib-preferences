@@ -16,33 +16,34 @@
  */
 package de.pro.lib.preferences.api;
 
-import de.pro.lib.preferences.PRoPreferences;
+import de.pro.lib.preferences.LibPreferences;
 
 /**
  * The facade {@link de.pro.lib.preferences.api.PreferencesFacade} provides a 
- * singleton instance of the Interface {@link de.pro.lib.preferences.api.IPreferences}.
+ * singleton instance of the Interface {@link de.pro.lib.preferences.api.ILibPreferences}.
  *
  * @author PRo
- * @see de.pro.lib.preferences.api.IPreferences
+ * @see de.pro.lib.preferences.api.ILibPreferences
  */
 public final class PreferencesFacade {
     
-    private static IPreferences instance = null;
+    private static ILibPreferences instance = null;
     
     /**
-     * Provides a singleton instance from the Interface {@link de.pro.lib.preferences.api.IPreferences}.
+     * Provides a singleton instance from the Interface {@link de.pro.lib.preferences.api.ILibPreferences}.
      * 
-     * @return A singleton instance of {@link de.pro.lib.preferences.api.IPreferences}.
-     * @see de.pro.lib.preferences.api.IPreferences
+     * @return A singleton instance of {@link de.pro.lib.preferences.api.ILibPreferences}.
+     * @see de.pro.lib.preferences.api.ILibPreferences
      */
-    public static IPreferences getDefault() {
+    public static ILibPreferences getDefault() {
         
         if (instance == null) {
-            instance = new PRoPreferences();
+            instance = new LibPreferences();
         }
         
         return instance;
     }
     
     private PreferencesFacade() { }
+    
 }

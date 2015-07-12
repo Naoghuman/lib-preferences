@@ -31,7 +31,7 @@ import static org.junit.Assert.*;
  *
  * @author PRo
  */
-public class PRoPreferencesTest {
+public class LibPreferencesTest {
     
     private static final String NORMAL_PATH
             = System.getProperty("user.dir") + File.separator // NOI18N
@@ -41,7 +41,7 @@ public class PRoPreferencesTest {
             = System.getProperty("user.dir") + File.separator // NOI18N
             + "own"; // NOI18N
     
-    public PRoPreferencesTest() {
+    public LibPreferencesTest() {
     }
     
     @BeforeClass

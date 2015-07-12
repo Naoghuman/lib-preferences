@@ -17,21 +17,21 @@
 package de.pro.lib.preferences;
 
 import de.pro.lib.logger.api.LoggerFacade;
-import de.pro.lib.preferences.api.IPreferences;
+import de.pro.lib.preferences.api.ILibPreferences;
 import java.io.File;
 import java.util.prefs.Preferences;
 
 /**
- * The implementation from the Interface {@link de.pro.lib.preferences.api.IPreferences}.<br />
+ * The implementation from the Interface {@link de.pro.lib.preferences.api.ILibPreferences}.<br />
  * Access to this class is over the facade {@link de.pro.lib.preferences.api.PreferencesFacade}.
  * 
  * @author PRo
- * @see de.pro.lib.preferences.api.IPreferences
+ * @see de.pro.lib.preferences.api.ILibPreferences
  * @see de.pro.lib.preferences.api.PreferencesFacade
  */
-public final class PRoPreferences implements IPreferences {
+public final class LibPreferences implements ILibPreferences {
     
-    private static IPreferencesProvider PREFS_IMPL = null;
+    private static ILibPreferencesProvider PREFS_IMPL = null;
     
     @Override
     public Preferences forApplication() {
@@ -207,7 +207,7 @@ public final class PRoPreferences implements IPreferences {
     public void init(boolean drop) {
         if (drop) {
             final String path = System.getProperty("user.dir") + File.separator // NOI18N
-                    + IPreferences.SYSTEM_PREFERENCES__FILE_DEFAULT_VALUE;
+                    + ILibPreferences.SYSTEM_PREFERENCES__FILE_DEFAULT_VALUE;
             final File file = new File(path);
             if (file.exists()) {
                 LoggerFacade.getDefault().own(this.getClass(),
@@ -217,13 +217,12 @@ public final class PRoPreferences implements IPreferences {
             }
         }
         
-        LoggerFacade.getDefault().debug(PRoPreferences.class, "  Init preferences file"); // NOI18N
+        LoggerFacade.getDefault().debug(LibPreferences.class, "  Init preferences file"); // NOI18N
         
-        System.setProperty(
-                IPreferences.SYSTEM_PREFERENCES__FILE,
-                IPreferences.SYSTEM_PREFERENCES__FILE_DEFAULT_VALUE);
+        System.setProperty(ILibPreferences.SYSTEM_PREFERENCES__FILE,
+                ILibPreferences.SYSTEM_PREFERENCES__FILE_DEFAULT_VALUE);
         
-        PREFS_IMPL = new IPreferencesProvider() {
+        PREFS_IMPL = new ILibPreferencesProvider() {
 
             @Override
             public final Preferences preferencesForModule(final Class clazz) {
@@ -237,7 +236,7 @@ public final class PRoPreferences implements IPreferences {
         };
     }
     
-    interface IPreferencesProvider {
+    interface ILibPreferencesProvider {
 
         /**
          * Returns user preference node. {@link Preferences#absolutePath} of such

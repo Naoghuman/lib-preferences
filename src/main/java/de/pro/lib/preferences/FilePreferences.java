@@ -16,7 +16,7 @@
  */
 package de.pro.lib.preferences;
 
-import de.pro.lib.preferences.api.IPreferences;
+import de.pro.lib.preferences.api.ILibPreferences;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -190,7 +190,7 @@ final class FilePreferences extends AbstractPreferences {
 
     public static File getPreferencesFile() {
         if (preferencesFile == null) {
-            String prefsFile = System.getProperty(IPreferences.SYSTEM_PREFERENCES__FILE);
+            String prefsFile = System.getProperty(ILibPreferences.SYSTEM_PREFERENCES__FILE);
             if (prefsFile == null || prefsFile.length() == 0) {
                 prefsFile = System.getProperty("user.dir") + File.separator + ".fileprefs"; // NOI18N
             }
