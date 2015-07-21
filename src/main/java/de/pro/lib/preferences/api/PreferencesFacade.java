@@ -19,31 +19,38 @@ package de.pro.lib.preferences.api;
 import de.pro.lib.preferences.LibPreferences;
 
 /**
- * The facade {@link de.pro.lib.preferences.api.PreferencesFacade} provides a 
- * singleton instance of the Interface {@link de.pro.lib.preferences.api.ILibPreferences}.
+ * The facade {@link de.pro.lib.preferences.api.PreferencesFacade} provides 
+ * access to the Interface {@link de.pro.lib.preferences.api.ILibPreferences}.
  *
  * @author PRo
  * @see de.pro.lib.preferences.api.ILibPreferences
  */
-public final class PreferencesFacade {
-    
-    private static ILibPreferences instance = null;
+public enum PreferencesFacade {
     
     /**
-     * Provides a singleton instance from the Interface {@link de.pro.lib.preferences.api.ILibPreferences}.
-     * 
-     * @return A singleton instance of {@link de.pro.lib.preferences.api.ILibPreferences}.
-     * @see de.pro.lib.preferences.api.ILibPreferences
+     * Over the value <code>INSTANCE</code> the developer have access to the
+     * singleton instance from the <code>PreferencesFacade</code>.
      */
-    public static ILibPreferences getDefault() {
-        
-        if (instance == null) {
-            instance = new LibPreferences();
-        }
-        
-        return instance;
+    INSTANCE;
+    
+    private ILibPreferences preferences = null;
+    
+    private PreferencesFacade() {
+        this.initialize();
     }
     
-    private PreferencesFacade() { }
+    private void initialize() {
+        preferences = new LibPreferences();
+    }
     
+    /**
+     * Over the {@link de.pro.lib.preferences.api.ILibPreferences} the developer
+     * have access to the preferences methods.
+     * 
+     * @return a singleton instance from ILibPreferences.
+     */
+    public ILibPreferences getPreferences() {
+        return preferences;
+    }
+ 
 }

@@ -26,13 +26,13 @@ Examples<a name="Examples" />
 
 ```java
 /**
- * The facade {@link de.pro.lib.preferences.api.PreferencesFacade} provides a 
- * singleton instance of the Interface {@link de.pro.lib.preferences.api.ILibPreferences}.
+ * The facade {@link de.pro.lib.preferences.api.PreferencesFacade} provides 
+ * access to the Interface {@link de.pro.lib.preferences.api.ILibPreferences}.
  *
  * @author PRo
  * @see de.pro.lib.preferences.api.ILibPreferences
  */
-public final class PreferencesFacade
+public enum PreferencesFacade
 ```
 
 ```java
@@ -43,7 +43,7 @@ public final class PreferencesFacade
  * @param def The default value if the key isn't stored.
  * @return The <code>String</code> which is associated with the key or the default value.
  */
-PreferencesFacade.getDefault().get(String key, String def);
+PreferencesFacade.INSTANCE.getPreferences().get(String key, String def);
 ```
 
 ```java
@@ -53,7 +53,7 @@ PreferencesFacade.getDefault().get(String key, String def);
  * @param key The key for the saved <code>String</code>.
  * @param value The value which will associated with the key.
  */
-PreferencesFacade.getDefault().put(String key, String value);
+PreferencesFacade.INSTANCE.getPreferences().put(String key, String value);
 ```
 
 ```java
@@ -65,7 +65,7 @@ PreferencesFacade.getDefault().put(String key, String value);
  * @param def The default value if the key isn't stored.
  * @return The <code>String</code> which is associated with the key or the default value.
  */
-PreferencesFacade.getDefault().get(Class clazz, String key, String def);
+PreferencesFacade.INSTANCE.getPreferences().get(Class clazz, String key, String def);
 ```
 
 ```java
@@ -76,7 +76,7 @@ PreferencesFacade.getDefault().get(Class clazz, String key, String def);
  * @param key The key for the to saved <code>String</code>.
  * @param value The value which will associated with the key.
  */
-PreferencesFacade.getDefault().put(Class clazz, String key, String value);
+PreferencesFacade.INSTANCE.getPreferences().put(Class clazz, String key, String value);
 ```
 
 
