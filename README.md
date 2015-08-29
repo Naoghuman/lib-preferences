@@ -43,7 +43,7 @@ public enum PreferencesFacade
  * @param def The default value if the key isn't stored.
  * @return The <code>String</code> which is associated with the key or the default value.
  */
-PreferencesFacade.INSTANCE.getPreferences().get(String key, String def);
+PreferencesFacade.INSTANCE.get(String key, String def);
 ```
 
 ```java
@@ -53,7 +53,7 @@ PreferencesFacade.INSTANCE.getPreferences().get(String key, String def);
  * @param key The key for the saved <code>String</code>.
  * @param value The value which will associated with the key.
  */
-PreferencesFacade.INSTANCE.getPreferences().put(String key, String value);
+PreferencesFacade.INSTANCE.put(String key, String value);
 ```
 
 ```java
@@ -65,7 +65,7 @@ PreferencesFacade.INSTANCE.getPreferences().put(String key, String value);
  * @param def The default value if the key isn't stored.
  * @return The <code>String</code> which is associated with the key or the default value.
  */
-PreferencesFacade.INSTANCE.getPreferences().get(Class clazz, String key, String def);
+PreferencesFacade.INSTANCE.get(Class clazz, String key, String def);
 ```
 
 ```java
@@ -76,7 +76,7 @@ PreferencesFacade.INSTANCE.getPreferences().get(Class clazz, String key, String 
  * @param key The key for the to saved <code>String</code>.
  * @param value The value which will associated with the key.
  */
-PreferencesFacade.INSTANCE.getPreferences().put(Class clazz, String key, String value);
+PreferencesFacade.INSTANCE.put(Class clazz, String key, String value);
 ```
 
 
