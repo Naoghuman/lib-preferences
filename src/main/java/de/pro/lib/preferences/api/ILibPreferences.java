@@ -155,6 +155,7 @@ public interface ILibPreferences {
      * @return The <code>Integer</code> which is associated with the key or the default value.
      */
     public Integer getInt(String key, Integer def);
+    
     /**
      * Get a {@link java.lang.Integer} which is associated with the key in module context.
      * 
@@ -190,6 +191,7 @@ public interface ILibPreferences {
      * @return The <code>Long</code> which is associated with the key or the default value.
      */
     public Long getLong(String key, Long def);
+    
     /**
      * Get a {@link java.lang.Long} which is associated with the key in module context.
      * 
