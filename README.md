@@ -9,7 +9,7 @@ Intention
 Lib-Preferences is a library for `easy` storing simple data to a 
 Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 
-Current `version` is `0.2.0` (07.2015).
+Current `version` is `0.2.1` (08.2015).
 
 
 
@@ -418,13 +418,15 @@ public Preferences forModule(Class clazz);
 Download<a name="Download" />
 ---
 
-Current `version` is `0.2.0`. Main points in this release are:
-* With this release the PreferencesFacade is now an enum singleton facade.
-* So instead `PreferencesFacade.getDefault()` now 
-  `PreferencesFacade.INSTANCE.getPreferences()` can be used.
+Current `version` is `0.2.1`. Main points in this release are:
+* Implement in PreferencesFacade directly the interface ILibPreferences for easier handling.
+* Add new section Api to the ReadMe.
+* Add new section Download to the ReadMe.
+* Add new section Intention to the ReadMe.
+* Extend the section Examples in the ReadMe.
 
 Download:
-* [Release v0.2.0 (07.2015)]
+* [Release v0.2.1 (08.2015)]
 
 An overview about all existings releases can be found here:
 * [Overview from all releases in Lib-Preferences]
@@ -435,7 +437,7 @@ Requirements<a name="Requirements" />
 ---
 
 * On your system you need [JRE 8] or [JDK 8] installed.
-* The library [Lib-Preferences-0.2.0.jar](#Installation).
+* The library [Lib-Preferences-0.2.1.jar](#Installation).
 * The library [Lib-Logger-0.2.1.jar](#Installation).
   * Included is the [log4j-api-2.3.jar].
   * Included is the [log4j-core-2.3.jar].
@@ -511,6 +513,6 @@ You can reach me under <peter.rogge@yahoo.de>.
 [Overview from all releases in Lib-Preferences]:https://github.com/Naoghuman/lib-preferences/releases
 [Pull Request]:https://help.github.com/articles/using-pull-requests
 [properties]:http://en.wikipedia.org/wiki/.properties
-[Release v0.2.0 (07.2015)]:https://github.com/Naoghuman/lib-preferences/releases/tag/v0.2.0
+[Release v0.2.1 (08.2015)]:https://github.com/Naoghuman/lib-preferences/releases/tag/v0.2.1
 
 
