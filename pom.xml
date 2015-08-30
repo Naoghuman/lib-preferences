@@ -6,7 +6,7 @@
     <artifactId>Lib-Preferences</artifactId>
     <version>0.2.1-SNAPSHOT</version> <!-- -SNAPSHOT -->
     <packaging>jar</packaging>
-    <description>A library for easy storing simple data in a Preferences.properties file in a JavaFx &amp; Maven desktop application. See https://github.com/Naoghuman/lib-preferences for more details.</description>
+    <description>Lib-Preferences is a library for easy storing simple data in a Preferences.properties file in a JavaFx &amp; Maven desktop application. See https://github.com/Naoghuman/lib-preferences for more details.</description>
     <name>Lib-Preferences</name>
     <inceptionYear>2014</inceptionYear>
     <url>https://github.com/Naoghuman/lib-preferences.git</url>

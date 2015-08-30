@@ -1,7 +1,8 @@
 Lib-Preferences
 ===============
 
-A library for `easy` storing simple data to a Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
+Lib-Preferences is a library for `easy` storing simple data to a 
+Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 
 Current `version` is `0.2.0` (07.2015).
 
