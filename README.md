@@ -1,6 +1,11 @@
 Lib-Preferences
 ===============
 
+
+
+Intention
+---------
+
 Lib-Preferences is a library for `easy` storing simple data to a 
 Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 
