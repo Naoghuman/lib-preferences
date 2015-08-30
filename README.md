@@ -17,6 +17,7 @@ Content
 -------
 
 * [Examples](#Examples)
+* [Download](#Download)
 * [Requirements](#Requirements)
 * [Installation](#Installation)
 * [Documentation](#Documentation)
@@ -84,6 +85,22 @@ PreferencesFacade.INSTANCE.get(Class clazz, String key, String def);
  */
 PreferencesFacade.INSTANCE.put(Class clazz, String key, String value);
 ```
+
+
+
+Download<a name="Download" />
+--------
+
+Current `version` is `0.2.0`. Main points in this release are:
+* With this release the PreferencesFacade is now an enum singleton facade.
+* So instead `PreferencesFacade.getDefault()` now 
+  `PreferencesFacade.INSTANCE.getPreferences()` can be used.
+
+Download:
+* [Release v0.2.0 (07.2015)]
+
+An overview about all existings releases can be found here:
+* [Overview from all releases in Lib-Preferences]
 
 
 
@@ -162,7 +179,9 @@ You can reach me under <peter.rogge@yahoo.de>.
 [log4j-core-2.3.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
 [Maven]:http://maven.apache.org/
 [NetBeans]:https://netbeans.org/
+[Overview from all releases in Lib-Preferences]:https://github.com/Naoghuman/lib-preferences/releases
 [Pull Request]:https://help.github.com/articles/using-pull-requests
 [properties]:http://en.wikipedia.org/wiki/.properties
+[Release v0.2.0 (07.2015)]:https://github.com/Naoghuman/lib-preferences/releases/tag/v0.2.0
 
 
