@@ -17,6 +17,11 @@ Content
 ---
 
 * [Examples](#Examples)
+   - [de.pro.lib.database.LibDatabaseTest#initDefaultAndDropTrue()](#InitDefaultAndDropTrue)
+   - [de.pro.lib.database.LibDatabaseTest#getStringInApplicationContext()](#GetStringInApplicationContext)
+   - [de.pro.lib.database.LibDatabaseTest#putStringInApplicationContext()](#PutStringInApplicationContext)
+   - [de.pro.lib.database.LibDatabaseTest#getBooleanInModuleContext()](#GetBooleanInModuleContext)
+   - [de.pro.lib.database.LibDatabaseTest#PutBooleanInModuleContext()](#putBooleanInModuleContext)
 * [Api](#Api)
     - [de.pro.lib.preferences.api.PreferencesFacade](#PreferencesFacade)
 * [Download](#Download)
@@ -33,59 +38,67 @@ Content
 Examples<a name="Examples" />
 ---
 
-```java
-/**
- * The facade {@link de.pro.lib.preferences.api.PreferencesFacade} provides 
- * access to the Interface {@link de.pro.lib.preferences.api.ILibPreferences}.
- *
- * @author PRo
- * @see de.pro.lib.preferences.api.ILibPreferences
- */
-public enum PreferencesFacade
-```
+### de.pro.lib.database.LibDatabaseTest#initDefaultAndDropTrue()<a name="InitDefaultAndDropTrue" />
 
 ```java
-/**
- * Get a <code>String</code> which is associated with the key in application context.
- * 
- * @param key The key which value is searched for.
- * @param def The default value if the key isn't stored.
- * @return The <code>String</code> which is associated with the key or the default value.
- */
-PreferencesFacade.INSTANCE.get(String key, String def);
+private static final String NORMAL_PATH
+        = System.getProperty("user.dir") + File.separator // NOI18N
+        + "Preferences.properties"; // NOI18N
+
+@Test
+public void initDefaultAndDropTrue() {
+    final File file = new File(NORMAL_PATH);
+    assertFalse(NORMAL_PATH + " mustn't exists", file.exists());
+  
+    PreferencesFacade.INSTANCE.put("x", "x");
+    assertTrue(NORMAL_PATH + " must exists", file.exists());
+}
 ```
 
-```java
-/**
- * Stores a <code>String</code> which is associated with the key in application context.
- * 
- * @param key The key for the saved <code>String</code>.
- * @param value The value which will associated with the key.
- */
-PreferencesFacade.INSTANCE.put(String key, String value);
-```
+
+### de.pro.lib.database.LibDatabaseTest#getStringInApplicationContext()<a name="GetStringInApplicationContext" />
 
 ```java
-/**
- * Get a <code>String</code> which is associated with the key in module context.
- * 
- * @param clazz Defined the module context.
- * @param key The key which value is searched for.
- * @param def The default value if the key isn't stored.
- * @return The <code>String</code> which is associated with the key or the default value.
- */
-PreferencesFacade.INSTANCE.get(Class clazz, String key, String def);
+@Test
+public void getStringInApplicationContext() {
+    final String x = PreferencesFacade.INSTANCE.get("my.string.key1", "x");
+    assertEquals("x", x);
+}
 ```
 
+
+### de.pro.lib.database.LibDatabaseTest#putStringInApplicationContext()<a name="PutStringInApplicationContext" />
+
 ```java
-/**
- * Stores a <code>String</code> which is associated with the key in module context.
- * 
- * @param clazz Defined the module context.
- * @param key The key for the to saved <code>String</code>.
- * @param value The value which will associated with the key.
- */
-PreferencesFacade.INSTANCE.put(Class clazz, String key, String value);
+Test
+public void putStringInApplicationContext() {
+    PreferencesFacade.INSTANCE.put("my.string.key2", "y");
+    final String y = PreferencesFacade.INSTANCE.get("my.string.key2", "x");
+    assertEquals("y", y);
+}
+```
+
+
+### de.pro.lib.database.LibDatabaseTest#getBooleanInModuleContext()<a name="GetBooleanInModuleContext" />
+
+```java
+@Test
+public void getBooleanInModuleContext() {
+    final boolean x = PreferencesFacade.INSTANCE.getBoolean(DummyModuleContext.class, "my.boolean.key13", true);
+    assertEquals(true, x);
+}
+```
+
+
+### de.pro.lib.database.LibDatabaseTest#putBooleanInModuleContext()<a name="PutBooleanInModuleContext" />
+
+```java
+@Test
+public void putBooleanInModuleContext() {
+    PreferencesFacade.INSTANCE.putBoolean(DummyModuleContext.class, "my.boolean.key14", false);
+    final boolean y = PreferencesFacade.INSTANCE.getBoolean(DummyModuleContext.class, "my.boolean.key14", true);
+    assertEquals(false, y);
+}
 ```
 
 
