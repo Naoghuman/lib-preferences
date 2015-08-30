@@ -436,7 +436,7 @@ Requirements<a name="Requirements" />
 
 * On your system you need [JRE 8] or [JDK 8] installed.
 * The library [Lib-Preferences-0.2.0.jar](#Installation).
-* The library [Lib-Logger-0.2.0.jar](#Installation).
+* The library [Lib-Logger-0.2.1.jar](#Installation).
   * Included is the [log4j-api-2.3.jar].
   * Included is the [log4j-core-2.3.jar].
 
