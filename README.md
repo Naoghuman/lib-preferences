@@ -419,7 +419,8 @@ Download<a name="Download" />
 ---
 
 Current `version` is `0.2.1`. Main points in this release are:
-* Implement in PreferencesFacade directly the interface ILibPreferences for easier handling.
+* Implement in PreferencesFacade directly the interface ILibPreferences for 
+  easier handling.
 * Add new section Api to the ReadMe.
 * Add new section Download to the ReadMe.
 * Add new section Intention to the ReadMe.
