@@ -21,7 +21,7 @@ Content
    - [de.pro.lib.database.LibDatabaseTest#getStringInApplicationContext()](#GetStringInApplicationContext)
    - [de.pro.lib.database.LibDatabaseTest#putStringInApplicationContext()](#PutStringInApplicationContext)
    - [de.pro.lib.database.LibDatabaseTest#getBooleanInModuleContext()](#GetBooleanInModuleContext)
-   - [de.pro.lib.database.LibDatabaseTest#PutBooleanInModuleContext()](#putBooleanInModuleContext)
+   - [de.pro.lib.database.LibDatabaseTest#putBooleanInModuleContext()](#PutBooleanInModuleContext)
 * [Api](#Api)
     - [de.pro.lib.preferences.api.PreferencesFacade](#PreferencesFacade)
 * [Download](#Download)
