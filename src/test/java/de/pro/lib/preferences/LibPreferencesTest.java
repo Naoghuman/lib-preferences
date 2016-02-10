@@ -16,7 +16,7 @@
  */
 package de.pro.lib.preferences;
 
-import de.pro.lib.logger.api.LoggerFacade;
+import com.github.naoghuman.lib.logger.api.LoggerFacade;
 import de.pro.lib.preferences.api.PreferencesFacade;
 import dummy.DummyModuleContext;
 import java.io.File;
