@@ -1,4 +1,4 @@
 /**
  * Contains the <code>API</code> for the library <code>Lib-Preferences</code>.
  */
-package de.pro.lib.preferences.api;
+package com.github.naoghuman.lib.preferences.api;

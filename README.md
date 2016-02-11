@@ -17,13 +17,13 @@ Content
 ---
 
 * [Examples](#Examples)
-   - [de.pro.lib.database.LibDatabaseTest#initDefaultAndDropTrue()](#InitDefaultAndDropTrue)
-   - [de.pro.lib.database.LibDatabaseTest#getStringInApplicationContext()](#GetStringInApplicationContext)
-   - [de.pro.lib.database.LibDatabaseTest#putStringInApplicationContext()](#PutStringInApplicationContext)
-   - [de.pro.lib.database.LibDatabaseTest#getBooleanInModuleContext()](#GetBooleanInModuleContext)
-   - [de.pro.lib.database.LibDatabaseTest#putBooleanInModuleContext()](#PutBooleanInModuleContext)
+   - [com.github.naoghuman.lib.database.LibPreferencesTest#initDefaultAndDropTrue()](#InitDefaultAndDropTrue)
+   - [com.github.naoghuman.lib.database.LibPreferencesTest#getStringInApplicationContext()](#GetStringInApplicationContext)
+   - [com.github.naoghuman.lib.database.LibPreferencesTest#putStringInApplicationContext()](#PutStringInApplicationContext)
+   - [com.github.naoghuman.lib.database.LibPreferencesTest#getBooleanInModuleContext()](#GetBooleanInModuleContext)
+   - [com.github.naoghuman.lib.database.LibPreferencesTest#putBooleanInModuleContext()](#PutBooleanInModuleContext)
 * [Api](#Api)
-    - [de.pro.lib.preferences.api.PreferencesFacade](#PreferencesFacade)
+    - [com.github.naoghuman.lib.preferences.api.PreferencesFacade](#PreferencesFacade)
 * [Download](#Download)
 * [Requirements](#Requirements)
 * [Installation](#Installation)
@@ -38,7 +38,7 @@ Content
 Examples<a name="Examples" />
 ---
 
-### de.pro.lib.database.LibDatabaseTest#initDefaultAndDropTrue()<a name="InitDefaultAndDropTrue" />
+### com.github.naoghuman.lib.database.LibPreferencesTest#initDefaultAndDropTrue()<a name="InitDefaultAndDropTrue" />
 
 ```java
 private static final String NORMAL_PATH
@@ -56,7 +56,7 @@ public void initDefaultAndDropTrue() {
 ```
 
 
-### de.pro.lib.database.LibDatabaseTest#getStringInApplicationContext()<a name="GetStringInApplicationContext" />
+### com.github.naoghuman.lib.database.LibPreferencesTest#getStringInApplicationContext()<a name="GetStringInApplicationContext" />
 
 ```java
 @Test
@@ -67,7 +67,7 @@ public void getStringInApplicationContext() {
 ```
 
 
-### de.pro.lib.database.LibDatabaseTest#putStringInApplicationContext()<a name="PutStringInApplicationContext" />
+### com.github.naoghuman.lib.database.LibPreferencesTest#putStringInApplicationContext()<a name="PutStringInApplicationContext" />
 
 ```java
 Test
@@ -79,7 +79,7 @@ public void putStringInApplicationContext() {
 ```
 
 
-### de.pro.lib.database.LibDatabaseTest#getBooleanInModuleContext()<a name="GetBooleanInModuleContext" />
+### com.github.naoghuman.lib.database.LibPreferencesTest#getBooleanInModuleContext()<a name="GetBooleanInModuleContext" />
 
 ```java
 @Test
@@ -90,7 +90,7 @@ public void getBooleanInModuleContext() {
 ```
 
 
-### de.pro.lib.database.LibDatabaseTest#putBooleanInModuleContext()<a name="PutBooleanInModuleContext" />
+### com.github.naoghuman.lib.database.LibPreferencesTest#putBooleanInModuleContext()<a name="PutBooleanInModuleContext" />
 
 ```java
 @Test
@@ -106,15 +106,15 @@ public void putBooleanInModuleContext() {
 Api<a name="Api" />
 ---
 
-### de.pro.lib.preferences.api.PreferencesFacade<a name="PreferencesFacade" />
+### com.github.naoghuman.lib.preferences.api.PreferencesFacade<a name="PreferencesFacade" />
 
 ```java
 /**
- * The facade {@link de.pro.lib.preferences.api.PreferencesFacade} provides 
- * access to the Interface {@link de.pro.lib.preferences.api.ILibPreferences}.
+ * The facade {@link com.github.naoghuman.lib.preferences.api.PreferencesFacade} provides 
+ * access to the Interface {@link com.github.naoghuman.lib.preferences.api.ILibPreferences}.
  *
  * @author PRo
- * @see de.pro.lib.preferences.api.ILibPreferences
+ * @see com.github.naoghuman.lib.preferences.api.ILibPreferences
  */
 public enum PreferencesFacade implements ILibPreferences
 ```
@@ -449,7 +449,8 @@ Installation<a name="Installation" />
 ---
 
 * If not installed download the [JRE 8] or the [JDK 8].
-  * Optional: To work better with [FXML] files in a [JavaFX] application download the [JavaFX Scene Builder] under 'Additional Resources'.
+  * Optional: To work better with [FXML] files in a [JavaFX] application 
+    download the [JavaFX Scene Builder] under 'Additional Resources'.
 * Choose your preferred IDE (e.g. [NetBeans], [Eclipse] or [IntelliJ IDEA]) for development.
 * Download or clone [Lib-Preferences].
 * Download or clone [Lib-Logger].

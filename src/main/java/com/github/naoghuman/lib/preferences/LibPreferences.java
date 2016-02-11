@@ -14,20 +14,20 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package de.pro.lib.preferences;
+package com.github.naoghuman.lib.preferences;
 
 import com.github.naoghuman.lib.logger.api.LoggerFacade;
-import de.pro.lib.preferences.api.ILibPreferences;
+import com.github.naoghuman.lib.preferences.api.ILibPreferences;
 import java.io.File;
 import java.util.prefs.Preferences;
 
 /**
- * The implementation from the Interface {@link de.pro.lib.preferences.api.ILibPreferences}.<br />
- * Access to this class is over the facade {@link de.pro.lib.preferences.api.PreferencesFacade}.
+ * The implementation from the Interface {@link com.github.naoghuman.lib.preferences.api.ILibPreferences}.<br />
+ * Access to this class is over the facade {@link com.github.naoghuman.lib.preferences.api.PreferencesFacade}.
  * 
  * @author PRo
- * @see de.pro.lib.preferences.api.ILibPreferences
- * @see de.pro.lib.preferences.api.PreferencesFacade
+ * @see com.github.naoghuman.lib.preferences.api.ILibPreferences
+ * @see com.github.naoghuman.lib.preferences.api.PreferencesFacade
  */
 public final class LibPreferences implements ILibPreferences {
     

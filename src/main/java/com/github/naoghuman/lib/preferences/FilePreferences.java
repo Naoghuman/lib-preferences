@@ -14,9 +14,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package de.pro.lib.preferences;
+package com.github.naoghuman.lib.preferences;
 
-import de.pro.lib.preferences.api.ILibPreferences;
+import com.github.naoghuman.lib.preferences.api.ILibPreferences;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

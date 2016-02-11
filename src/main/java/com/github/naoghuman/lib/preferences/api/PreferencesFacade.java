@@ -14,17 +14,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package de.pro.lib.preferences.api;
+package com.github.naoghuman.lib.preferences.api;
 
-import de.pro.lib.preferences.LibPreferences;
+import com.github.naoghuman.lib.preferences.LibPreferences;
 import java.util.prefs.Preferences;
 
 /**
- * The facade {@link de.pro.lib.preferences.api.PreferencesFacade} provides 
- * access to the Interface {@link de.pro.lib.preferences.api.ILibPreferences}.
+ * The facade {@link com.github.naoghuman.lib.preferences.api.PreferencesFacade} provides 
+ * access to the Interface {@link com.github.naoghuman.lib.preferences.api.ILibPreferences}.
  *
  * @author PRo
- * @see de.pro.lib.preferences.api.ILibPreferences
+ * @see com.github.naoghuman.lib.preferences.api.ILibPreferences
  */
 public enum PreferencesFacade implements ILibPreferences {
     

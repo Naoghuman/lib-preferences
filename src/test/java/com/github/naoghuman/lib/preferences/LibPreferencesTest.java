@@ -14,10 +14,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package de.pro.lib.preferences;
+package com.github.naoghuman.lib.preferences;
 
 import com.github.naoghuman.lib.logger.api.LoggerFacade;
-import de.pro.lib.preferences.api.PreferencesFacade;
+import com.github.naoghuman.lib.preferences.api.PreferencesFacade;
 import dummy.DummyModuleContext;
 import java.io.File;
 import org.junit.After;

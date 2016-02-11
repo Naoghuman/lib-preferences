@@ -28,6 +28,7 @@ Welcome to `Lib-Preferences` with the new release `v0.3.0`.
 
 
 #### Refactoring
+#3 [Refactoring] Change groupId to com.github.naoghuman.
 
 
 
@@ -36,4 +37,3 @@ Welcome to `Lib-Preferences` with the new release `v0.3.0`.
 
 
 [//]: # (Issues which will be integrated in this release)
-#3 [Refactoring] Change groupId to com.github.naoghuman.
