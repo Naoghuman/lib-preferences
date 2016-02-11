@@ -14,6 +14,7 @@ Welcome to `Lib-Preferences` with the new release `v0.3.0`.
 
 
 #### Enhancement
+#6 [Project] Rename jar file to lowercase with version number.
 #5 [Dependencies] Update the project to the new version from lib-logger-0.3.0.
 
 
@@ -36,4 +37,3 @@ Welcome to `Lib-Preferences` with the new release `v0.3.0`.
 
 [//]: # (Issues which will be integrated in this release)
 #3 [Refactoring] Change groupId to com.github.naoghuman.
-#2 [pom] Update project version to 0.3.0-SNAPSHOT.
