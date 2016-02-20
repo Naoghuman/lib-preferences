@@ -91,7 +91,7 @@
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>Lib-Logger</artifactId>
+            <artifactId>lib-logger</artifactId>
             <version>0.3.0</version>
             <type>jar</type>
         </dependency>
