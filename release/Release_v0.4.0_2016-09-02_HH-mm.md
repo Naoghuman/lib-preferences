@@ -20,6 +20,7 @@ Preferences.properties file in a JavaFx & Maven desktop application.
 
 #### Enhancement
 #11 [Documentation] Add a template for the release-notes.
+#9 [pom] Sign jar(s) for Maven Central.
 #8 [pom] New format from jar(s) for Maven Central.
 
 
