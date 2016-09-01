@@ -32,7 +32,7 @@ Preferences.properties file in a JavaFx & Maven desktop application.
 
 
 #### Additional
-#9 [Internal] Add /todo/ to .gitignore.
+#10 [Internal] Add /todo/ to .gitignore.
 
 
 
