@@ -50,7 +50,7 @@ public void initDefaultAndDropTrue() {
     final File file = new File(NORMAL_PATH);
     assertFalse(NORMAL_PATH + " mustn't exists", file.exists());
   
-    PreferencesFacade.INSTANCE.put("x", "x");
+    PreferencesFacade.getDefault().put("x", "x");
     assertTrue(NORMAL_PATH + " must exists", file.exists());
 }
 ```
@@ -61,7 +61,7 @@ public void initDefaultAndDropTrue() {
 ```java
 @Test
 public void getStringInApplicationContext() {
-    final String x = PreferencesFacade.INSTANCE.get("my.string.key1", "x");
+    final String x = PreferencesFacade.getDefault().get("my.string.key1", "x");
     assertEquals("x", x);
 }
 ```
@@ -72,8 +72,8 @@ public void getStringInApplicationContext() {
 ```java
 Test
 public void putStringInApplicationContext() {
-    PreferencesFacade.INSTANCE.put("my.string.key2", "y");
-    final String y = PreferencesFacade.INSTANCE.get("my.string.key2", "x");
+    PreferencesFacade.getDefault().put("my.string.key2", "y");
+    final String y = PreferencesFacade.getDefault().get("my.string.key2", "x");
     assertEquals("y", y);
 }
 ```
@@ -84,7 +84,7 @@ public void putStringInApplicationContext() {
 ```java
 @Test
 public void getBooleanInModuleContext() {
-    final boolean x = PreferencesFacade.INSTANCE.getBoolean(DummyModuleContext.class, "my.boolean.key13", true);
+    final boolean x = PreferencesFacade.getDefault().getBoolean(DummyModuleContext.class, "my.boolean.key13", true);
     assertEquals(true, x);
 }
 ```
@@ -95,8 +95,8 @@ public void getBooleanInModuleContext() {
 ```java
 @Test
 public void putBooleanInModuleContext() {
-    PreferencesFacade.INSTANCE.putBoolean(DummyModuleContext.class, "my.boolean.key14", false);
-    final boolean y = PreferencesFacade.INSTANCE.getBoolean(DummyModuleContext.class, "my.boolean.key14", true);
+    PreferencesFacade.getDefault().putBoolean(DummyModuleContext.class, "my.boolean.key14", false);
+    final boolean y = PreferencesFacade.getDefault().getBoolean(DummyModuleContext.class, "my.boolean.key14", true);
     assertEquals(false, y);
 }
 ```
@@ -116,7 +116,7 @@ Api<a name="Api" />
  * @author PRo
  * @see com.github.naoghuman.lib.preferences.api.ILibPreferences
  */
-public enum PreferencesFacade implements ILibPreferences
+public final class PreferencesFacade implements ILibPreferences {
 ```
 
 

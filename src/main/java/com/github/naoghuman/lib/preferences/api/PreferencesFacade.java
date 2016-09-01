@@ -17,6 +17,7 @@
 package com.github.naoghuman.lib.preferences.api;
 
 import com.github.naoghuman.lib.preferences.LibPreferences;
+import java.util.Optional;
 import java.util.prefs.Preferences;
 
 /**
@@ -26,13 +27,18 @@ import java.util.prefs.Preferences;
  * @author PRo
  * @see com.github.naoghuman.lib.preferences.api.ILibPreferences
  */
-public enum PreferencesFacade implements ILibPreferences {
+public final class PreferencesFacade implements ILibPreferences {
     
+    private static final Optional<PreferencesFacade> instance = Optional.of(new PreferencesFacade());
+
     /**
-     * Over the value <code>INSTANCE</code> the developer have access to the
-     * singleton instance from the <code>PreferencesFacade</code>.
+     * Returns a singleton instance from the class <code>PreferencesFacade</code>.
+     * 
+     * @return a singleton instance from the class <code>PreferencesFacade</code>.
      */
-    INSTANCE;
+    public static final PreferencesFacade getDefault() {
+        return instance.get();
+    }
     
     private ILibPreferences preferences = null;
     
