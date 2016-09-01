@@ -1,4 +1,4 @@
-Welcome to `Lib-Preferences` with the new release `v0.4.0`.
+Welcome to `Lib-Preferences` with the new release `vX.Y.Z`.
 
 Lib-Preferences is a library for easy storing simple data in a 
 Preferences.properties file in a JavaFx & Maven desktop application. 
@@ -6,7 +6,8 @@ Preferences.properties file in a JavaFx & Maven desktop application.
 
 
 #### Summary
-* Deploy the jar files to Maven Central :smiley: .
+* ...
+* ...
 
 
 
@@ -19,8 +20,6 @@ Preferences.properties file in a JavaFx & Maven desktop application.
 
 
 #### Enhancement
-#11 [Documentation] Add a template for the release-notes.
-#8 [pom] New format from jar(s) for Maven Central.
 
 
 
@@ -29,12 +28,10 @@ Preferences.properties file in a JavaFx & Maven desktop application.
 
 
 #### Refactoring
-#12 [Version] Change version to 0.4.0-SNAPSHOT.
 
 
 
 #### Additional
-#10 [Internal] Add /todo/ to .gitignore.
 
 
 
@@ -48,3 +45,4 @@ Naoghuman
 
 
 [//]: # (Links)
+
