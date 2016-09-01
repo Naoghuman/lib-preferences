@@ -19,6 +19,7 @@ Preferences.properties file in a JavaFx & Maven desktop application.
 
 
 #### Enhancement
+#8 [pom] New format from jar(s) for Maven Central.
 
 
 
