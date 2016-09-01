@@ -29,6 +29,7 @@ Preferences.properties file in a JavaFx & Maven desktop application.
 
 
 #### Refactoring
+#13 [pom] Update the dependencies to the libraries in pom.xml.
 #12 [Version] Change version to 0.4.0-SNAPSHOT.
 
 

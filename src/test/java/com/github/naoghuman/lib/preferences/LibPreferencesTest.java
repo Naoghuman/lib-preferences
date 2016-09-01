@@ -46,7 +46,7 @@ public class LibPreferencesTest {
     
     @BeforeClass
     public static void setUpClass() {
-        LoggerFacade.INSTANCE.deactivate(Boolean.TRUE);
+        LoggerFacade.getDefault().deactivate(Boolean.TRUE);
     }
     
     @AfterClass
