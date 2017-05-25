@@ -17,11 +17,11 @@ Content
 ---
 
 * [Examples](#Examples)
-   - [com.github.naoghuman.lib.database.LibPreferencesTest#initDefaultAndDropTrue()](#InitDefaultAndDropTrue)
-   - [com.github.naoghuman.lib.database.LibPreferencesTest#getStringInApplicationContext()](#GetStringInApplicationContext)
-   - [com.github.naoghuman.lib.database.LibPreferencesTest#putStringInApplicationContext()](#PutStringInApplicationContext)
-   - [com.github.naoghuman.lib.database.LibPreferencesTest#getBooleanInModuleContext()](#GetBooleanInModuleContext)
-   - [com.github.naoghuman.lib.database.LibPreferencesTest#putBooleanInModuleContext()](#PutBooleanInModuleContext)
+   - [com.github.naoghuman.lib.database.LibPreferencesTest#initDefaultAndDropTrue()](#InDeAnDrTr)
+   - [com.github.naoghuman.lib.database.LibPreferencesTest#getDefaultStringInApplicationContext()](#GeDeStInApCo)
+   - [com.github.naoghuman.lib.database.LibPreferencesTest#putStringInApplicationContext()](#PuStInApCo)
+   - [com.github.naoghuman.lib.database.LibPreferencesTest#getDefaultBooleanInModuleContext()](#GeDeBoInMoCo)
+   - [com.github.naoghuman.lib.database.LibPreferencesTest#putBooleanInModuleContext()](#PuBoInMoCo)
 * [Api](#Api)
     - [com.github.naoghuman.lib.preferences.api.PreferencesFacade](#PreferencesFacade)
 * [Download](#Download)
@@ -38,15 +38,22 @@ Content
 Examples<a name="Examples" />
 ---
 
-### com.github.naoghuman.lib.database.LibPreferencesTest#initDefaultAndDropTrue()<a name="InitDefaultAndDropTrue" />
+### com.github.naoghuman.lib.database.LibPreferencesTest#initDefaultAndDropTrue()<a name="InDeAnDrTr" />
 
 ```java
 private static final String NORMAL_PATH
         = System.getProperty("user.dir") + File.separator // NOI18N
         + "Preferences.properties"; // NOI18N
 
+/**
+ * The file <code>Preferences.properties</code> will only generated if a last 
+ * one <code>key-value</code> pair is written to the file.<br>
+ * <br>
+ * This test will write following statement in the file:<br>
+ * <code>com.github.naoghuman.lib.preferences.x=x</code>
+ */
 @Test
-public void initDefaultAndDropTrue() {
+public void initDefaultAndDropTrue() {    
     final File file = new File(NORMAL_PATH);
     assertFalse(NORMAL_PATH + " mustn't exists", file.exists());
   
@@ -56,48 +63,101 @@ public void initDefaultAndDropTrue() {
 ```
 
 
-### com.github.naoghuman.lib.database.LibPreferencesTest#getStringInApplicationContext()<a name="GetStringInApplicationContext" />
+### com.github.naoghuman.lib.database.LibPreferencesTest#getDefaultStringInApplicationContext()<a name="GeDeStInApCo" />
 
 ```java
+/**
+ * Searching in <code>ApplicationContext</code> means in this case that the 
+ * engine search for a <code>key=my.string.key1</code> with a prefix 
+ * <code>com.github.naoghuman.lib.preferences</code>. So the complete <code>key</code>
+ * for the search is <code>com.github.naoghuman.lib.preferences.my.string.key1</code>.<br>
+ * <br>
+ * If the <code>key</code> is not found in the file <code>Preferences.properties</code>
+ * then the <code>default</code> value will returned, in this case <code>x</code>.
+ */
 @Test
-public void getStringInApplicationContext() {
-    final String x = PreferencesFacade.getDefault().get("my.string.key1", "x");
-    assertEquals("x", x);
+public void getDefaultStringInApplicationContext() {
+    final String defaultValue = PreferencesFacade.getDefault().get("my.string.key1", "x");
+    assertEquals("x", defaultValue);
 }
 ```
 
 
-### com.github.naoghuman.lib.database.LibPreferencesTest#putStringInApplicationContext()<a name="PutStringInApplicationContext" />
+### com.github.naoghuman.lib.database.LibPreferencesTest#putStringInApplicationContext()<a name="PuStInApCo" />
 
 ```java
-Test
+/**
+ * Putting a <code>value</code> in the file <code>Preferences.properties</code> 
+ * in <code>ApplicationContext</code> will write in this case following statement 
+ * in the file:<br>
+ * <code>com.github.naoghuman.lib.preferences.my.string.key2=y</code><br>
+ * <br>
+ * Searching / writing in <code>ApplicationContext</code> means in this case that the 
+ * engine search / write a <code>key=my.string.key2</code> with a prefix 
+ * <code>com.github.naoghuman.lib.preferences</code>. So the complete <code>key</code>
+ * for the search / to write is <code>com.github.naoghuman.lib.preferences.my.string.key2</code>.<br>
+ * <br>
+ * Because the search engine find the <code>key</code> in the file not the 
+ * <code>default</code> value <code>x</code> will be returned instead the stored 
+ * value <code>y</code> will used.
+ */
+@Test
 public void putStringInApplicationContext() {
     PreferencesFacade.getDefault().put("my.string.key2", "y");
-    final String y = PreferencesFacade.getDefault().get("my.string.key2", "x");
-    assertEquals("y", y);
+
+    final String storedValue = PreferencesFacade.getDefault().get("my.string.key2", "x");
+    assertEquals("y", storedValue);
 }
 ```
 
 
-### com.github.naoghuman.lib.database.LibPreferencesTest#getBooleanInModuleContext()<a name="GetBooleanInModuleContext" />
+### com.github.naoghuman.lib.database.LibPreferencesTest#getDefaultBooleanInModuleContext()<a name="GeDeBoInMoCo" />
 
 ```java
+/**
+ * Searching in <code>ModuleContext</code> means that the engine search in 
+ * the package context from the given <code>class</code>.<br>
+ * <br>
+ * In the context from the class <code>dummy.module.context.DummyModuleContext</code> 
+ * the engine search for a <code>key=my.boolean.key13</code> with a prefix 
+ * <code>dummy.module.context</code>. So the complete <code>key</code>
+ * for the search is <code>dummy.module.context.my.boolean.key13</code>.<br>
+ * <br>
+ * Because the <code>key</code> is not found in the file <code>Preferences.properties</code>
+ * so the <code>default</code> value will returned, in this case <code>true</code>.
+ */
 @Test
-public void getBooleanInModuleContext() {
-    final boolean x = PreferencesFacade.getDefault().getBoolean(DummyModuleContext.class, "my.boolean.key13", true);
-    assertEquals(true, x);
+public void getDefaultBooleanInModuleContext() {
+    final boolean defaultValue = PreferencesFacade.getDefault().getBoolean(DummyModuleContext.class, "my.boolean.key13", true);
+    assertEquals(true, defaultValue);
 }
 ```
 
 
-### com.github.naoghuman.lib.database.LibPreferencesTest#putBooleanInModuleContext()<a name="PutBooleanInModuleContext" />
+### com.github.naoghuman.lib.database.LibPreferencesTest#putBooleanInModuleContext()<a name="PuBoInMoCo" />
 
 ```java
+/**
+ * Putting a <code>value</code> in the file <code>Preferences.properties</code> 
+ * in <code>ApplicationContext</code> will write in this case following statement 
+ * in the file:<br>
+ * <code>com.github.naoghuman.lib.preferences.my.string.key2=y</code><br>
+ * <br>
+ * Searching / writing in <code>ApplicationContext</code> means in this case that the 
+ * engine search / write a <code>key=my.string.key2</code> with a prefix 
+ * <code>com.github.naoghuman.lib.preferences</code>. So the complete <code>key</code>
+ * for the search / to write is <code>com.github.naoghuman.lib.preferences.my.string.key2</code>.<br>
+ * <br>
+ * Because the search engine find the <code>key</code> in the file not the 
+ * <code>default</code> value <code>x</code> will be returned instead the stored 
+ * value <code>y</code> will used.
+ */
 @Test
-public void putBooleanInModuleContext() {
-    PreferencesFacade.getDefault().putBoolean(DummyModuleContext.class, "my.boolean.key14", false);
-    final boolean y = PreferencesFacade.getDefault().getBoolean(DummyModuleContext.class, "my.boolean.key14", true);
-    assertEquals(false, y);
+public void putStringInApplicationContext() {
+    PreferencesFacade.getDefault().put("my.string.key2", "y");
+        
+    final String storedValue = PreferencesFacade.getDefault().get("my.string.key2", "x");
+    assertEquals("y", storedValue);
 }
 ```
 

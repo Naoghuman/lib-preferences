@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package dummy;
+package dummy.module.context;
 
 /**
  * This class is a dummy class for testing the module context.

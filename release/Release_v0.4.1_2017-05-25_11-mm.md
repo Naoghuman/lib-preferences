@@ -20,6 +20,7 @@ Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 
 
 #### Enhancement
+#18 [Documentation] Add additional commentary to the section `Examples`.
 
 
 
