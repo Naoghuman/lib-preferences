@@ -9,7 +9,7 @@ Intention
 Lib-Preferences is a library for `easy` storing simple data to a 
 Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 
-Current `version` is `0.4.0` (09.01.2016).
+Current `version` is `0.4.1` (05.25.2017).
 
 
 
@@ -478,22 +478,28 @@ public Preferences forModule(Class clazz);
 Download<a name="Download" />
 ---
 
-Current `version` is `0.4.0`. Main points in this release are:
-* Deploy the jar files to Maven Central :smiley: .
+Current `version` is `0.4.1`. Main points in this release are:
+* This is a minor update.
+* Primarily the section `Examples` in the README is with additional commentary updated.
 
 **Maven coordinates**  
 ```xml
 <dependencies>
     <dependency>
         <groupId>com.github.naoghuman</groupId>
+        <artifactId>lib-preferences</artifactId>
+        <version>0.4.1</version>
+    </dependency>
+    <dependency>
+        <groupId>com.github.naoghuman</groupId>
         <artifactId>lib-logger</artifactId>
-        <version>0.4.0</version>
+        <version>0.4.1</version>
     </dependency>
 </dependencies>
 ```
 
 Download:
-* [Release v0.4.0 (09.01.2016)]
+* [Release v0.4.1 (05.25.2017)]
 
 An overview about all existings releases can be found here:
 * [Overview from all releases in Lib-Preferences]
@@ -504,12 +510,12 @@ Requirements<a name="Requirements" />
 ---
 
 * On your system you need [JRE 8] or [JDK 8] installed.
-* The library [Lib-Preferences-0.4.0.jar](#Installation).
+* The library [Lib-Preferences-0.4.1.jar](#Installation).
 
 In the library are following libraries registered as dependencies:
-* The library [Lib-Logger-0.4.0.jar](#Installation).
-  * Included in `Lib-Logger` is the [log4j-api-2.6.2.jar].
-  * Included in `Lib-Logger` is the [log4j-core-2.6.2.jar].
+* The library [Lib-Logger-0.4.1.jar](#Installation).
+  * Included in `Lib-Logger` is the library [log4j-api-2.8.2.jar].
+  * Included is `Lib-Logger` is the library [log4j-core-2.8.2.jar].
 
 
 
@@ -576,13 +582,13 @@ You can reach me under <peter.rogge@yahoo.de>.
 [JRE 8]:http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
 [Lib-Preferences]:https://github.com/Naoghuman/lib-preferences
 [Lib-Logger]:https://github.com/Naoghuman/lib-logger
-[log4j-api-2.6.2.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
-[log4j-core-2.6.2.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
+[log4j-api-2.8.2.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
+[log4j-core-2.8.2.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
 [Maven]:http://maven.apache.org/
 [NetBeans]:https://netbeans.org/
 [Overview from all releases in Lib-Preferences]:https://github.com/Naoghuman/lib-preferences/releases
 [Pull Request]:https://help.github.com/articles/using-pull-requests
 [properties]:http://en.wikipedia.org/wiki/.properties
-[Release v0.4.0 (09.01.2016)]:https://github.com/Naoghuman/lib-preferences/releases/tag/v0.4.0
+[Release v0.4.1 (05.25.2017)]:https://github.com/Naoghuman/lib-preferences/releases/tag/v0.4.1
 
 
