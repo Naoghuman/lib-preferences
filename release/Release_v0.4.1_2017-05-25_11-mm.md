@@ -28,6 +28,7 @@ Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 
 
 #### Refactoring
+#17 [pom] Remove dependency to `maven-release-plugin`.
 
 
 
