@@ -28,6 +28,7 @@ Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 
 
 #### Refactoring
+#19 [pom] Update dependency to the library `Lib-Logger`.
 #17 [pom] Remove dependency to `maven-release-plugin`.
 
 
