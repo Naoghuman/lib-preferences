@@ -16,7 +16,7 @@
  */
 package com.github.naoghuman.lib.preferences;
 
-import com.github.naoghuman.lib.preferences.core.FilePreferences;
+import com.github.naoghuman.lib.preferences.internal.FilePreferences;
 import com.github.naoghuman.lib.logger.api.LoggerFacade;
 import com.github.naoghuman.lib.preferences.api.ILibPreferences;
 import java.io.File;
