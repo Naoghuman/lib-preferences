@@ -1,5 +1,5 @@
-/*
- * Copyright (C) 2014 Naoghuman
+/**
+ * Copyright (C) 2017 Naoghuman
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,13 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package dummy.module.context;
-
 /**
- * This class is a dummy class for testing the module context.
- *
- * @author Naoghuman
+ * Contains the <code>API</code> for the library <code>Lib-Preferences</code>.
  */
-public class DummyModuleContext {
-    
-}
+package com.github.naoghuman.lib.preferences.core;
