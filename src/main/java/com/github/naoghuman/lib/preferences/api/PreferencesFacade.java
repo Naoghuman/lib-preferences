@@ -27,6 +27,7 @@ import java.util.prefs.Preferences;
  * @author PRo
  * @see com.github.naoghuman.lib.preferences.api.ILibPreferences
  */
+@Deprecated
 public final class PreferencesFacade implements ILibPreferences {
     
     private static final Optional<PreferencesFacade> instance = Optional.of(new PreferencesFacade());
@@ -36,6 +37,7 @@ public final class PreferencesFacade implements ILibPreferences {
      * 
      * @return a singleton instance from the class <code>PreferencesFacade</code>.
      */
+    @Deprecated
     public static final PreferencesFacade getDefault() {
         return instance.get();
     }
@@ -51,116 +53,139 @@ public final class PreferencesFacade implements ILibPreferences {
     }
 
     @Override
+    @Deprecated
     public Boolean getBoolean(String key, Boolean def) {
         return preferences.getBoolean(key, def);
     }
 
     @Override
+    @Deprecated
     public Boolean getBoolean(Class clazz, String key, Boolean def) {
         return preferences.getBoolean(clazz, key, def);
     }
 
     @Override
+    @Deprecated
     public void putBoolean(String key, Boolean value) {
         preferences.putBoolean(key, value);
     }
 
     @Override
+    @Deprecated
     public void putBoolean(Class clazz, String key, Boolean value) {
         preferences.putBoolean(clazz, key, value);
     }
 
     @Override
+    @Deprecated
     public String get(String key, String def) {
         return preferences.get(key, def);
     }
 
     @Override
+    @Deprecated
     public String get(Class clazz, String key, String def) {
         return preferences.get(clazz, key, def);
     }
 
     @Override
+    @Deprecated
     public void put(String key, String value) {
         preferences.put(key, value);
     }
 
     @Override
+    @Deprecated
     public void put(Class clazz, String key, String value) {
         preferences.put(clazz, key, value);
     }
 
     @Override
+    @Deprecated
     public Double getDouble(String key, Double def) {
         return preferences.getDouble(key, def);
     }
 
     @Override
+    @Deprecated
     public Double getDouble(Class clazz, String key, Double def) {
         return preferences.getDouble(clazz, key, def);
     }
 
     @Override
+    @Deprecated
     public void putDouble(String key, Double value) {
         preferences.putDouble(key, value);
     }
 
     @Override
+    @Deprecated
     public void putDouble(Class clazz, String key, Double value) {
         preferences.putDouble(clazz, key, value);
     }
 
     @Override
+    @Deprecated
     public Integer getInt(String key, Integer def) {
         return preferences.getInt(key, def);
     }
 
     @Override
+    @Deprecated
     public Integer getInt(Class clazz, String key, Integer def) {
         return preferences.getInt(clazz, key, def);
     }
 
     @Override
+    @Deprecated
     public void putInt(String key, Integer value) {
         preferences.putInt(key, value);
     }
 
     @Override
+    @Deprecated
     public void putInt(Class clazz, String key, Integer value) {
         preferences.putInt(clazz, key, value);
     }
 
     @Override
+    @Deprecated
     public Long getLong(String key, Long def) {
         return preferences.getLong(key, def);
     }
 
     @Override
+    @Deprecated
     public Long getLong(Class clazz, String key, Long def) {
         return preferences.getLong(clazz, key, def);
     }
 
     @Override
+    @Deprecated
     public void putLong(String key, Long value) {
         preferences.putLong(key, value);
     }
 
     @Override
+    @Deprecated
     public void putLong(Class clazz, String key, Long value) {
         preferences.putLong(clazz, key, value);
     }
 
     @Override
+    @Deprecated
     public void init(boolean drop) {
         preferences.init(drop);
     }
 
     @Override
+    @Deprecated
     public Preferences forApplication() {
         return preferences.forApplication();
     }
 
     @Override
+    @Deprecated
     public Preferences forModule(Class clazz) {
         return preferences.forModule(clazz);
     }

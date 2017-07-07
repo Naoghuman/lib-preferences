@@ -27,16 +27,19 @@ import java.util.prefs.Preferences;
  * @see com.github.naoghuman.lib.preferences.LibPreferences
  * @see com.github.naoghuman.lib.preferences.api.PreferencesFacade
  */
+@Deprecated
 public interface ILibPreferences {
     
     /**
      * Key constant for accessing the system preferfence file.
      */
+    @Deprecated
     public static final String SYSTEM_PREFERENCES__FILE = "SYSTEM_PREFERENCES__FILE"; // NOI18N
     
     /**
      * Default value contant for the system preferfence file.
      */
+    @Deprecated
     public static final String SYSTEM_PREFERENCES__FILE_DEFAULT_VALUE = "Preferences.properties"; // NOI18N
     
     /**
@@ -46,6 +49,7 @@ public interface ILibPreferences {
      * @param def The default value if the key isn't stored.
      * @return The <code>Boolean</code> which is associated with the key or the default value.
      */
+    @Deprecated
     public Boolean getBoolean(String key, Boolean def);
     
     /**
@@ -56,6 +60,7 @@ public interface ILibPreferences {
      * @param def The default value if the key isn't stored.
      * @return The <code>Boolean</code> which is associated with the key or the default value.
      */
+    @Deprecated
     public Boolean getBoolean(Class clazz, String key, Boolean def);
     
     /**
@@ -64,6 +69,7 @@ public interface ILibPreferences {
      * @param key The key for the saved <code>Boolean</code>.
      * @param value The value which will associated with the key.
      */
+    @Deprecated
     public void putBoolean(String key, Boolean value);
     
     /**
@@ -73,6 +79,7 @@ public interface ILibPreferences {
      * @param key The key for the to saved <code>Boolean</code>.
      * @param value The value which will associated with the key.
      */
+    @Deprecated
     public void putBoolean(Class clazz, String key, Boolean value);
     
     /**
@@ -82,6 +89,7 @@ public interface ILibPreferences {
      * @param def The default value if the key isn't stored.
      * @return The <code>String</code> which is associated with the key or the default value.
      */
+    @Deprecated
     public String get(String key, String def);
     
     /**
@@ -92,6 +100,7 @@ public interface ILibPreferences {
      * @param def The default value if the key isn't stored.
      * @return The <code>String</code> which is associated with the key or the default value.
      */
+    @Deprecated
     public String get(Class clazz, String key, String def);
     
     /**
@@ -100,6 +109,7 @@ public interface ILibPreferences {
      * @param key The key for the saved <code>String</code>.
      * @param value The value which will associated with the key.
      */
+    @Deprecated
     public void put(String key, String value);
     
     /**
@@ -109,6 +119,7 @@ public interface ILibPreferences {
      * @param key The key for the to saved <code>String</code>.
      * @param value The value which will associated with the key.
      */
+    @Deprecated
     public void put(Class clazz, String key, String value);
     
     /**
@@ -118,6 +129,7 @@ public interface ILibPreferences {
      * @param def The default value if the key isn't stored.
      * @return The <code>Double</code> which is associated with the key or the default value.
      */
+    @Deprecated
     public Double getDouble( String key, Double def);
     
     /**
@@ -128,6 +140,7 @@ public interface ILibPreferences {
      * @param def The default value if the key isn't stored.
      * @return The <code>Double</code> which is associated with the key or the default value.
      */
+    @Deprecated
     public Double getDouble(Class clazz, String key, Double def);
     
     /**
@@ -136,6 +149,7 @@ public interface ILibPreferences {
      * @param key The key for the saved <code>Double</code>.
      * @param value The value which will associated with the key.
      */
+    @Deprecated
     public void putDouble(String key, Double value);
     
     /**
@@ -145,6 +159,7 @@ public interface ILibPreferences {
      * @param key The key for the to saved <code>Double</code>.
      * @param value The value which will associated with the key.
      */
+    @Deprecated
     public void putDouble(Class clazz, String key, Double value);
     
     /**
@@ -154,6 +169,7 @@ public interface ILibPreferences {
      * @param def The default value if the key isn't stored.
      * @return The <code>Integer</code> which is associated with the key or the default value.
      */
+    @Deprecated
     public Integer getInt(String key, Integer def);
     
     /**
@@ -164,6 +180,7 @@ public interface ILibPreferences {
      * @param def The default value if the key isn't stored.
      * @return The <code>Integer</code> which is associated with the key or the default value.
      */
+    @Deprecated
     public Integer getInt(Class clazz, String key, Integer def);
     
     /**
@@ -172,6 +189,7 @@ public interface ILibPreferences {
      * @param key The key for the saved <code>Integer</code>.
      * @param value The value which will associated with the key.
      */
+    @Deprecated
     public void putInt(String key, Integer value);
     
     /**
@@ -181,6 +199,7 @@ public interface ILibPreferences {
      * @param key The key for the to saved <code>Integer</code>.
      * @param value The value which will associated with the key.
      */
+    @Deprecated
     public void putInt(Class clazz, String key, Integer value);
     
     /**
@@ -190,6 +209,7 @@ public interface ILibPreferences {
      * @param def The default value if the key isn't stored.
      * @return The <code>Long</code> which is associated with the key or the default value.
      */
+    @Deprecated
     public Long getLong(String key, Long def);
     
     /**
@@ -200,6 +220,7 @@ public interface ILibPreferences {
      * @param def The default value if the key isn't stored.
      * @return The <code>Long</code> which is associated with the key or the default value.
      */
+    @Deprecated
     public Long getLong(Class clazz, String key, Long def);
     
     /**
@@ -208,6 +229,7 @@ public interface ILibPreferences {
      * @param key The key for the saved <code>Long</code>.
      * @param value The value which will associated with the key.
      */
+    @Deprecated
     public void putLong(String key, Long value);
     
     /**
@@ -217,6 +239,7 @@ public interface ILibPreferences {
      * @param key The key for the to saved <code>Long</code>.
      * @param value The value which will associated with the key.
      */
+    @Deprecated
     public void putLong(Class clazz, String key, Long value);
     
     /**
@@ -227,6 +250,7 @@ public interface ILibPreferences {
      * 
      * @param drop Should an existing file dropped at frist?
      */
+    @Deprecated
     public void init(boolean drop);
     
     /**
@@ -236,6 +260,7 @@ public interface ILibPreferences {
      * 
      * @return The <code>Preferences</code> in application context.
      */
+    @Deprecated
     public Preferences forApplication();
     
     /**
@@ -246,6 +271,7 @@ public interface ILibPreferences {
      * @param clazz The class in which defined the module.
      * @return The <code>Preferences</code> in module context.
      */
+    @Deprecated
     public Preferences forModule(Class clazz);
     
 }

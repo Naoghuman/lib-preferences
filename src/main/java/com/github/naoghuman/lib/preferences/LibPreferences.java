@@ -16,6 +16,7 @@
  */
 package com.github.naoghuman.lib.preferences;
 
+import com.github.naoghuman.lib.preferences.core.FilePreferences;
 import com.github.naoghuman.lib.logger.api.LoggerFacade;
 import com.github.naoghuman.lib.preferences.api.ILibPreferences;
 import java.io.File;
@@ -29,6 +30,7 @@ import java.util.prefs.Preferences;
  * @see com.github.naoghuman.lib.preferences.api.ILibPreferences
  * @see com.github.naoghuman.lib.preferences.api.PreferencesFacade
  */
+@Deprecated
 public final class LibPreferences implements ILibPreferences {
     
     private static ILibPreferencesProvider PREFS_IMPL = null;
