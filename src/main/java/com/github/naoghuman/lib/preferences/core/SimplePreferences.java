@@ -221,7 +221,7 @@ public interface SimplePreferences {
     public void putLong(Class clazz, String key, Long value);
     
     /**
-     * Initialize the <code>Preferences.properties</code> file.<br />
+     * Initialize the <code>Preferences.properties</code> file.<br>
      * That means that the <code>Preferences.properties</code> file will created
      * under <code>System.getProperty("user.dir") + File.separator
      * + "Preferences.properties"</code>.

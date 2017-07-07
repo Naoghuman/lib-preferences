@@ -14,11 +14,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.github.naoghuman.lib.preferences;
+package com.github.naoghuman.lib.preferences.core;
 
-import com.github.naoghuman.lib.logger.api.LoggerFacade;
-import com.github.naoghuman.lib.preferences.core.PreferencesFacade;
 import dummy.module.context.DummyModuleContext;
+import com.github.naoghuman.lib.logger.api.LoggerFacade;
 import java.io.File;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -67,7 +66,7 @@ public class SimplePreferencesTest {
      * one <code>key-value</code> pair is written to the file.<br>
      * <br>
      * This test will write following statement in the file:<br>
-     * <code>com.github.naoghuman.lib.preferences.x=x</code>
+     * <code>com.github.naoghuman.lib.preferences.internal.x=x</code>
      */
     @Test
     public void initDefaultAndDropTrue() {
@@ -81,8 +80,8 @@ public class SimplePreferencesTest {
     /**
      * Searching in <code>ApplicationContext</code> means in this case that the 
      * engine search for a <code>key=my.string.key1</code> with a prefix 
-     * <code>com.github.naoghuman.lib.preferences</code>. So the complete <code>key</code>
-     * for the search is <code>com.github.naoghuman.lib.preferences.my.string.key1</code>.<br>
+     * <code>com.github.naoghuman.lib.preferences.internal</code>. So the complete <code>key</code>
+     * for the search is <code>com.github.naoghuman.lib.preferences.internal.my.string.key1</code>.<br>
      * <br>
      * If the <code>key</code> is not found in the file <code>Preferences.properties</code>
      * then the <code>default</code> value will returned, in this case <code>x</code>.
@@ -97,12 +96,12 @@ public class SimplePreferencesTest {
      * Putting a <code>value</code> in the file <code>Preferences.properties</code> 
      * in <code>ApplicationContext</code> will write in this case following statement 
      * in the file:<br>
-     * <code>com.github.naoghuman.lib.preferences.my.string.key2=y</code><br>
+     * <code>com.github.naoghuman.lib.preferences.internal.my.string.key2=y</code><br>
      * <br>
      * Searching / writing in <code>ApplicationContext</code> means in this case that the 
      * engine search / write a <code>key=my.string.key2</code> with a prefix 
-     * <code>com.github.naoghuman.lib.preferences</code>. So the complete <code>key</code>
-     * for the search / to write is <code>com.github.naoghuman.lib.preferences.my.string.key2</code>.<br>
+     * <code>com.github.naoghuman.lib.preferences.internal</code>. So the complete <code>key</code>
+     * for the search / to write is <code>com.github.naoghuman.lib.preferences.internal.my.string.key2</code>.<br>
      * <br>
      * Because the search engine find the <code>key</code> in the file not the 
      * <code>default</code> value <code>x</code> will be returned instead the stored 

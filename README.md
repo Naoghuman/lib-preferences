@@ -9,6 +9,12 @@ Intention
 Lib-Preferences is a library for `easy` storing simple data to a 
 Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 
+_Image:_ [UML] Lib-Preferences  
+![UML-diagram_Lib-Preferences_v0.5.0_2017-07-07_19-56.png][UML-diagram_Lib-Preferences_v0.5.0_2017-07-07_19-56]
+
+> __Hint__  
+> The `UML` diagram is created with the `Online Modeling Platform` [GenMyModel].
+
 Current `version` is `0.4.1` (05.25.2017).
 
 
@@ -17,13 +23,14 @@ Content
 ---
 
 * [Examples](#Examples)
-   - [com.github.naoghuman.lib.database.LibPreferencesTest#initDefaultAndDropTrue()](#InDeAnDrTr)
-   - [com.github.naoghuman.lib.database.LibPreferencesTest#getDefaultStringInApplicationContext()](#GeDeStInApCo)
-   - [com.github.naoghuman.lib.database.LibPreferencesTest#putStringInApplicationContext()](#PuStInApCo)
-   - [com.github.naoghuman.lib.database.LibPreferencesTest#getDefaultBooleanInModuleContext()](#GeDeBoInMoCo)
-   - [com.github.naoghuman.lib.database.LibPreferencesTest#putBooleanInModuleContext()](#PuBoInMoCo)
+   - [com.github.naoghuman.lib.preferences.core.SimplePreferencesTest#initDefaultAndDropTrue()](#InDeAnDrTr)
+   - [com.github.naoghuman.lib.preferences.core.SimplePreferencesTest#getDefaultStringInApplicationContext()](#GeDeStInApCo)
+   - [com.github.naoghuman.lib.preferences.core.SimplePreferencesTest#putStringInApplicationContext()](#PuStInApCo)
+   - [com.github.naoghuman.lib.preferences.core.SimplePreferencesTest#getDefaultBooleanInModuleContext()](#GeDeBoInMoCo)
+   - [com.github.naoghuman.lib.preferences.core.SimplePreferencesTest#putBooleanInModuleContext()](#PuBoInMoCo)
 * [Api](#Api)
-    - [com.github.naoghuman.lib.preferences.api.PreferencesFacade](#PreferencesFacade)
+    - [com.github.naoghuman.lib.preferences.core.PreferencesFacade](#PreferencesFacade)
+    - [com.github.naoghuman.lib.preferences.core.SimplePreferences](#SimplePreferences)
 * [Download](#Download)
 * [Requirements](#Requirements)
 * [Installation](#Installation)
@@ -38,7 +45,7 @@ Content
 Examples<a name="Examples" />
 ---
 
-### com.github.naoghuman.lib.database.LibPreferencesTest#initDefaultAndDropTrue()<a name="InDeAnDrTr" />
+### com.github.naoghuman.lib.preferences.core.SimplePreferencesTest#initDefaultAndDropTrue()<a name="InDeAnDrTr" />
 
 ```java
 private static final String NORMAL_PATH
@@ -50,7 +57,7 @@ private static final String NORMAL_PATH
  * one <code>key-value</code> pair is written to the file.<br>
  * <br>
  * This test will write following statement in the file:<br>
- * <code>com.github.naoghuman.lib.preferences.x=x</code>
+ * <code>com.github.naoghuman.lib.preferences.internal.x=x</code>
  */
 @Test
 public void initDefaultAndDropTrue() {    
@@ -63,14 +70,14 @@ public void initDefaultAndDropTrue() {
 ```
 
 
-### com.github.naoghuman.lib.database.LibPreferencesTest#getDefaultStringInApplicationContext()<a name="GeDeStInApCo" />
+### com.github.naoghuman.lib.preferences.core.SimplePreferencesTest#getDefaultStringInApplicationContext()<a name="GeDeStInApCo" />
 
 ```java
 /**
  * Searching in <code>ApplicationContext</code> means in this case that the 
  * engine search for a <code>key=my.string.key1</code> with a prefix 
- * <code>com.github.naoghuman.lib.preferences</code>. So the complete <code>key</code>
- * for the search is <code>com.github.naoghuman.lib.preferences.my.string.key1</code>.<br>
+ * <code>com.github.naoghuman.lib.preferences.internal</code>. So the complete <code>key</code>
+ * for the search is <code>com.github.naoghuman.lib.preferences.internal.my.string.key1</code>.<br>
  * <br>
  * If the <code>key</code> is not found in the file <code>Preferences.properties</code>
  * then the <code>default</code> value will returned, in this case <code>x</code>.
@@ -83,19 +90,19 @@ public void getDefaultStringInApplicationContext() {
 ```
 
 
-### com.github.naoghuman.lib.database.LibPreferencesTest#putStringInApplicationContext()<a name="PuStInApCo" />
+### com.github.naoghuman.lib.preferences.core.SimplePreferencesTest#putStringInApplicationContext()<a name="PuStInApCo" />
 
 ```java
 /**
  * Putting a <code>value</code> in the file <code>Preferences.properties</code> 
  * in <code>ApplicationContext</code> will write in this case following statement 
  * in the file:<br>
- * <code>com.github.naoghuman.lib.preferences.my.string.key2=y</code><br>
+ * <code>com.github.naoghuman.lib.preferences.internal.my.string.key2=y</code><br>
  * <br>
  * Searching / writing in <code>ApplicationContext</code> means in this case that the 
  * engine search / write a <code>key=my.string.key2</code> with a prefix 
- * <code>com.github.naoghuman.lib.preferences</code>. So the complete <code>key</code>
- * for the search / to write is <code>com.github.naoghuman.lib.preferences.my.string.key2</code>.<br>
+ * <code>com.github.naoghuman.lib.preferences.internal</code>. So the complete <code>key</code>
+ * for the search / to write is <code>com.github.naoghuman.lib.preferences.internal.my.string.key2</code>.<br>
  * <br>
  * Because the search engine find the <code>key</code> in the file not the 
  * <code>default</code> value <code>x</code> will be returned instead the stored 
@@ -111,7 +118,7 @@ public void putStringInApplicationContext() {
 ```
 
 
-### com.github.naoghuman.lib.database.LibPreferencesTest#getDefaultBooleanInModuleContext()<a name="GeDeBoInMoCo" />
+### com.github.naoghuman.lib.preferences.core.SimplePreferencesTest#getDefaultBooleanInModuleContext()<a name="GeDeBoInMoCo" />
 
 ```java
 /**
@@ -134,7 +141,7 @@ public void getDefaultBooleanInModuleContext() {
 ```
 
 
-### com.github.naoghuman.lib.database.LibPreferencesTest#putBooleanInModuleContext()<a name="PuBoInMoCo" />
+### com.github.naoghuman.lib.preferences.core.SimplePreferencesTest#putBooleanInModuleContext()<a name="PuBoInMoCo" />
 
 ```java
 /**
@@ -166,17 +173,48 @@ public void putStringInApplicationContext() {
 Api<a name="Api" />
 ---
 
-### com.github.naoghuman.lib.preferences.api.PreferencesFacade<a name="PreferencesFacade" />
+### com.github.naoghuman.lib.preferences.core.PreferencesFacade<a name="PreferencesFacade" />
 
 ```java
 /**
- * The facade {@link com.github.naoghuman.lib.preferences.api.PreferencesFacade} provides 
- * access to the Interface {@link com.github.naoghuman.lib.preferences.api.ILibPreferences}.
+ * The facade {@link com.github.naoghuman.lib.preferences.core.PreferencesFacade} provides 
+ * access to the default implementation from the {@code Interface} 
+ * {@link com.github.naoghuman.lib.preferences.core.SimplePreferences}.<br>
+ * The default implementation from the Interface {@code SimplePreferences} is 
+ * {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences}.
  *
- * @author PRo
- * @see com.github.naoghuman.lib.preferences.api.ILibPreferences
+ * @author Naoghuman
+ * @see com.github.naoghuman.lib.preferences.core.SimplePreferences
+ * @see com.github.naoghuman.lib.preferences.internal.DefaultPreferences
  */
-public final class PreferencesFacade implements ILibPreferences {
+public class PreferencesFacade implements SimplePreferences {
+```
+
+
+```java
+/**
+ * Returns a singleton instance from the class <code>PreferencesFacade</code>.
+ * 
+ * @return a singleton instance from the class <code>PreferencesFacade</code>.
+ */
+public static final PreferencesFacade getDefault()
+```
+
+
+### com.github.naoghuman.lib.preferences.core.SimplePreferences<a name="SimplePreferences" />
+
+```java
+/**
+ * The {@code Interface} for the default implementation 
+ * {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences}.<br>
+ * Over the facade {@link com.github.naoghuman.lib.preferences.core.PreferencesFacade} 
+ * you can access to the implementation for the methods in this {@code Interface}.
+ *
+ * @author Naoghuman
+ * @see com.github.naoghuman.lib.preferences.core.PreferencesFacade
+ * @see com.github.naoghuman.lib.preferences.internal.DefaultPreferences
+ */
+public interface SimplePreferences {
 ```
 
 
@@ -438,7 +476,7 @@ public void putLong(Class clazz, String key, Long value);
 
 ```java
 /**
- * Initialize the <code>Preferences.properties</code> file.<br />
+ * Initialize the <code>Preferences.properties</code> file.<br>
  * That means that the <code>Preferences.properties</code> file will created
  * under <code>System.getProperty("user.dir") + File.separator
  * + "Preferences.properties"</code>.
@@ -535,7 +573,9 @@ Installation<a name="Installation" />
 Documentation<a name="Documentation" />
 ---
 
-* In section [Api](#Api) you can see the main point(s) to access the functionality 
+* In the section [Examples](#Examples) you can see different examples to put and
+  get in the custom file `Preferences.properties`.
+* In the section [Api](#Api) you can see the main point(s) to access the functionality 
   in this library.
 * For additional information see the [JavaDoc] in the library itself.
 
@@ -569,10 +609,17 @@ Contact<a name="Contact" />
 You can reach me under <peter.rogge@yahoo.de>.
 
 
+
+[//]: # (Images)
+[UML-diagram_Lib-Preferences_v0.5.0_2017-07-07_19-56]:https://user-images.githubusercontent.com/8161815/27970427-135599b2-634f-11e7-8bad-98bb3601f493.png
+
+
+
 [//]: # (Links)
 [Eclipse]:https://www.eclipse.org/
 [FXML]:http://docs.oracle.com/javafx/2/fxml_get_started/jfxpub-fxml_get_started.htm
 [General Public License 3.0]:http://www.gnu.org/licenses/gpl-3.0.en.html
+[GenMyModel]:https://www.genmymodel.com/
 [IntelliJ IDEA]:http://www.jetbrains.com/idea/
 [Issue]:https://github.com/Naoghuman/lib-preferences/issues
 [JavaDoc]:http://www.oracle.com/technetwork/java/javase/documentation/index-jsp-135444.html
@@ -590,5 +637,6 @@ You can reach me under <peter.rogge@yahoo.de>.
 [Pull Request]:https://help.github.com/articles/using-pull-requests
 [properties]:http://en.wikipedia.org/wiki/.properties
 [Release v0.4.1 (05.25.2017)]:https://github.com/Naoghuman/lib-preferences/releases/tag/v0.4.1
+[UML]:https://en.wikipedia.org/wiki/Unified_Modeling_Language
 
 

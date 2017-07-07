@@ -20,6 +20,7 @@ Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 
 
 #### Enhancement
+#20 [api] Create new packages to reflect my new package structure in the library.
 
 
 
@@ -41,7 +42,6 @@ Naoghuman
 
 
 [//]: # (Issues which will be integrated in this release)
-
 
 
 [//]: # (Links)
