@@ -6,8 +6,10 @@ Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 
 
 #### Summary
-* ...
-* ...
+* This is a major update.
+* Create new package structure to reflect my new library conventions.
+* Deprecated all old classes and interfaces.
+* Update the readme to reflect the changes.
 
 
 
@@ -34,6 +36,7 @@ Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 
 
 #### Additional
+#22 [version] Prepare the library for the release 0.5.0.
 
 
 
