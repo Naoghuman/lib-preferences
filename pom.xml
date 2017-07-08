@@ -100,7 +100,7 @@
         <dependency>
             <groupId>com.github.naoghuman</groupId>
             <artifactId>lib-logger</artifactId>
-            <version>0.4.1</version>
+            <version>0.5.0</version>
             <type>jar</type>
         </dependency>
         
@@ -112,5 +112,6 @@
             <type>jar</type>
         </dependency>
     </dependencies>
+    
 </project>
 

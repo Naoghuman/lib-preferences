@@ -531,7 +531,7 @@ Current `version` is `0.4.1`. Main points in this release are:
     <dependency>
         <groupId>com.github.naoghuman</groupId>
         <artifactId>lib-logger</artifactId>
-        <version>0.4.1</version>
+        <version>0.5.0</version>
     </dependency>
 </dependencies>
 ```
@@ -539,7 +539,7 @@ Current `version` is `0.4.1`. Main points in this release are:
 Download:
 * [Release v0.4.1 (05.25.2017)]
 
-An overview about all existings releases can be found here:
+An `overview` about all existings releases can be found here:
 * [Overview from all releases in Lib-Preferences]
 
 
@@ -551,7 +551,7 @@ Requirements<a name="Requirements" />
 * The library [Lib-Preferences-0.4.1.jar](#Installation).
 
 In the library are following libraries registered as dependencies:
-* The library [Lib-Logger-0.4.1.jar](#Installation).
+* The library [Lib-Logger-0.5.0.jar](#Installation).
   * Included in `Lib-Logger` is the library [log4j-api-2.8.2.jar].
   * Included is `Lib-Logger` is the library [log4j-core-2.8.2.jar].
 
@@ -574,7 +574,7 @@ Documentation<a name="Documentation" />
 ---
 
 * In the section [Examples](#Examples) you can see different examples to put and
-  get in the custom file `Preferences.properties`.
+  get simple data in the your custom file `Preferences.properties`.
 * In the section [Api](#Api) you can see the main point(s) to access the functionality 
   in this library.
 * For additional information see the [JavaDoc] in the library itself.
