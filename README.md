@@ -23,11 +23,11 @@ Content
 ---
 
 * [Examples](#Examples)
-   - [com.github.naoghuman.lib.preferences.core.SimplePreferencesTest#initDefaultAndDropTrue()](#InDeAnDrTr)
-   - [com.github.naoghuman.lib.preferences.core.SimplePreferencesTest#getDefaultStringInApplicationContext()](#GeDeStInApCo)
-   - [com.github.naoghuman.lib.preferences.core.SimplePreferencesTest#putStringInApplicationContext()](#PuStInApCo)
-   - [com.github.naoghuman.lib.preferences.core.SimplePreferencesTest#getDefaultBooleanInModuleContext()](#GeDeBoInMoCo)
-   - [com.github.naoghuman.lib.preferences.core.SimplePreferencesTest#putBooleanInModuleContext()](#PuBoInMoCo)
+   - [SimplePreferencesTest#initDefaultAndDropTrue()](#InDeAnDrTr)
+   - [SimplePreferencesTest#getDefaultStringInApplicationContext()](#GeDeStInApCo)
+   - [SimplePreferencesTest#putStringInApplicationContext()](#PuStInApCo)
+   - [SimplePreferencesTest#getDefaultBooleanInModuleContext()](#GeDeBoInMoCo)
+   - [SimplePreferencesTest#putBooleanInModuleContext()](#PuBoInMoCo)
 * [Api](#Api)
     - [com.github.naoghuman.lib.preferences.core.PreferencesFacade](#PreferencesFacade)
     - [com.github.naoghuman.lib.preferences.core.SimplePreferences](#SimplePreferences)
@@ -45,7 +45,7 @@ Content
 Examples<a name="Examples" />
 ---
 
-### com.github.naoghuman.lib.preferences.core.SimplePreferencesTest#initDefaultAndDropTrue()<a name="InDeAnDrTr" />
+### SimplePreferencesTest#initDefaultAndDropTrue()<a name="InDeAnDrTr" />
 
 ```java
 private static final String NORMAL_PATH
@@ -70,7 +70,7 @@ public void initDefaultAndDropTrue() {
 ```
 
 
-### com.github.naoghuman.lib.preferences.core.SimplePreferencesTest#getDefaultStringInApplicationContext()<a name="GeDeStInApCo" />
+### SimplePreferencesTest#getDefaultStringInApplicationContext()<a name="GeDeStInApCo" />
 
 ```java
 /**
@@ -90,7 +90,7 @@ public void getDefaultStringInApplicationContext() {
 ```
 
 
-### com.github.naoghuman.lib.preferences.core.SimplePreferencesTest#putStringInApplicationContext()<a name="PuStInApCo" />
+### SimplePreferencesTest#putStringInApplicationContext()<a name="PuStInApCo" />
 
 ```java
 /**
@@ -118,7 +118,7 @@ public void putStringInApplicationContext() {
 ```
 
 
-### com.github.naoghuman.lib.preferences.core.SimplePreferencesTest#getDefaultBooleanInModuleContext()<a name="GeDeBoInMoCo" />
+### SimplePreferencesTest#getDefaultBooleanInModuleContext()<a name="GeDeBoInMoCo" />
 
 ```java
 /**
@@ -141,7 +141,7 @@ public void getDefaultBooleanInModuleContext() {
 ```
 
 
-### com.github.naoghuman.lib.preferences.core.SimplePreferencesTest#putBooleanInModuleContext()<a name="PuBoInMoCo" />
+### SimplePreferencesTest#putBooleanInModuleContext()<a name="PuBoInMoCo" />
 
 ```java
 /**
