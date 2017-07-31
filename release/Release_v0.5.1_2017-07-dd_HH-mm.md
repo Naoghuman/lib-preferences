@@ -28,6 +28,7 @@ Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 
 
 #### Refactoring
+#24 [Refactoring] Rename DefaultPreferences to DefaultSimplePreferences.
 
 
 

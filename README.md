@@ -181,11 +181,11 @@ Api<a name="Api" />
  * access to the default implementation from the {@code Interface} 
  * {@link com.github.naoghuman.lib.preferences.core.SimplePreferences}.<br>
  * The default implementation from the Interface {@code SimplePreferences} is 
- * {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences}.
+ * {@link com.github.naoghuman.lib.preferences.internal.DefaultSimplePreferences}.
  *
  * @author Naoghuman
  * @see com.github.naoghuman.lib.preferences.core.SimplePreferences
- * @see com.github.naoghuman.lib.preferences.internal.DefaultPreferences
+ * @see com.github.naoghuman.lib.preferences.internal.DefaultSimplePreferences
  */
 public class PreferencesFacade implements SimplePreferences {
 ```
@@ -206,13 +206,13 @@ public static final PreferencesFacade getDefault()
 ```java
 /**
  * The {@code Interface} for the default implementation 
- * {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences}.<br>
+ * {@link com.github.naoghuman.lib.preferences.internal.DefaultSimplePreferences}.<br>
  * Over the facade {@link com.github.naoghuman.lib.preferences.core.PreferencesFacade} 
  * you can access to the implementation for the methods in this {@code Interface}.
  *
  * @author Naoghuman
  * @see com.github.naoghuman.lib.preferences.core.PreferencesFacade
- * @see com.github.naoghuman.lib.preferences.internal.DefaultPreferences
+ * @see com.github.naoghuman.lib.preferences.internal.DefaultSimplePreferences
  */
 public interface SimplePreferences {
 ```

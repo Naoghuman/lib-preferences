@@ -30,7 +30,7 @@ import java.util.prefs.Preferences;
  * @see com.github.naoghuman.lib.preferences.core.SimplePreferences
  * @see com.github.naoghuman.lib.preferences.core.PreferencesFacade
  */
-public class DefaultPreferences implements SimplePreferences {
+public class DefaultSimplePreferences implements SimplePreferences {
     
     private static DefaultPreferencesProvider PREFS_IMPL = null;
     

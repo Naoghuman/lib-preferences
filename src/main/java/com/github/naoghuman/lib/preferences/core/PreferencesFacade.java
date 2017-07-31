@@ -16,7 +16,7 @@
  */
 package com.github.naoghuman.lib.preferences.core;
 
-import com.github.naoghuman.lib.preferences.internal.DefaultPreferences;
+import com.github.naoghuman.lib.preferences.internal.DefaultSimplePreferences;
 import java.util.Optional;
 import java.util.prefs.Preferences;
 
@@ -25,11 +25,11 @@ import java.util.prefs.Preferences;
  * access to the default implementation from the {@code Interface} 
  * {@link com.github.naoghuman.lib.preferences.core.SimplePreferences}.<br>
  * The default implementation from the Interface {@code SimplePreferences} is 
- * {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences}.
+ * {@link com.github.naoghuman.lib.preferences.internal.DefaultSimplePreferences}.
  *
  * @author Naoghuman
  * @see com.github.naoghuman.lib.preferences.core.SimplePreferences
- * @see com.github.naoghuman.lib.preferences.internal.DefaultPreferences
+ * @see com.github.naoghuman.lib.preferences.internal.DefaultSimplePreferences
  */
 public class PreferencesFacade implements SimplePreferences {
     
@@ -51,7 +51,7 @@ public class PreferencesFacade implements SimplePreferences {
     }
     
     private void initialize() {
-        preferences = new DefaultPreferences();
+        preferences = new DefaultSimplePreferences();
     }
 
     @Override

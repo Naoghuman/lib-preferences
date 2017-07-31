@@ -20,13 +20,13 @@ import java.util.prefs.Preferences;
 
 /**
  * The {@code Interface} for the default implementation 
- * {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences}.<br>
+ * {@link com.github.naoghuman.lib.preferences.internal.DefaultSimplePreferences}.<br>
  * Over the facade {@link com.github.naoghuman.lib.preferences.core.PreferencesFacade} 
  * you can access to the implementation for the methods in this {@code Interface}.
  *
  * @author Naoghuman
  * @see com.github.naoghuman.lib.preferences.core.PreferencesFacade
- * @see com.github.naoghuman.lib.preferences.internal.DefaultPreferences
+ * @see com.github.naoghuman.lib.preferences.internal.DefaultSimplePreferences
  */
 public interface SimplePreferences {
     
