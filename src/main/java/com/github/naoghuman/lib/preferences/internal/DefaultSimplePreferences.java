@@ -22,8 +22,9 @@ import java.io.File;
 import java.util.prefs.Preferences;
 
 /**
- * The implementation from the {@code Interface} 
- * {@link com.github.naoghuman.lib.preferences.core.SimplePreferences}.<br>
+ * The {@code Implementation} from the {@code Interface} 
+ * {@link com.github.naoghuman.lib.preferences.core.SimplePreferences}.
+ * <p>
  * Access to this {@code Class} is over the facade {@link com.github.naoghuman.lib.preferences.core.PreferencesFacade}.
  * 
  * @author Naoghuman
@@ -243,9 +244,10 @@ public class DefaultSimplePreferences implements SimplePreferences {
          * a node depends whether class provided as a parameter was loaded as a
          * part of any module or not. If so, then absolute path corresponds to 
          * slashified code name base of module.
+         * <p>
          * If not, then absolute path corresponds to class's package.
          *
-         * @param clazz the class for which a user preference node is desired.
+         * @param  clazz the class for which a user preference node is desired.
          * @return the user preference node
          */
         Preferences preferencesForModule(final Class clazz);

@@ -21,24 +21,25 @@ import java.util.Optional;
 import java.util.prefs.Preferences;
 
 /**
- * The facade {@link com.github.naoghuman.lib.preferences.core.PreferencesFacade} provides 
- * access to the default implementation from the {@code Interface} 
- * {@link com.github.naoghuman.lib.preferences.core.SimplePreferences}.<br>
- * The default implementation from the Interface {@code SimplePreferences} is 
+ * The facade {@link com.github.naoghuman.lib.preferences.core.PreferencesFacade} 
+ * provides access to the default implementation from the {@code Interface} 
+ * {@link com.github.naoghuman.lib.preferences.core.SimplePreferences}.
+ * <p>
+ * The default implementation from the {@code Interface} {@code SimplePreferences} is 
  * {@link com.github.naoghuman.lib.preferences.internal.DefaultSimplePreferences}.
  *
  * @author Naoghuman
  * @see com.github.naoghuman.lib.preferences.core.SimplePreferences
  * @see com.github.naoghuman.lib.preferences.internal.DefaultSimplePreferences
  */
-public class PreferencesFacade implements SimplePreferences {
+public final class PreferencesFacade implements SimplePreferences {
     
     private static final Optional<PreferencesFacade> instance = Optional.of(new PreferencesFacade());
 
     /**
-     * Returns a singleton instance from the class <code>PreferencesFacade</code>.
+     * Returns a singleton instance from the class {@code PreferencesFacade}.
      * 
-     * @return a singleton instance from the class <code>PreferencesFacade</code>.
+     * @return a singleton instance from the class {@code PreferencesFacade}.
      */
     public static final PreferencesFacade getDefault() {
         return instance.get();
@@ -55,107 +56,107 @@ public class PreferencesFacade implements SimplePreferences {
     }
 
     @Override
-    public Boolean getBoolean(String key, Boolean def) {
+    public Boolean getBoolean(final String key, final Boolean def) {
         return preferences.getBoolean(key, def);
     }
 
     @Override
-    public Boolean getBoolean(Class clazz, String key, Boolean def) {
+    public Boolean getBoolean(final Class clazz, final String key, final Boolean def) {
         return preferences.getBoolean(clazz, key, def);
     }
 
     @Override
-    public void putBoolean(String key, Boolean value) {
+    public void putBoolean(final String key, final Boolean value) {
         preferences.putBoolean(key, value);
     }
 
     @Override
-    public void putBoolean(Class clazz, String key, Boolean value) {
+    public void putBoolean(final Class clazz, final String key, final Boolean value) {
         preferences.putBoolean(clazz, key, value);
     }
 
     @Override
-    public String get(String key, String def) {
+    public String get(final String key, final String def) {
         return preferences.get(key, def);
     }
 
     @Override
-    public String get(Class clazz, String key, String def) {
+    public String get(final Class clazz, final String key, final String def) {
         return preferences.get(clazz, key, def);
     }
 
     @Override
-    public void put(String key, String value) {
+    public void put(final String key, final String value) {
         preferences.put(key, value);
     }
 
     @Override
-    public void put(Class clazz, String key, String value) {
+    public void put(final Class clazz, final String key, final String value) {
         preferences.put(clazz, key, value);
     }
 
     @Override
-    public Double getDouble(String key, Double def) {
+    public Double getDouble(final String key, final Double def) {
         return preferences.getDouble(key, def);
     }
 
     @Override
-    public Double getDouble(Class clazz, String key, Double def) {
+    public Double getDouble(final Class clazz, final String key, final Double def) {
         return preferences.getDouble(clazz, key, def);
     }
 
     @Override
-    public void putDouble(String key, Double value) {
+    public void putDouble(final String key, final Double value) {
         preferences.putDouble(key, value);
     }
 
     @Override
-    public void putDouble(Class clazz, String key, Double value) {
+    public void putDouble(final Class clazz, final String key, final Double value) {
         preferences.putDouble(clazz, key, value);
     }
 
     @Override
-    public Integer getInt(String key, Integer def) {
+    public Integer getInt(final String key, final Integer def) {
         return preferences.getInt(key, def);
     }
 
     @Override
-    public Integer getInt(Class clazz, String key, Integer def) {
+    public Integer getInt(final Class clazz, final String key, final Integer def) {
         return preferences.getInt(clazz, key, def);
     }
 
     @Override
-    public void putInt(String key, Integer value) {
+    public void putInt(final String key, final Integer value) {
         preferences.putInt(key, value);
     }
 
     @Override
-    public void putInt(Class clazz, String key, Integer value) {
+    public void putInt(final Class clazz, final String key, final Integer value) {
         preferences.putInt(clazz, key, value);
     }
 
     @Override
-    public Long getLong(String key, Long def) {
+    public Long getLong(final String key, final Long def) {
         return preferences.getLong(key, def);
     }
 
     @Override
-    public Long getLong(Class clazz, String key, Long def) {
+    public Long getLong(final Class clazz, final String key, final Long def) {
         return preferences.getLong(clazz, key, def);
     }
 
     @Override
-    public void putLong(String key, Long value) {
+    public void putLong(final String key, final Long value) {
         preferences.putLong(key, value);
     }
 
     @Override
-    public void putLong(Class clazz, String key, Long value) {
+    public void putLong(final Class clazz, final String key, final Long value) {
         preferences.putLong(clazz, key, value);
     }
 
     @Override
-    public void init(boolean drop) {
+    public void init(final boolean drop) {
         preferences.init(drop);
     }
 

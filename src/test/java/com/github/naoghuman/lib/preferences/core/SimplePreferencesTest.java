@@ -17,7 +17,7 @@
 package com.github.naoghuman.lib.preferences.core;
 
 import dummy.module.context.DummyModuleContext;
-import com.github.naoghuman.lib.logger.api.LoggerFacade;
+import com.github.naoghuman.lib.logger.core.LoggerFacade;
 import java.io.File;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -62,11 +62,11 @@ public class SimplePreferencesTest {
     }
     
     /**
-     * The file <code>Preferences.properties</code> will only generated if a last 
-     * one <code>key-value</code> pair is written to the file.<br>
-     * <br>
+     * The file {@code Preferences.properties} will only generated if a last one 
+     * {@code key-value} pair is written to the file.
+     * <p>
      * This test will write following statement in the file:<br>
-     * <code>com.github.naoghuman.lib.preferences.internal.x=x</code>
+     * {@code com.github.naoghuman.lib.preferences.internal.x=x}
      */
     @Test
     public void initDefaultAndDropTrue() {
@@ -78,13 +78,13 @@ public class SimplePreferencesTest {
     }
     
     /**
-     * Searching in <code>ApplicationContext</code> means in this case that the 
-     * engine search for a <code>key=my.string.key1</code> with a prefix 
-     * <code>com.github.naoghuman.lib.preferences.internal</code>. So the complete <code>key</code>
-     * for the search is <code>com.github.naoghuman.lib.preferences.internal.my.string.key1</code>.<br>
-     * <br>
-     * If the <code>key</code> is not found in the file <code>Preferences.properties</code>
-     * then the <code>default</code> value will returned, in this case <code>x</code>.
+     * Searching in {@code ApplicationContext} means in this case that the engine 
+     * search for a {@code key=my.string.key1} with a prefix 
+     * {@code com.github.naoghuman.lib.preferences.internal}. So the complete {@code key}
+     * for the search is {@code com.github.naoghuman.lib.preferences.internal.my.string.key1}.
+     * <p>
+     * If the {@code key} is not found in the file {@code Preferences.properties}
+     * then the {@code default} value will returned, in this case {@code x}.
      */
     @Test
     public void getDefaultStringInApplicationContext() {
@@ -93,19 +93,18 @@ public class SimplePreferencesTest {
     }
     
     /**
-     * Putting a <code>value</code> in the file <code>Preferences.properties</code> 
-     * in <code>ApplicationContext</code> will write in this case following statement 
-     * in the file:<br>
-     * <code>com.github.naoghuman.lib.preferences.internal.my.string.key2=y</code><br>
-     * <br>
-     * Searching / writing in <code>ApplicationContext</code> means in this case that the 
-     * engine search / write a <code>key=my.string.key2</code> with a prefix 
-     * <code>com.github.naoghuman.lib.preferences.internal</code>. So the complete <code>key</code>
-     * for the search / to write is <code>com.github.naoghuman.lib.preferences.internal.my.string.key2</code>.<br>
-     * <br>
-     * Because the search engine find the <code>key</code> in the file not the 
-     * <code>default</code> value <code>x</code> will be returned instead the stored 
-     * value <code>y</code> will used.
+     * Putting a {@code value} in the file {@code Preferences.properties} in 
+     * {@code ApplicationContext} will write in this case following statement in 
+     * the file:<br>
+     * {@code com.github.naoghuman.lib.preferences.internal.my.string.key2=y}
+     * <p>
+     * Searching / writing in {@code ApplicationContext} means in this case that 
+     * the engine search / write a {@code key=my.string.key2} with a prefix 
+     * {@code com.github.naoghuman.lib.preferences.internal}. So the complete {@code key}
+     * for the search / to write is {@code com.github.naoghuman.lib.preferences.internal.my.string.key2}.
+     * <p>
+     * Because the search engine find the {@code key} in the file not the {@code default} 
+     * value {@code x} will be returned instead the stored value {@code y} will used.
      */
     @Test
     public void putStringInApplicationContext() {
@@ -188,16 +187,16 @@ public class SimplePreferencesTest {
     }
     
     /**
-     * Searching in <code>ModuleContext</code> means that the engine search in 
-     * the package context from the given <code>class</code>.<br>
-     * <br>
-     * In the context from the class <code>dummy.module.context.DummyModuleContext</code> 
-     * the engine search for a <code>key=my.boolean.key13</code> with a prefix 
-     * <code>dummy.module.context</code>. So the complete <code>key</code>
-     * for the search is <code>dummy.module.context.my.boolean.key13</code>.<br>
-     * <br>
-     * Because the <code>key</code> is not found in the file <code>Preferences.properties</code>
-     * so the <code>default</code> value will returned, in this case <code>true</code>.
+     * Searching in {@code ModuleContext} means that the engine search in the package 
+     * context from the given {@code class}.
+     * <p>
+     * In the context from the class {@code dummy.module.context.DummyModuleContext}
+     * the engine search for a {@code key=my.boolean.key13} with a prefix 
+     * {@code dummy.module.context}. So the complete {@code key} for the search is 
+     * {@code dummy.module.context.my.boolean.key13}.
+     * <p>
+     * Because the {@code key} is not found in the file {@code Preferences.properties}
+     * so the {@code default} value will returned, in this case {@code true}.
      */
     @Test
     public void getDefaultBooleanInModuleContext() {
@@ -206,20 +205,17 @@ public class SimplePreferencesTest {
     }
     
     /**
-     * Putting a <code>value</code> in the file <code>Preferences.properties</code> 
-     * in <code>ModuleContext</code> will write in this case following statement 
-     * in the file:<br>
-     * <code>dummy.module.context.my.boolean.key14=true</code><br>
-     * <br>
-     * Searching / writing in <code>ModuleContext</code> means that the engine 
-     * search / write in the package context from the given <code>class</code> 
-     * (in this case <code>dummy.module.context.DummyModuleContext</code>).So 
-     * the complete <code>key</code> for the search / to write is 
-     * <code>dummy.module.context.my.boolean.key14</code>.<br>
-     * <br>
-     * Because the search engine find the <code>key</code> in the file not the 
-     * <code>default</code> value <code>true</code> will be returned instead the stored 
-     * value <code>false</code> will used.
+     * Putting a {@code value}in the file {@code Preferences.properties} in 
+     * {@code ModuleContext} will write in this case following statement in the file:<br>
+     * {@code dummy.module.context.my.boolean.key14=true}
+     * <p>
+     * Searching / writing in {@code ModuleContext} means that the engine search / write 
+     * in the package context from the given {@code class} (in this case 
+     * {@code dummy.module.context.DummyModuleContext}).So the complete {@code key} for 
+     * the search / to write is {@code dummy.module.context.my.boolean.key14}.
+     * <p>
+     * Because the search engine find the {@code key} in the file not the {@code default} 
+     * {@code true} will be returned instead the stored value {@code false} will used.
      */
     @Test
     public void putBooleanInModuleContext() {

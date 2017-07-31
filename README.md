@@ -53,11 +53,11 @@ private static final String NORMAL_PATH
         + "Preferences.properties"; // NOI18N
 
 /**
- * The file <code>Preferences.properties</code> will only generated if a last 
- * one <code>key-value</code> pair is written to the file.<br>
- * <br>
+ * The file {@code Preferences.properties} will only generated if a last one 
+ * {@code key-value} pair is written to the file.
+ * <p>
  * This test will write following statement in the file:<br>
- * <code>com.github.naoghuman.lib.preferences.internal.x=x</code>
+ * {@code com.github.naoghuman.lib.preferences.internal.x=x}
  */
 @Test
 public void initDefaultAndDropTrue() {    
@@ -74,13 +74,13 @@ public void initDefaultAndDropTrue() {
 
 ```java
 /**
- * Searching in <code>ApplicationContext</code> means in this case that the 
- * engine search for a <code>key=my.string.key1</code> with a prefix 
- * <code>com.github.naoghuman.lib.preferences.internal</code>. So the complete <code>key</code>
- * for the search is <code>com.github.naoghuman.lib.preferences.internal.my.string.key1</code>.<br>
- * <br>
- * If the <code>key</code> is not found in the file <code>Preferences.properties</code>
- * then the <code>default</code> value will returned, in this case <code>x</code>.
+ * Searching in {@code ApplicationContext} means in this case that the engine 
+ * search for a {@code key=my.string.key1} with a prefix 
+ * {@code com.github.naoghuman.lib.preferences.internal}. So the complete {@code key}
+ * for the search is {@code com.github.naoghuman.lib.preferences.internal.my.string.key1}.
+ * <p>
+ * If the {@code key} is not found in the file {@code Preferences.properties}
+ * then the {@code default} value will returned, in this case {@code x}.
  */
 @Test
 public void getDefaultStringInApplicationContext() {
@@ -94,19 +94,18 @@ public void getDefaultStringInApplicationContext() {
 
 ```java
 /**
- * Putting a <code>value</code> in the file <code>Preferences.properties</code> 
- * in <code>ApplicationContext</code> will write in this case following statement 
- * in the file:<br>
- * <code>com.github.naoghuman.lib.preferences.internal.my.string.key2=y</code><br>
- * <br>
- * Searching / writing in <code>ApplicationContext</code> means in this case that the 
- * engine search / write a <code>key=my.string.key2</code> with a prefix 
- * <code>com.github.naoghuman.lib.preferences.internal</code>. So the complete <code>key</code>
- * for the search / to write is <code>com.github.naoghuman.lib.preferences.internal.my.string.key2</code>.<br>
- * <br>
- * Because the search engine find the <code>key</code> in the file not the 
- * <code>default</code> value <code>x</code> will be returned instead the stored 
- * value <code>y</code> will used.
+ * Putting a {@code value} in the file {@code Preferences.properties} in 
+ * {@code ApplicationContext} will write in this case following statement in 
+ * the file:<br>
+ * {@code com.github.naoghuman.lib.preferences.internal.my.string.key2=y}
+ * <p>
+ * Searching / writing in {@code ApplicationContext} means in this case that 
+ * the engine search / write a {@code key=my.string.key2} with a prefix 
+ * {@code com.github.naoghuman.lib.preferences.internal}. So the complete {@code key}
+ * for the search / to write is {@code com.github.naoghuman.lib.preferences.internal.my.string.key2}.
+ * <p>
+ * Because the search engine find the {@code key} in the file not the {@code default} 
+ * value {@code x} will be returned instead the stored value {@code y} will used.
  */
 @Test
 public void putStringInApplicationContext() {
@@ -122,16 +121,16 @@ public void putStringInApplicationContext() {
 
 ```java
 /**
- * Searching in <code>ModuleContext</code> means that the engine search in 
- * the package context from the given <code>class</code>.<br>
- * <br>
- * In the context from the class <code>dummy.module.context.DummyModuleContext</code> 
- * the engine search for a <code>key=my.boolean.key13</code> with a prefix 
- * <code>dummy.module.context</code>. So the complete <code>key</code>
- * for the search is <code>dummy.module.context.my.boolean.key13</code>.<br>
- * <br>
- * Because the <code>key</code> is not found in the file <code>Preferences.properties</code>
- * so the <code>default</code> value will returned, in this case <code>true</code>.
+ * Searching in {@code ModuleContext} means that the engine search in the package 
+ * context from the given {@code class}.
+ * <p>
+ * In the context from the class {@code dummy.module.context.DummyModuleContext}
+ * the engine search for a {@code key=my.boolean.key13} with a prefix 
+ * {@code dummy.module.context}. So the complete {@code key} for the search is 
+ * {@code dummy.module.context.my.boolean.key13}.
+ * <p>
+ * Because the {@code key} is not found in the file {@code Preferences.properties}
+ * so the {@code default} value will returned, in this case {@code true}.
  */
 @Test
 public void getDefaultBooleanInModuleContext() {
@@ -145,19 +144,18 @@ public void getDefaultBooleanInModuleContext() {
 
 ```java
 /**
- * Putting a <code>value</code> in the file <code>Preferences.properties</code> 
- * in <code>ApplicationContext</code> will write in this case following statement 
- * in the file:<br>
- * <code>com.github.naoghuman.lib.preferences.my.string.key2=y</code><br>
- * <br>
- * Searching / writing in <code>ApplicationContext</code> means in this case that the 
- * engine search / write a <code>key=my.string.key2</code> with a prefix 
- * <code>com.github.naoghuman.lib.preferences</code>. So the complete <code>key</code>
- * for the search / to write is <code>com.github.naoghuman.lib.preferences.my.string.key2</code>.<br>
- * <br>
- * Because the search engine find the <code>key</code> in the file not the 
- * <code>default</code> value <code>x</code> will be returned instead the stored 
- * value <code>y</code> will used.
+ * Putting a {@code value} in the file {@code Preferences.properties} in 
+ * {@code ApplicationContext} will write in this case following statement in 
+ * the file:<br>
+ * {@code com.github.naoghuman.lib.preferences.internal.my.string.key2=y}
+ * <p>
+ * Searching / writing in {@code ApplicationContext} means in this case that 
+ * the engine search / write a {@code key=my.string.key2} with a prefix 
+ * {@code com.github.naoghuman.lib.preferences.internal}. So the complete {@code key}
+ * for the search / to write is {@code com.github.naoghuman.lib.preferences.internal.my.string.key2}.
+ * <p>
+ * Because the search engine find the {@code key} in the file not the {@code default} 
+ * value {@code x} will be returned instead the stored value {@code y} will used.
  */
 @Test
 public void putStringInApplicationContext() {
@@ -177,25 +175,26 @@ Api<a name="Api" />
 
 ```java
 /**
- * The facade {@link com.github.naoghuman.lib.preferences.core.PreferencesFacade} provides 
- * access to the default implementation from the {@code Interface} 
- * {@link com.github.naoghuman.lib.preferences.core.SimplePreferences}.<br>
- * The default implementation from the Interface {@code SimplePreferences} is 
+ * The facade {@link com.github.naoghuman.lib.preferences.core.PreferencesFacade} 
+ * provides access to the default implementation from the {@code Interface} 
+ * {@link com.github.naoghuman.lib.preferences.core.SimplePreferences}.
+ * <p>
+ * The default implementation from the {@code Interface} {@code SimplePreferences} is 
  * {@link com.github.naoghuman.lib.preferences.internal.DefaultSimplePreferences}.
  *
  * @author Naoghuman
  * @see com.github.naoghuman.lib.preferences.core.SimplePreferences
  * @see com.github.naoghuman.lib.preferences.internal.DefaultSimplePreferences
  */
-public class PreferencesFacade implements SimplePreferences {
+public final class PreferencesFacade implements SimplePreferences
 ```
 
 
 ```java
 /**
- * Returns a singleton instance from the class <code>PreferencesFacade</code>.
+ * Returns a singleton instance from the class {@code PreferencesFacade}.
  * 
- * @return a singleton instance from the class <code>PreferencesFacade</code>.
+ * @return a singleton instance from the class {@code PreferencesFacade}.
  */
 public static final PreferencesFacade getDefault()
 ```
@@ -205,16 +204,18 @@ public static final PreferencesFacade getDefault()
 
 ```java
 /**
- * The {@code Interface} for the default implementation 
- * {@link com.github.naoghuman.lib.preferences.internal.DefaultSimplePreferences}.<br>
+ * The {@code Interface} for the default {@code Implementation} 
+ * {@link com.github.naoghuman.lib.preferences.internal.DefaultSimplePreferences}.
+ * <p>
  * Over the facade {@link com.github.naoghuman.lib.preferences.core.PreferencesFacade} 
- * you can access to the implementation for the methods in this {@code Interface}.
+ * you can access to the default {@code Implementation} for the methods in this 
+ * {@code Interface}.
  *
  * @author Naoghuman
  * @see com.github.naoghuman.lib.preferences.core.PreferencesFacade
  * @see com.github.naoghuman.lib.preferences.internal.DefaultSimplePreferences
  */
-public interface SimplePreferences {
+public interface SimplePreferences
 ```
 
 
@@ -238,11 +239,12 @@ public static final String SYSTEM_PREFERENCES__FILE_DEFAULT_VALUE = "Preferences
 /**
  * Get a {@link java.lang.Boolean} which is associated with the key in application context.
  * 
- * @param key The key which value is searched for.
- * @param def The default value if the key isn't stored.
- * @return The <code>Boolean</code> which is associated with the key or the default value.
+ * @param  key The key which value is searched for.
+ * @param  def The default value if the key isn't stored.
+ * @return The {@code Boolean} which is associated with the key or the default value.
+ * @see    java.lang.Boolean
  */
-public Boolean getBoolean(String key, Boolean def);
+public Boolean getBoolean(final String key, final Boolean def);
 ```
 
 
@@ -250,12 +252,13 @@ public Boolean getBoolean(String key, Boolean def);
 /**
  * Get a {@link java.lang.Boolean} which is associated with the key in module context.
  * 
- * @param clazz Defined the module context.
- * @param key The key which value is searched for.
- * @param def The default value if the key isn't stored.
- * @return The <code>Boolean</code> which is associated with the key or the default value.
+ * @param  clazz Defined the module context.
+ * @param  key   The key which value is searched for.
+ * @param  def   The default value if the key isn't stored.
+ * @return The {@code Boolean} which is associated with the key or the default value.
+ * @see    java.lang.Boolean
  */
-public Boolean getBoolean(Class clazz, String key, Boolean def);
+public Boolean getBoolean(final Class clazz, final String key, final Boolean def);
 ```
 
 
@@ -263,10 +266,11 @@ public Boolean getBoolean(Class clazz, String key, Boolean def);
 /**
  * Stores a {@link java.lang.Boolean} which is associated with the key in application context.
  * 
- * @param key The key for the saved <code>Boolean</code>.
+ * @param key   The key for the saved {@code Boolean}.
  * @param value The value which will associated with the key.
+ * @see   java.lang.Boolean
  */
-public void putBoolean(String key, Boolean value);
+public void putBoolean(final String key, final Boolean value);
 ```
 
 
@@ -275,10 +279,11 @@ public void putBoolean(String key, Boolean value);
  * Stores a {@link java.lang.Boolean} which is associated with the key in module context.
  * 
  * @param clazz Defined the module context.
- * @param key The key for the to saved <code>Boolean</code>.
+ * @param key   The key for the to saved {@code Boolean}.
  * @param value The value which will associated with the key.
+ * @see   java.lang.Boolean
  */
-public void putBoolean(Class clazz, String key, Boolean value);
+public void putBoolean(final Class clazz, final String key, final Boolean value);
 ```
 
 
@@ -286,11 +291,12 @@ public void putBoolean(Class clazz, String key, Boolean value);
 /**
  * Get a {@link java.lang.String} which is associated with the key in application context.
  * 
- * @param key The key which value is searched for.
- * @param def The default value if the key isn't stored.
- * @return The <code>String</code> which is associated with the key or the default value.
+ * @param  key The key which value is searched for.
+ * @param  def The default value if the key isn't stored.
+ * @return The {@code String} which is associated with the key or the default value.
+ * @see    java.lang.String
  */
-public String get(String key, String def);
+public String get(final String key, final String def);
 ```
 
 
@@ -298,12 +304,13 @@ public String get(String key, String def);
 /**
  * Get a {@link java.lang.String} which is associated with the key in module context.
  * 
- * @param clazz Defined the module context.
- * @param key The key which value is searched for.
- * @param def The default value if the key isn't stored.
- * @return The <code>String</code> which is associated with the key or the default value.
+ * @param  clazz Defined the module context.
+ * @param  key   The key which value is searched for.
+ * @param  def   The default value if the key isn't stored.
+ * @return The {@code String} which is associated with the key or the default value.
+ * @see    java.lang.String
  */
-public String get(Class clazz, String key, String def);
+public String get(final Class clazz, final String key, final String def);
 ```
 
 
@@ -311,10 +318,11 @@ public String get(Class clazz, String key, String def);
 /**
  * Stores a {@link java.lang.String} which is associated with the key in application context.
  * 
- * @param key The key for the saved <code>String</code>.
+ * @param key   The key for the saved {@code String}.
  * @param value The value which will associated with the key.
+ * @see   java.lang.String
  */
-public void put(String key, String value);
+public void put(final String key, final String value);
 ```
 
 
@@ -323,10 +331,11 @@ public void put(String key, String value);
  * Stores a {@link java.lang.String} which is associated with the key in module context.
  * 
  * @param clazz Defined the module context.
- * @param key The key for the to saved <code>String</code>.
+ * @param key   The key for the to saved {@code String}.
  * @param value The value which will associated with the key.
+ * @see   java.lang.String
  */
-public void put(Class clazz, String key, String value);
+public void put(final Class clazz, final String key, final String value);
 ```
 
 
@@ -334,11 +343,12 @@ public void put(Class clazz, String key, String value);
 /**
  * Get a {@link java.lang.Double} which is associated with the key in application context.
  * 
- * @param key The key which value is searched for.
- * @param def The default value if the key isn't stored.
- * @return The <code>Double</code> which is associated with the key or the default value.
+ * @param  key The key which value is searched for.
+ * @param  def The default value if the key isn't stored.
+ * @return The {@code Double} which is associated with the key or the default value.
+ * @see    java.lang.Double
  */
-public Double getDouble( String key, Double def);
+public Double getDouble(final String key, final Double def);
 ```
 
 
@@ -346,12 +356,13 @@ public Double getDouble( String key, Double def);
 /**
  * Get a {@link java.lang.Double} which is associated with the key in module context.
  * 
- * @param clazz Defined the module context.
- * @param key The key which value is searched for.
- * @param def The default value if the key isn't stored.
- * @return The <code>Double</code> which is associated with the key or the default value.
+ * @param  clazz Defined the module context.
+ * @param  key   The key which value is searched for.
+ * @param  def   The default value if the key isn't stored.
+ * @return The {@code Double} which is associated with the key or the default value.
+ * @see    java.lang.Double
  */
-public Double getDouble(Class clazz, String key, Double def);
+public Double getDouble(final Class clazz, final String key, final Double def);
 ```
 
 
@@ -359,10 +370,11 @@ public Double getDouble(Class clazz, String key, Double def);
 /**
  * Stores a {@link java.lang.Double} which is associated with the key in application context.
  * 
- * @param key The key for the saved <code>Double</code>.
+ * @param key   The key for the saved {@code Double}.
  * @param value The value which will associated with the key.
+ * @see   java.lang.Double
  */
-public void putDouble(String key, Double value);
+public void putDouble(final String key, final Double value);
 ```
 
 
@@ -371,10 +383,11 @@ public void putDouble(String key, Double value);
  * Stores a {@link java.lang.Double} which is associated with the key in module context.
  * 
  * @param clazz Defined the module context.
- * @param key The key for the to saved <code>Double</code>.
+ * @param key   The key for the to saved {@code Double}.
  * @param value The value which will associated with the key.
+ * @see   java.lang.Double
  */
-public void putDouble(Class clazz, String key, Double value);
+public void putDouble(final Class clazz, final String key, final Double value);
 ```
 
 
@@ -382,11 +395,12 @@ public void putDouble(Class clazz, String key, Double value);
 /**
  * Get a {@link java.lang.Integer} which is associated with the key in application context.
  * 
- * @param key The key which value is searched for.
- * @param def The default value if the key isn't stored.
- * @return The <code>Integer</code> which is associated with the key or the default value.
+ * @param  key The key which value is searched for.
+ * @param  def The default value if the key isn't stored.
+ * @return The {@code Integer} which is associated with the key or the default value.
+ * @see    java.lang.Integer
  */
-public Integer getInt(String key, Integer def);
+public Integer getInt(final String key, final Integer def);
 ```
 
 
@@ -394,12 +408,13 @@ public Integer getInt(String key, Integer def);
 /**
  * Get a {@link java.lang.Integer} which is associated with the key in module context.
  * 
- * @param clazz Defined the module context.
- * @param key The key which value is searched for.
- * @param def The default value if the key isn't stored.
- * @return The <code>Integer</code> which is associated with the key or the default value.
+ * @param  clazz Defined the module context.
+ * @param  key   The key which value is searched for.
+ * @param  def   The default value if the key isn't stored.
+ * @return The {@code Integer} which is associated with the key or the default value.
+ * @see    java.lang.Integer
  */
-public Integer getInt(Class clazz, String key, Integer def);
+public Integer getInt(final Class clazz, final String key, final Integer def);
 ```
 
 
@@ -407,10 +422,11 @@ public Integer getInt(Class clazz, String key, Integer def);
 /**
  * Stores a {@link java.lang.Integer} which is associated with the key in application context.
  * 
- * @param key The key for the saved <code>Integer</code>.
+ * @param key   The key for the saved {@code Integer}.
  * @param value The value which will associated with the key.
+ * @see   java.lang.Integer
  */
-public void putInt(String key, Integer value);
+public void putInt(final String key, final Integer final value);
 ```
 
 
@@ -419,10 +435,11 @@ public void putInt(String key, Integer value);
  * Stores a {@link java.lang.Integer} which is associated with the key in module context.
  * 
  * @param clazz Defined the module context.
- * @param key The key for the to saved <code>Integer</code>.
+ * @param key   The key for the to saved {@code Integer}.
  * @param value The value which will associated with the key.
+ * @see   java.lang.Integer
  */
-public void putInt(Class clazz, String key, Integer value);
+public void putInt(final Class clazz, final String key, final Integer value);
 ```
 
 
@@ -430,11 +447,12 @@ public void putInt(Class clazz, String key, Integer value);
 /**
  * Get a {@link java.lang.Long} which is associated with the key in application context.
  * 
- * @param key The key which value is searched for.
- * @param def The default value if the key isn't stored.
- * @return The <code>Long</code> which is associated with the key or the default value.
+ * @param  key The key which value is searched for.
+ * @param  def The default value if the key isn't stored.
+ * @return The {@code Long} which is associated with the key or the default value.
+ * @see    java.lang.Long
  */
-public Long getLong(String key, Long def);
+public Long getLong(final String key, final Long def);
 ```
 
 
@@ -442,12 +460,13 @@ public Long getLong(String key, Long def);
 /**
  * Get a {@link java.lang.Long} which is associated with the key in module context.
  * 
- * @param clazz Defined the module context.
- * @param key The key which value is searched for.
- * @param def The default value if the key isn't stored.
- * @return The <code>Long</code> which is associated with the key or the default value.
+ * @param  clazz Defined the module context.
+ * @param  key   The key which value is searched for.
+ * @param  def   The default value if the key isn't stored.
+ * @return The {@code Long} which is associated with the key or the default value.
+ * @see    java.lang.Long
  */
-public Long getLong(Class clazz, String key, Long def);
+public Long getLong(final Class clazz, final String key, final Long def);
 ```
 
 
@@ -455,10 +474,11 @@ public Long getLong(Class clazz, String key, Long def);
 /**
  * Stores a {@link java.lang.Long} which is associated with the key in application context.
  * 
- * @param key The key for the saved <code>Long</code>.
+ * @param key   The key for the saved {@code Long}.
  * @param value The value which will associated with the key.
+ * @see   java.lang.Long
  */
-public void putLong(String key, Long value);
+public void putLong(final String key, final Long value);
 ```
 
 
@@ -467,33 +487,35 @@ public void putLong(String key, Long value);
  * Stores a {@link java.lang.Long} which is associated with the key in module context.
  * 
  * @param clazz Defined the module context.
- * @param key The key for the to saved <code>Long</code>.
+ * @param key   The key for the to saved {@code Long}.
  * @param value The value which will associated with the key.
+ * @see   java.lang.Long
  */
-public void putLong(Class clazz, String key, Long value);
+public void putLong(final Class clazz, final String key, final Long value);
 ```
 
 
 ```java
 /**
- * Initialize the <code>Preferences.properties</code> file.<br>
- * That means that the <code>Preferences.properties</code> file will created
- * under <code>System.getProperty("user.dir") + File.separator
- * + "Preferences.properties"</code>.
+ * Initialize the {@code Preferences.properties} file.
+ * <p>
+ * That means that the {@code Preferences.properties} file will created
+ * under {@code System.getProperty("user.dir") + File.separator + "Preferences.properties"}.
  * 
  * @param drop Should an existing file dropped at frist?
  */
-public void init(boolean drop);
+public void init(final boolean drop);
 ```
 
 
 ```java
 /**
- * Allowed access to the <code>Preferences</code> in application context. You can
- * for example add a {@link java.util.prefs.PreferenceChangeListener PreferenceChangeListener}
- * to listen for changes in specific preferences.
+ * Allowed access to the {@code Preferences} in application context. You can
+ * for example add a {@link java.util.prefs.PreferenceChangeListener} to listen 
+ * for changes in specific preferences.
  * 
- * @return The <code>Preferences</code> in application context.
+ * @return The {@code Preferences} in application context.
+ * @see    java.util.prefs.PreferenceChangeListener
  */
 public Preferences forApplication();
 ```
@@ -501,12 +523,13 @@ public Preferences forApplication();
 
 ```java
 /**
- * Allowed access to the <code>Preferences</code> in module context. You can
- * for example add a {@link java.util.prefs.PreferenceChangeListener PreferenceChangeListener}
+ * Allowed access to the {@code Preferences} in module context. You can
+ * for example add a {@link java.util.prefs.PreferenceChangeListener}
  * to listen for changes in specific preferences.
  * 
- * @param clazz The class in which defined the module.
- * @return The <code>Preferences</code> in module context.
+ * @param  clazz The class in which defined the module.
+ * @return The {@code Preferences} in module context.
+ * @see    java.util.prefs.PreferenceChangeListener
  */
 public Preferences forModule(Class clazz);
 ```

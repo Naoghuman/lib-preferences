@@ -29,6 +29,7 @@ Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 
 #### Refactoring
 #26 [pom] Update the dependencies in the pom.xml.
+#25 [JavaDoc] Use {@code xy} instead the tag 'code' in JavaDoc.
 #24 [Refactoring] Rename DefaultPreferences to DefaultSimplePreferences.
 
 
