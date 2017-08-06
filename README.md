@@ -10,7 +10,7 @@ Lib-Preferences is a library for `easy` storing simple data to a
 Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 
 _Image:_ [UML] Lib-Preferences  
-![UML-diagram_Lib-Preferences_v0.5.0_2017-07-07_19-56.png][UML-diagram_Lib-Preferences_v0.5.0_2017-07-07_19-56]
+![UML-diagram_Lib-Preferences_v0.5.1_2017-08-02_22-04.png][UML-diagram_Lib-Preferences_v0.5.1_2017-08-02_22-04]
 
 > __Hint__  
 > The `UML` diagram is created with the `Online Modeling Platform` [GenMyModel].
@@ -636,7 +636,7 @@ You can reach me under <peter.rogge@yahoo.de>.
 
 
 [//]: # (Images)
-[UML-diagram_Lib-Preferences_v0.5.0_2017-07-07_19-56]:https://user-images.githubusercontent.com/8161815/27970427-135599b2-634f-11e7-8bad-98bb3601f493.png
+[UML-diagram_Lib-Preferences_v0.5.1_2017-08-02_22-04]:https://user-images.githubusercontent.com/8161815/28892584-c3b4afd0-77ce-11e7-8d52-65c4cc491c88.png
 
 
 
