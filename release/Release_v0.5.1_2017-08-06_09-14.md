@@ -6,8 +6,8 @@ Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 
 
 #### Summary
-* ...
-* ...
+* This is a minor update.
+* Mostly updated the documentation (ReadMe, JavaDoc).
 
 
 
