@@ -20,6 +20,7 @@ Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 
 
 #### Enhancement
+#35 [doc] Add start-year to every JavaDoc from the classes and interfaces.
 
 
 
