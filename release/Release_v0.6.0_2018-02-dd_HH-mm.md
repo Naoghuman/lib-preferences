@@ -30,6 +30,7 @@ Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 
 
 #### Refactoring
+#30 [pom] Update dependencies in pom.xml.
 #29 [deprecated] Remove deprecated packages, classes and interfaces.
 
 
