@@ -29,8 +29,8 @@ import java.util.prefs.Preferences;
  * {@link com.github.naoghuman.lib.preferences.internal.DefaultSimplePreferences}.
  *
  * @author Naoghuman
- * @see com.github.naoghuman.lib.preferences.core.SimplePreferences
- * @see com.github.naoghuman.lib.preferences.internal.DefaultSimplePreferences
+ * @see    com.github.naoghuman.lib.preferences.core.SimplePreferences
+ * @see    com.github.naoghuman.lib.preferences.internal.DefaultSimplePreferences
  */
 public final class PreferencesFacade implements SimplePreferences {
     
@@ -39,6 +39,7 @@ public final class PreferencesFacade implements SimplePreferences {
     /**
      * Returns a singleton instance from the class {@code PreferencesFacade}.
      * 
+     * @author Naoghuman
      * @return a singleton instance from the class {@code PreferencesFacade}.
      */
     public static final PreferencesFacade getDefault() {

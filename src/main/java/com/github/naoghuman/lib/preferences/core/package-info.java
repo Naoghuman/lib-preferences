@@ -16,5 +16,7 @@
  */
 /**
  * Contains the {@code API} for the library {@code Lib-Preferences}.
+ * 
+ * @author Naoghuman
  */
 package com.github.naoghuman.lib.preferences.core;

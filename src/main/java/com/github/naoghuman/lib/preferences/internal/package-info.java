@@ -16,5 +16,7 @@
  */
 /**
  * Contains the {@code Implementation} for the library {@code Lib-Preferences}.
+ * 
+ * @author Naoghuman
  */
 package com.github.naoghuman.lib.preferences.internal;

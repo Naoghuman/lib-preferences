@@ -27,24 +27,29 @@ import java.util.prefs.Preferences;
  * {@code Interface}.
  *
  * @author Naoghuman
- * @see com.github.naoghuman.lib.preferences.core.PreferencesFacade
- * @see com.github.naoghuman.lib.preferences.internal.DefaultSimplePreferences
+ * @see    com.github.naoghuman.lib.preferences.core.PreferencesFacade
+ * @see    com.github.naoghuman.lib.preferences.internal.DefaultSimplePreferences
  */
 public interface SimplePreferences {
     
     /**
      * Key constant for accessing the system preference file.
+     * 
+     * @author Naoghuman
      */
     public static final String SYSTEM_PREFERENCES__FILE = "SYSTEM_PREFERENCES__FILE"; // NOI18N
     
     /**
      * Default value constant for the system preference file.
+     * 
+     * @author Naoghuman
      */
     public static final String SYSTEM_PREFERENCES__FILE_DEFAULT_VALUE = "Preferences.properties"; // NOI18N
     
     /**
      * Get a {@link java.lang.Boolean} which is associated with the key in application context.
      * 
+     * @author Naoghuman
      * @param  key The key which value is searched for.
      * @param  def The default value if the key isn't stored.
      * @return The {@code Boolean} which is associated with the key or the default value.
@@ -55,6 +60,7 @@ public interface SimplePreferences {
     /**
      * Get a {@link java.lang.Boolean} which is associated with the key in module context.
      * 
+     * @author Naoghuman
      * @param  clazz Defined the module context.
      * @param  key   The key which value is searched for.
      * @param  def   The default value if the key isn't stored.
@@ -66,25 +72,28 @@ public interface SimplePreferences {
     /**
      * Stores a {@link java.lang.Boolean} which is associated with the key in application context.
      * 
-     * @param key   The key for the saved {@code Boolean}.
-     * @param value The value which will associated with the key.
-     * @see   java.lang.Boolean
+     * @author Naoghuman
+     * @param  key   The key for the saved {@code Boolean}.
+     * @param  value The value which will associated with the key.
+     * @see    java.lang.Boolean
      */
     public void putBoolean(final String key, final Boolean value);
     
     /**
      * Stores a {@link java.lang.Boolean} which is associated with the key in module context.
      * 
-     * @param clazz Defined the module context.
-     * @param key   The key for the to saved {@code Boolean}.
-     * @param value The value which will associated with the key.
-     * @see   java.lang.Boolean
+     * @author Naoghuman
+     * @param  clazz Defined the module context.
+     * @param  key   The key for the to saved {@code Boolean}.
+     * @param  value The value which will associated with the key.
+     * @see    java.lang.Boolean
      */
     public void putBoolean(final Class clazz, final String key, final Boolean value);
     
     /**
      * Get a {@link java.lang.String} which is associated with the key in application context.
      * 
+     * @author Naoghuman
      * @param  key The key which value is searched for.
      * @param  def The default value if the key isn't stored.
      * @return The {@code String} which is associated with the key or the default value.
@@ -95,6 +104,7 @@ public interface SimplePreferences {
     /**
      * Get a {@link java.lang.String} which is associated with the key in module context.
      * 
+     * @author Naoghuman
      * @param  clazz Defined the module context.
      * @param  key   The key which value is searched for.
      * @param  def   The default value if the key isn't stored.
@@ -106,25 +116,28 @@ public interface SimplePreferences {
     /**
      * Stores a {@link java.lang.String} which is associated with the key in application context.
      * 
-     * @param key   The key for the saved {@code String}.
-     * @param value The value which will associated with the key.
-     * @see   java.lang.String
+     * @author Naoghuman
+     * @param  key   The key for the saved {@code String}.
+     * @param  value The value which will associated with the key.
+     * @see    java.lang.String
      */
     public void put(final String key, final String value);
     
     /**
      * Stores a {@link java.lang.String} which is associated with the key in module context.
      * 
-     * @param clazz Defined the module context.
-     * @param key   The key for the to saved {@code String}.
-     * @param value The value which will associated with the key.
-     * @see   java.lang.String
+     * @author Naoghuman
+     * @param  clazz Defined the module context.
+     * @param  key   The key for the to saved {@code String}.
+     * @param  value The value which will associated with the key.
+     * @see    java.lang.String
      */
     public void put(final Class clazz, final String key, final String value);
     
     /**
      * Get a {@link java.lang.Double} which is associated with the key in application context.
      * 
+     * @author Naoghuman
      * @param  key The key which value is searched for.
      * @param  def The default value if the key isn't stored.
      * @return The {@code Double} which is associated with the key or the default value.
@@ -135,6 +148,7 @@ public interface SimplePreferences {
     /**
      * Get a {@link java.lang.Double} which is associated with the key in module context.
      * 
+     * @author Naoghuman
      * @param  clazz Defined the module context.
      * @param  key   The key which value is searched for.
      * @param  def   The default value if the key isn't stored.
@@ -146,25 +160,28 @@ public interface SimplePreferences {
     /**
      * Stores a {@link java.lang.Double} which is associated with the key in application context.
      * 
-     * @param key   The key for the saved {@code Double}.
-     * @param value The value which will associated with the key.
-     * @see   java.lang.Double
+     * @author Naoghuman
+     * @param  key   The key for the saved {@code Double}.
+     * @param  value The value which will associated with the key.
+     * @see    java.lang.Double
      */
     public void putDouble(final String key, final Double value);
     
     /**
      * Stores a {@link java.lang.Double} which is associated with the key in module context.
      * 
-     * @param clazz Defined the module context.
-     * @param key   The key for the to saved {@code Double}.
-     * @param value The value which will associated with the key.
-     * @see   java.lang.Double
+     * @author Naoghuman
+     * @param  clazz Defined the module context.
+     * @param  key   The key for the to saved {@code Double}.
+     * @param  value The value which will associated with the key.
+     * @see    java.lang.Double
      */
     public void putDouble(final Class clazz, final String key, final Double value);
     
     /**
      * Get a {@link java.lang.Integer} which is associated with the key in application context.
      * 
+     * @author Naoghuman
      * @param  key The key which value is searched for.
      * @param  def The default value if the key isn't stored.
      * @return The {@code Integer} which is associated with the key or the default value.
@@ -175,6 +192,7 @@ public interface SimplePreferences {
     /**
      * Get a {@link java.lang.Integer} which is associated with the key in module context.
      * 
+     * @author Naoghuman
      * @param  clazz Defined the module context.
      * @param  key   The key which value is searched for.
      * @param  def   The default value if the key isn't stored.
@@ -186,25 +204,28 @@ public interface SimplePreferences {
     /**
      * Stores a {@link java.lang.Integer} which is associated with the key in application context.
      * 
-     * @param key   The key for the saved {@code Integer}.
-     * @param value The value which will associated with the key.
-     * @see   java.lang.Integer
+     * @author Naoghuman
+     * @param  key   The key for the saved {@code Integer}.
+     * @param  value The value which will associated with the key.
+     * @see    java.lang.Integer
      */
     public void putInt(final String key, final Integer value);
     
     /**
      * Stores a {@link java.lang.Integer} which is associated with the key in module context.
      * 
-     * @param clazz Defined the module context.
-     * @param key   The key for the to saved {@code Integer}.
-     * @param value The value which will associated with the key.
-     * @see   java.lang.Integer
+     * @author Naoghuman
+     * @param  clazz Defined the module context.
+     * @param  key   The key for the to saved {@code Integer}.
+     * @param  value The value which will associated with the key.
+     * @see    java.lang.Integer
      */
     public void putInt(final Class clazz, final String key, final Integer value);
     
     /**
      * Get a {@link java.lang.Long} which is associated with the key in application context.
      * 
+     * @author Naoghuman
      * @param  key The key which value is searched for.
      * @param  def The default value if the key isn't stored.
      * @return The {@code Long} which is associated with the key or the default value.
@@ -215,6 +236,7 @@ public interface SimplePreferences {
     /**
      * Get a {@link java.lang.Long} which is associated with the key in module context.
      * 
+     * @author Naoghuman
      * @param  clazz Defined the module context.
      * @param  key   The key which value is searched for.
      * @param  def   The default value if the key isn't stored.
@@ -226,19 +248,21 @@ public interface SimplePreferences {
     /**
      * Stores a {@link java.lang.Long} which is associated with the key in application context.
      * 
-     * @param key   The key for the saved {@code Long}.
-     * @param value The value which will associated with the key.
-     * @see   java.lang.Long
+     * @author Naoghuman
+     * @param  key   The key for the saved {@code Long}.
+     * @param  value The value which will associated with the key.
+     * @see    java.lang.Long
      */
     public void putLong(final String key, final Long value);
     
     /**
      * Stores a {@link java.lang.Long} which is associated with the key in module context.
      * 
-     * @param clazz Defined the module context.
-     * @param key   The key for the to saved {@code Long}.
-     * @param value The value which will associated with the key.
-     * @see   java.lang.Long
+     * @author Naoghuman
+     * @param  clazz Defined the module context.
+     * @param  key   The key for the to saved {@code Long}.
+     * @param  value The value which will associated with the key.
+     * @see    java.lang.Long
      */
     public void putLong(final Class clazz, final String key, final Long value);
     
@@ -248,7 +272,8 @@ public interface SimplePreferences {
      * That means that the {@code Preferences.properties} file will created
      * under {@code System.getProperty("user.dir") + File.separator + "Preferences.properties"}.
      * 
-     * @param drop Should an existing file dropped at frist?
+     * @author Naoghuman
+     * @param  drop Should an existing file dropped at frist?
      */
     public void init(final boolean drop);
     
@@ -257,6 +282,7 @@ public interface SimplePreferences {
      * for example add a {@link java.util.prefs.PreferenceChangeListener} to listen 
      * for changes in specific preferences.
      * 
+     * @author Naoghuman
      * @return The {@code Preferences} in application context.
      * @see    java.util.prefs.PreferenceChangeListener
      */
@@ -267,6 +293,7 @@ public interface SimplePreferences {
      * for example add a {@link java.util.prefs.PreferenceChangeListener}
      * to listen for changes in specific preferences.
      * 
+     * @author Naoghuman
      * @param  clazz The class in which defined the module.
      * @return The {@code Preferences} in module context.
      * @see    java.util.prefs.PreferenceChangeListener

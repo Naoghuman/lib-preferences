@@ -67,6 +67,8 @@ public class SimplePreferencesTest {
      * <p>
      * This test will write following statement in the file:<br>
      * {@code com.github.naoghuman.lib.preferences.internal.x=x}
+     * 
+     * @author Naoghuman
      */
     @Test
     public void initDefaultAndDropTrue() {
@@ -85,6 +87,8 @@ public class SimplePreferencesTest {
      * <p>
      * If the {@code key} is not found in the file {@code Preferences.properties}
      * then the {@code default} value will returned, in this case {@code x}.
+     * 
+     * @author Naoghuman
      */
     @Test
     public void getDefaultStringInApplicationContext() {
@@ -105,6 +109,8 @@ public class SimplePreferencesTest {
      * <p>
      * Because the search engine find the {@code key} in the file not the {@code default} 
      * value {@code x} will be returned instead the stored value {@code y} will used.
+     * 
+     * @author Naoghuman
      */
     @Test
     public void putStringInApplicationContext() {
@@ -197,6 +203,8 @@ public class SimplePreferencesTest {
      * <p>
      * Because the {@code key} is not found in the file {@code Preferences.properties}
      * so the {@code default} value will returned, in this case {@code true}.
+     * 
+     * @author Naoghuman
      */
     @Test
     public void getDefaultBooleanInModuleContext() {
@@ -216,6 +224,8 @@ public class SimplePreferencesTest {
      * <p>
      * Because the search engine find the {@code key} in the file not the {@code default} 
      * {@code true} will be returned instead the stored value {@code false} will used.
+     * 
+     * @author Naoghuman
      */
     @Test
     public void putBooleanInModuleContext() {

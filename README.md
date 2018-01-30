@@ -58,6 +58,8 @@ private static final String NORMAL_PATH
  * <p>
  * This test will write following statement in the file:<br>
  * {@code com.github.naoghuman.lib.preferences.internal.x=x}
+ * 
+ * @author Naoghuman
  */
 @Test
 public void initDefaultAndDropTrue() {    
@@ -81,6 +83,8 @@ public void initDefaultAndDropTrue() {
  * <p>
  * If the {@code key} is not found in the file {@code Preferences.properties}
  * then the {@code default} value will returned, in this case {@code x}.
+ * 
+ * @author Naoghuman
  */
 @Test
 public void getDefaultStringInApplicationContext() {
@@ -106,6 +110,8 @@ public void getDefaultStringInApplicationContext() {
  * <p>
  * Because the search engine find the {@code key} in the file not the {@code default} 
  * value {@code x} will be returned instead the stored value {@code y} will used.
+ * 
+ * @author Naoghuman
  */
 @Test
 public void putStringInApplicationContext() {
@@ -131,6 +137,8 @@ public void putStringInApplicationContext() {
  * <p>
  * Because the {@code key} is not found in the file {@code Preferences.properties}
  * so the {@code default} value will returned, in this case {@code true}.
+ * 
+ * @author Naoghuman
  */
 @Test
 public void getDefaultBooleanInModuleContext() {
@@ -156,6 +164,8 @@ public void getDefaultBooleanInModuleContext() {
  * <p>
  * Because the search engine find the {@code key} in the file not the {@code default} 
  * value {@code x} will be returned instead the stored value {@code y} will used.
+ * 
+ * @author Naoghuman
  */
 @Test
 public void putStringInApplicationContext() {
@@ -194,6 +204,7 @@ public final class PreferencesFacade implements SimplePreferences
 /**
  * Returns a singleton instance from the class {@code PreferencesFacade}.
  * 
+ * @author Naoghuman
  * @return a singleton instance from the class {@code PreferencesFacade}.
  */
 public static final PreferencesFacade getDefault()
@@ -212,8 +223,8 @@ public static final PreferencesFacade getDefault()
  * {@code Interface}.
  *
  * @author Naoghuman
- * @see com.github.naoghuman.lib.preferences.core.PreferencesFacade
- * @see com.github.naoghuman.lib.preferences.internal.DefaultSimplePreferences
+ * @see    com.github.naoghuman.lib.preferences.core.PreferencesFacade
+ * @see    com.github.naoghuman.lib.preferences.internal.DefaultSimplePreferences
  */
 public interface SimplePreferences
 ```
@@ -222,6 +233,8 @@ public interface SimplePreferences
 ```java
 /**
  * Key constant for accessing the system preferfence file.
+ * 
+ * @author Naoghuman
  */
 public static final String SYSTEM_PREFERENCES__FILE = "SYSTEM_PREFERENCES__FILE"; // NOI18N
 ```
@@ -230,6 +243,8 @@ public static final String SYSTEM_PREFERENCES__FILE = "SYSTEM_PREFERENCES__FILE"
 ```java
 /**
  * Default value contant for the system preferfence file.
+ * 
+ * @author Naoghuman
  */
 public static final String SYSTEM_PREFERENCES__FILE_DEFAULT_VALUE = "Preferences.properties"; // NOI18N
 ```
@@ -239,6 +254,7 @@ public static final String SYSTEM_PREFERENCES__FILE_DEFAULT_VALUE = "Preferences
 /**
  * Get a {@link java.lang.Boolean} which is associated with the key in application context.
  * 
+ * @author Naoghuman
  * @param  key The key which value is searched for.
  * @param  def The default value if the key isn't stored.
  * @return The {@code Boolean} which is associated with the key or the default value.
@@ -252,6 +268,7 @@ public Boolean getBoolean(final String key, final Boolean def);
 /**
  * Get a {@link java.lang.Boolean} which is associated with the key in module context.
  * 
+ * @author Naoghuman
  * @param  clazz Defined the module context.
  * @param  key   The key which value is searched for.
  * @param  def   The default value if the key isn't stored.
@@ -266,9 +283,10 @@ public Boolean getBoolean(final Class clazz, final String key, final Boolean def
 /**
  * Stores a {@link java.lang.Boolean} which is associated with the key in application context.
  * 
- * @param key   The key for the saved {@code Boolean}.
- * @param value The value which will associated with the key.
- * @see   java.lang.Boolean
+ * @author Naoghuman
+ * @param  key   The key for the saved {@code Boolean}.
+ * @param  value The value which will associated with the key.
+ * @see    java.lang.Boolean
  */
 public void putBoolean(final String key, final Boolean value);
 ```
@@ -278,10 +296,11 @@ public void putBoolean(final String key, final Boolean value);
 /**
  * Stores a {@link java.lang.Boolean} which is associated with the key in module context.
  * 
- * @param clazz Defined the module context.
- * @param key   The key for the to saved {@code Boolean}.
- * @param value The value which will associated with the key.
- * @see   java.lang.Boolean
+ * @author Naoghuman
+ * @param  clazz Defined the module context.
+ * @param  key   The key for the to saved {@code Boolean}.
+ * @param  value The value which will associated with the key.
+ * @see    java.lang.Boolean
  */
 public void putBoolean(final Class clazz, final String key, final Boolean value);
 ```
@@ -291,6 +310,7 @@ public void putBoolean(final Class clazz, final String key, final Boolean value)
 /**
  * Get a {@link java.lang.String} which is associated with the key in application context.
  * 
+ * @author Naoghuman
  * @param  key The key which value is searched for.
  * @param  def The default value if the key isn't stored.
  * @return The {@code String} which is associated with the key or the default value.
@@ -304,6 +324,7 @@ public String get(final String key, final String def);
 /**
  * Get a {@link java.lang.String} which is associated with the key in module context.
  * 
+ * @author Naoghuman
  * @param  clazz Defined the module context.
  * @param  key   The key which value is searched for.
  * @param  def   The default value if the key isn't stored.
@@ -318,9 +339,10 @@ public String get(final Class clazz, final String key, final String def);
 /**
  * Stores a {@link java.lang.String} which is associated with the key in application context.
  * 
- * @param key   The key for the saved {@code String}.
- * @param value The value which will associated with the key.
- * @see   java.lang.String
+ * @author Naoghuman
+ * @param  key   The key for the saved {@code String}.
+ * @param  value The value which will associated with the key.
+ * @see    java.lang.String
  */
 public void put(final String key, final String value);
 ```
@@ -330,10 +352,11 @@ public void put(final String key, final String value);
 /**
  * Stores a {@link java.lang.String} which is associated with the key in module context.
  * 
- * @param clazz Defined the module context.
- * @param key   The key for the to saved {@code String}.
- * @param value The value which will associated with the key.
- * @see   java.lang.String
+ * @author Naoghuman
+ * @param  clazz Defined the module context.
+ * @param  key   The key for the to saved {@code String}.
+ * @param  value The value which will associated with the key.
+ * @see    java.lang.String
  */
 public void put(final Class clazz, final String key, final String value);
 ```
@@ -343,6 +366,7 @@ public void put(final Class clazz, final String key, final String value);
 /**
  * Get a {@link java.lang.Double} which is associated with the key in application context.
  * 
+ * @author Naoghuman
  * @param  key The key which value is searched for.
  * @param  def The default value if the key isn't stored.
  * @return The {@code Double} which is associated with the key or the default value.
@@ -356,6 +380,7 @@ public Double getDouble(final String key, final Double def);
 /**
  * Get a {@link java.lang.Double} which is associated with the key in module context.
  * 
+ * @author Naoghuman
  * @param  clazz Defined the module context.
  * @param  key   The key which value is searched for.
  * @param  def   The default value if the key isn't stored.
@@ -370,9 +395,10 @@ public Double getDouble(final Class clazz, final String key, final Double def);
 /**
  * Stores a {@link java.lang.Double} which is associated with the key in application context.
  * 
- * @param key   The key for the saved {@code Double}.
- * @param value The value which will associated with the key.
- * @see   java.lang.Double
+ * @author Naoghuman
+ * @param  key   The key for the saved {@code Double}.
+ * @param  value The value which will associated with the key.
+ * @see    java.lang.Double
  */
 public void putDouble(final String key, final Double value);
 ```
@@ -382,10 +408,11 @@ public void putDouble(final String key, final Double value);
 /**
  * Stores a {@link java.lang.Double} which is associated with the key in module context.
  * 
- * @param clazz Defined the module context.
- * @param key   The key for the to saved {@code Double}.
- * @param value The value which will associated with the key.
- * @see   java.lang.Double
+ * @author Naoghuman
+ * @param  clazz Defined the module context.
+ * @param  key   The key for the to saved {@code Double}.
+ * @param  value The value which will associated with the key.
+ * @see    java.lang.Double
  */
 public void putDouble(final Class clazz, final String key, final Double value);
 ```
@@ -395,6 +422,7 @@ public void putDouble(final Class clazz, final String key, final Double value);
 /**
  * Get a {@link java.lang.Integer} which is associated with the key in application context.
  * 
+ * @author Naoghuman
  * @param  key The key which value is searched for.
  * @param  def The default value if the key isn't stored.
  * @return The {@code Integer} which is associated with the key or the default value.
@@ -408,6 +436,7 @@ public Integer getInt(final String key, final Integer def);
 /**
  * Get a {@link java.lang.Integer} which is associated with the key in module context.
  * 
+ * @author Naoghuman
  * @param  clazz Defined the module context.
  * @param  key   The key which value is searched for.
  * @param  def   The default value if the key isn't stored.
@@ -422,9 +451,10 @@ public Integer getInt(final Class clazz, final String key, final Integer def);
 /**
  * Stores a {@link java.lang.Integer} which is associated with the key in application context.
  * 
- * @param key   The key for the saved {@code Integer}.
- * @param value The value which will associated with the key.
- * @see   java.lang.Integer
+ * @author Naoghuman
+ * @param  key   The key for the saved {@code Integer}.
+ * @param  value The value which will associated with the key.
+ * @see    java.lang.Integer
  */
 public void putInt(final String key, final Integer final value);
 ```
@@ -434,10 +464,11 @@ public void putInt(final String key, final Integer final value);
 /**
  * Stores a {@link java.lang.Integer} which is associated with the key in module context.
  * 
- * @param clazz Defined the module context.
- * @param key   The key for the to saved {@code Integer}.
- * @param value The value which will associated with the key.
- * @see   java.lang.Integer
+ * @author Naoghuman
+ * @param  clazz Defined the module context.
+ * @param  key   The key for the to saved {@code Integer}.
+ * @param  value The value which will associated with the key.
+ * @see    java.lang.Integer
  */
 public void putInt(final Class clazz, final String key, final Integer value);
 ```
@@ -447,6 +478,7 @@ public void putInt(final Class clazz, final String key, final Integer value);
 /**
  * Get a {@link java.lang.Long} which is associated with the key in application context.
  * 
+ * @author Naoghuman
  * @param  key The key which value is searched for.
  * @param  def The default value if the key isn't stored.
  * @return The {@code Long} which is associated with the key or the default value.
@@ -460,6 +492,7 @@ public Long getLong(final String key, final Long def);
 /**
  * Get a {@link java.lang.Long} which is associated with the key in module context.
  * 
+ * @author Naoghuman
  * @param  clazz Defined the module context.
  * @param  key   The key which value is searched for.
  * @param  def   The default value if the key isn't stored.
@@ -474,9 +507,10 @@ public Long getLong(final Class clazz, final String key, final Long def);
 /**
  * Stores a {@link java.lang.Long} which is associated with the key in application context.
  * 
- * @param key   The key for the saved {@code Long}.
- * @param value The value which will associated with the key.
- * @see   java.lang.Long
+ * @author Naoghuman
+ * @param  key   The key for the saved {@code Long}.
+ * @param  value The value which will associated with the key.
+ * @see    java.lang.Long
  */
 public void putLong(final String key, final Long value);
 ```
@@ -486,10 +520,11 @@ public void putLong(final String key, final Long value);
 /**
  * Stores a {@link java.lang.Long} which is associated with the key in module context.
  * 
- * @param clazz Defined the module context.
- * @param key   The key for the to saved {@code Long}.
- * @param value The value which will associated with the key.
- * @see   java.lang.Long
+ * @author Naoghuman
+ * @param  clazz Defined the module context.
+ * @param  key   The key for the to saved {@code Long}.
+ * @param  value The value which will associated with the key.
+ * @see    java.lang.Long
  */
 public void putLong(final Class clazz, final String key, final Long value);
 ```
@@ -503,6 +538,8 @@ public void putLong(final Class clazz, final String key, final Long value);
  * under {@code System.getProperty("user.dir") + File.separator + "Preferences.properties"}.
  * 
  * @param drop Should an existing file dropped at frist?
+ * 
+ * @author Naoghuman
  */
 public void init(final boolean drop);
 ```
@@ -514,6 +551,7 @@ public void init(final boolean drop);
  * for example add a {@link java.util.prefs.PreferenceChangeListener} to listen 
  * for changes in specific preferences.
  * 
+ * @author Naoghuman
  * @return The {@code Preferences} in application context.
  * @see    java.util.prefs.PreferenceChangeListener
  */
@@ -527,6 +565,7 @@ public Preferences forApplication();
  * for example add a {@link java.util.prefs.PreferenceChangeListener}
  * to listen for changes in specific preferences.
  * 
+ * @author Naoghuman
  * @param  clazz The class in which defined the module.
  * @return The {@code Preferences} in module context.
  * @see    java.util.prefs.PreferenceChangeListener
