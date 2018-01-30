@@ -28,6 +28,7 @@ Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 
 
 #### Refactoring
+#29 [deprecated] Remove deprecated packages, classes and interfaces.
 
 
 
