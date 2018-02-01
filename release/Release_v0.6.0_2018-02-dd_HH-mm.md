@@ -27,6 +27,7 @@ Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 
 
 #### Bug
+#40 [doc] Example SimplePreferencesTest#putBooleanInModuleContext() is wrong.
 
 
 

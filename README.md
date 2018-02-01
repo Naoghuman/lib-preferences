@@ -152,27 +152,26 @@ public void getDefaultBooleanInModuleContext() {
 
 ```java
 /**
- * Putting a {@code value} in the file {@code Preferences.properties} in 
- * {@code ApplicationContext} will write in this case following statement in 
- * the file:<br>
- * {@code com.github.naoghuman.lib.preferences.internal.my.string.key2=y}
+ * Putting a {@code value}in the file {@code Preferences.properties} in 
+ * {@code ModuleContext} will write in this case following statement in the file:<br>
+ * {@code dummy.module.context.my.boolean.key14=true}
  * <p>
- * Searching / writing in {@code ApplicationContext} means in this case that 
- * the engine search / write a {@code key=my.string.key2} with a prefix 
- * {@code com.github.naoghuman.lib.preferences.internal}. So the complete {@code key}
- * for the search / to write is {@code com.github.naoghuman.lib.preferences.internal.my.string.key2}.
+ * Searching / writing in {@code ModuleContext} means that the engine search / write 
+ * in the package context from the given {@code class} (in this case 
+ * {@code dummy.module.context.DummyModuleContext}).So the complete {@code key} for 
+ * the search / to write is {@code dummy.module.context.my.boolean.key14}.
  * <p>
  * Because the search engine find the {@code key} in the file not the {@code default} 
- * value {@code x} will be returned instead the stored value {@code y} will used.
+ * {@code true} will be returned instead the stored value {@code false} will used.
  * 
  * @author Naoghuman
  */
 @Test
-public void putStringInApplicationContext() {
-    PreferencesFacade.getDefault().put("my.string.key2", "y");
-        
-    final String storedValue = PreferencesFacade.getDefault().get("my.string.key2", "x");
-    assertEquals("y", storedValue);
+public void putBooleanInModuleContext() {
+    PreferencesFacade.getDefault().putBoolean(DummyModuleContext.class, "my.boolean.key14", false);
+    
+    final boolean storedValue = PreferencesFacade.getDefault().getBoolean(DummyModuleContext.class, "my.boolean.key14", true);
+    assertEquals(false, storedValue);
 }
 ```
 
