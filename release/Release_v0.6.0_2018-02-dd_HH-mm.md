@@ -32,6 +32,7 @@ Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 
 
 #### Refactoring
+#42 [pom] Update dependencies in the file pom.xml.
 #30 [pom] Update dependencies in pom.xml.
 #29 [deprecated] Remove deprecated packages, classes and interfaces.
 
@@ -47,6 +48,7 @@ Naoghuman
 
 
 [//]: # (Issues which will be integrated in this release)
+#41 [doc] Rewrite the JavaDoc from the tests in the class SimplePreferencesTest.
 
 
 
