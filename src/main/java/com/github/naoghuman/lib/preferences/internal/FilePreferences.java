@@ -35,11 +35,13 @@ import java.util.prefs.Preferences;
  * @author David Croft (<a href="http://www.davidc.net">www.davidc.net</a>)
  * @version $Id: FilePreferences.java 283 2009-06-18 17:06:58Z david $
  */
+@Deprecated
 public final class FilePreferences extends AbstractPreferences {
     private static final Logger log = Logger.getLogger(FilePreferences.class.getName());
     private static FilePreferences instance = null;
     private static File preferencesFile = null;
 
+    @Deprecated
     public static Preferences getUserRoot() {
         if (instance == null) {
             instance = new FilePreferences();
@@ -48,6 +50,7 @@ public final class FilePreferences extends AbstractPreferences {
         return instance;
     }
 
+    @Deprecated
     public static Preferences userNodeForPackage(final Class clazz) {
         return FilePreferences.getUserRoot().node(FilePreferences.nodeName(clazz));
     }
@@ -188,6 +191,7 @@ public final class FilePreferences extends AbstractPreferences {
         }
     }
 
+    @Deprecated
     public static File getPreferencesFile() {
         if (preferencesFile == null) {
             String prefsFile = System.getProperty(SimplePreferences.SYSTEM_PREFERENCES__FILE);

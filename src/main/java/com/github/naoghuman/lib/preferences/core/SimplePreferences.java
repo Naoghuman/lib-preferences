@@ -30,6 +30,7 @@ import java.util.prefs.Preferences;
  * @see    com.github.naoghuman.lib.preferences.core.PreferencesFacade
  * @see    com.github.naoghuman.lib.preferences.internal.DefaultSimplePreferences
  */
+@Deprecated
 public interface SimplePreferences {
     
     /**
@@ -37,6 +38,7 @@ public interface SimplePreferences {
      * 
      * @author Naoghuman
      */
+    @Deprecated
     public static final String SYSTEM_PREFERENCES__FILE = "SYSTEM_PREFERENCES__FILE"; // NOI18N
     
     /**
@@ -44,6 +46,7 @@ public interface SimplePreferences {
      * 
      * @author Naoghuman
      */
+    @Deprecated
     public static final String SYSTEM_PREFERENCES__FILE_DEFAULT_VALUE = "Preferences.properties"; // NOI18N
     
     /**
@@ -55,6 +58,7 @@ public interface SimplePreferences {
      * @return The {@code Boolean} which is associated with the key or the default value.
      * @see    java.lang.Boolean
      */
+    @Deprecated
     public Boolean getBoolean(final String key, final Boolean def);
     
     /**
@@ -67,6 +71,7 @@ public interface SimplePreferences {
      * @return The {@code Boolean} which is associated with the key or the default value.
      * @see    java.lang.Boolean
      */
+    @Deprecated
     public Boolean getBoolean(final Class clazz, final String key, final Boolean def);
     
     /**
@@ -77,6 +82,7 @@ public interface SimplePreferences {
      * @param  value The value which will associated with the key.
      * @see    java.lang.Boolean
      */
+    @Deprecated
     public void putBoolean(final String key, final Boolean value);
     
     /**
@@ -88,6 +94,7 @@ public interface SimplePreferences {
      * @param  value The value which will associated with the key.
      * @see    java.lang.Boolean
      */
+    @Deprecated
     public void putBoolean(final Class clazz, final String key, final Boolean value);
     
     /**
@@ -99,6 +106,7 @@ public interface SimplePreferences {
      * @return The {@code String} which is associated with the key or the default value.
      * @see    java.lang.String
      */
+    @Deprecated
     public String get(final String key, final String def);
     
     /**
@@ -111,6 +119,7 @@ public interface SimplePreferences {
      * @return The {@code String} which is associated with the key or the default value.
      * @see    java.lang.String
      */
+    @Deprecated
     public String get(final Class clazz, final String key, final String def);
     
     /**
@@ -121,6 +130,7 @@ public interface SimplePreferences {
      * @param  value The value which will associated with the key.
      * @see    java.lang.String
      */
+    @Deprecated
     public void put(final String key, final String value);
     
     /**
@@ -132,6 +142,7 @@ public interface SimplePreferences {
      * @param  value The value which will associated with the key.
      * @see    java.lang.String
      */
+    @Deprecated
     public void put(final Class clazz, final String key, final String value);
     
     /**
@@ -143,6 +154,7 @@ public interface SimplePreferences {
      * @return The {@code Double} which is associated with the key or the default value.
      * @see    java.lang.Double
      */
+    @Deprecated
     public Double getDouble(final String key, final Double def);
     
     /**
@@ -155,6 +167,7 @@ public interface SimplePreferences {
      * @return The {@code Double} which is associated with the key or the default value.
      * @see    java.lang.Double
      */
+    @Deprecated
     public Double getDouble(final Class clazz, final String key, final Double def);
     
     /**
@@ -165,6 +178,7 @@ public interface SimplePreferences {
      * @param  value The value which will associated with the key.
      * @see    java.lang.Double
      */
+    @Deprecated
     public void putDouble(final String key, final Double value);
     
     /**
@@ -176,6 +190,7 @@ public interface SimplePreferences {
      * @param  value The value which will associated with the key.
      * @see    java.lang.Double
      */
+    @Deprecated
     public void putDouble(final Class clazz, final String key, final Double value);
     
     /**
@@ -187,6 +202,7 @@ public interface SimplePreferences {
      * @return The {@code Integer} which is associated with the key or the default value.
      * @see    java.lang.Integer
      */
+    @Deprecated
     public Integer getInt(final String key, final Integer def);
     
     /**
@@ -199,6 +215,7 @@ public interface SimplePreferences {
      * @return The {@code Integer} which is associated with the key or the default value.
      * @see    java.lang.Integer
      */
+    @Deprecated
     public Integer getInt(final Class clazz, final String key, final Integer def);
     
     /**
@@ -209,6 +226,7 @@ public interface SimplePreferences {
      * @param  value The value which will associated with the key.
      * @see    java.lang.Integer
      */
+    @Deprecated
     public void putInt(final String key, final Integer value);
     
     /**
@@ -220,6 +238,7 @@ public interface SimplePreferences {
      * @param  value The value which will associated with the key.
      * @see    java.lang.Integer
      */
+    @Deprecated
     public void putInt(final Class clazz, final String key, final Integer value);
     
     /**
@@ -231,6 +250,7 @@ public interface SimplePreferences {
      * @return The {@code Long} which is associated with the key or the default value.
      * @see    java.lang.Long
      */
+    @Deprecated
     public Long getLong(final String key, final Long def);
     
     /**
@@ -243,6 +263,7 @@ public interface SimplePreferences {
      * @return The {@code Long} which is associated with the key or the default value.
      * @see    java.lang.Long
      */
+    @Deprecated
     public Long getLong(final Class clazz, final String key, final Long def);
     
     /**
@@ -253,6 +274,7 @@ public interface SimplePreferences {
      * @param  value The value which will associated with the key.
      * @see    java.lang.Long
      */
+    @Deprecated
     public void putLong(final String key, final Long value);
     
     /**
@@ -264,6 +286,7 @@ public interface SimplePreferences {
      * @param  value The value which will associated with the key.
      * @see    java.lang.Long
      */
+    @Deprecated
     public void putLong(final Class clazz, final String key, final Long value);
     
     /**
@@ -275,6 +298,7 @@ public interface SimplePreferences {
      * @author Naoghuman
      * @param  drop Should an existing file dropped at frist?
      */
+    @Deprecated
     public void init(final boolean drop);
     
     /**
@@ -286,6 +310,7 @@ public interface SimplePreferences {
      * @return The {@code Preferences} in application context.
      * @see    java.util.prefs.PreferenceChangeListener
      */
+    @Deprecated
     public Preferences forApplication();
     
     /**
@@ -298,6 +323,7 @@ public interface SimplePreferences {
      * @return The {@code Preferences} in module context.
      * @see    java.util.prefs.PreferenceChangeListener
      */
+    @Deprecated
     public Preferences forModule(Class clazz);
     
 }

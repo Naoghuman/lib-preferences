@@ -31,21 +31,25 @@ import java.util.prefs.Preferences;
  * @see com.github.naoghuman.lib.preferences.core.SimplePreferences
  * @see com.github.naoghuman.lib.preferences.core.PreferencesFacade
  */
+@Deprecated
 public class DefaultSimplePreferences implements SimplePreferences {
     
     private static DefaultPreferencesProvider PREFS_IMPL = null;
     
     @Override
+    @Deprecated
     public Preferences forApplication() {
         return PREFS_IMPL.preferencesForModule(this.getClass());
     }
 
     @Override
+    @Deprecated
     public Preferences forModule(Class clazz) {
         return PREFS_IMPL.preferencesForModule(clazz);
     }
 
     @Override
+    @Deprecated
     public Boolean getBoolean(String key, Boolean def) {
         final Boolean value = this.forApplication().getBoolean(key, def);
         
@@ -55,6 +59,7 @@ public class DefaultSimplePreferences implements SimplePreferences {
     }
 
     @Override
+    @Deprecated
     public Boolean getBoolean(Class clazz, String key, Boolean def) {
         final Boolean b = this.forModule(clazz).getBoolean(key, def);
         
@@ -64,6 +69,7 @@ public class DefaultSimplePreferences implements SimplePreferences {
     }
 
     @Override
+    @Deprecated
     public void putBoolean(String key, Boolean value) {
         this.forApplication().putBoolean(key, value);
         
@@ -71,6 +77,7 @@ public class DefaultSimplePreferences implements SimplePreferences {
     }
 
     @Override
+    @Deprecated
     public void putBoolean(Class clazz, String key, Boolean value) {
         this.forModule(clazz).putBoolean(key, value);
         
@@ -78,6 +85,7 @@ public class DefaultSimplePreferences implements SimplePreferences {
     }
 
     @Override
+    @Deprecated
     public String get(String key, String def) {
         final String value = this.forApplication().get(key, def);
         
@@ -87,6 +95,7 @@ public class DefaultSimplePreferences implements SimplePreferences {
     }
 
     @Override
+    @Deprecated
     public String get(Class clazz, String key, String def) {
         final String value = this.forModule(clazz).get(key, def);
         
@@ -96,6 +105,7 @@ public class DefaultSimplePreferences implements SimplePreferences {
     }
 
     @Override
+    @Deprecated
     public void put(String key, String value) {
         this.forApplication().put(key, value);
         
@@ -103,6 +113,7 @@ public class DefaultSimplePreferences implements SimplePreferences {
     }
 
     @Override
+    @Deprecated
     public void put(Class clazz, String key, String value) {
         this.forModule(clazz).put(key, value);
         
@@ -110,6 +121,7 @@ public class DefaultSimplePreferences implements SimplePreferences {
     }
 
     @Override
+    @Deprecated
     public Double getDouble(String key, Double def) {
         final Double value = this.forApplication().getDouble(key, def);
         
@@ -119,6 +131,7 @@ public class DefaultSimplePreferences implements SimplePreferences {
     }
 
     @Override
+    @Deprecated
     public Double getDouble(Class clazz, String key, Double def) {
         final Double value = this.forModule(clazz).getDouble(key, def);
         
@@ -128,6 +141,7 @@ public class DefaultSimplePreferences implements SimplePreferences {
     }
 
     @Override
+    @Deprecated
     public void putDouble(String key, Double value) {
         this.forApplication().putDouble(key, value);
         
@@ -135,6 +149,7 @@ public class DefaultSimplePreferences implements SimplePreferences {
     }
 
     @Override
+    @Deprecated
     public void putDouble(Class clazz, String key, Double value) {
         this.forModule(clazz).putDouble(key, value);
         
@@ -142,6 +157,7 @@ public class DefaultSimplePreferences implements SimplePreferences {
     }
 
     @Override
+    @Deprecated
     public Integer getInt(String key, Integer def) {
         final Integer value = this.forApplication().getInt(key, def);
         
@@ -151,6 +167,7 @@ public class DefaultSimplePreferences implements SimplePreferences {
     }
 
     @Override
+    @Deprecated
     public Integer getInt(Class clazz, String key, Integer def) {
         final Integer value = this.forModule(clazz).getInt(key, def);
         
@@ -160,6 +177,7 @@ public class DefaultSimplePreferences implements SimplePreferences {
     }
 
     @Override
+    @Deprecated
     public void putInt(String key, Integer value) {
         this.forApplication().putInt(key, value);
         
@@ -167,6 +185,7 @@ public class DefaultSimplePreferences implements SimplePreferences {
     }
 
     @Override
+    @Deprecated
     public void putInt(Class clazz, String key, Integer value) {
         this.forModule(clazz).putInt(key, value);
         
@@ -174,6 +193,7 @@ public class DefaultSimplePreferences implements SimplePreferences {
     }
 
     @Override
+    @Deprecated
     public Long getLong(String key, Long def) {
         final Long value = this.forApplication().getLong(key, def);
         
@@ -183,6 +203,7 @@ public class DefaultSimplePreferences implements SimplePreferences {
     }
 
     @Override
+    @Deprecated
     public Long getLong(Class clazz, String key, Long def) {
         final Long value = this.forModule(clazz).getLong(key, def);
         
@@ -192,6 +213,7 @@ public class DefaultSimplePreferences implements SimplePreferences {
     }
 
     @Override
+    @Deprecated
     public void putLong(String key, Long value) {
         this.forApplication().putLong(key, value);
         
@@ -199,6 +221,7 @@ public class DefaultSimplePreferences implements SimplePreferences {
     }
 
     @Override
+    @Deprecated
     public void putLong(Class clazz, String key, Long value) {
         this.forModule(clazz).putLong(key, value);
         
@@ -206,6 +229,7 @@ public class DefaultSimplePreferences implements SimplePreferences {
     }
 
     @Override
+    @Deprecated
     public void init(boolean drop) {
         if (drop) {
             final String path = System.getProperty("user.dir") + File.separator // NOI18N
@@ -237,6 +261,7 @@ public class DefaultSimplePreferences implements SimplePreferences {
         };
     }
     
+    @Deprecated
     interface DefaultPreferencesProvider {
 
         /**
@@ -250,6 +275,7 @@ public class DefaultSimplePreferences implements SimplePreferences {
          * @param  clazz the class for which a user preference node is desired.
          * @return the user preference node
          */
+        @Deprecated
         Preferences preferencesForModule(final Class clazz);
 
         /**
@@ -257,6 +283,7 @@ public class DefaultSimplePreferences implements SimplePreferences {
          *
          * @return the root preference node.
          */
+        @Deprecated
         Preferences preferencesRoot();
     }
     

@@ -33,6 +33,7 @@ Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 
 
 #### Refactoring
+#44 [api] Deprecated hole old api from v0.5.0.
 #42 [pom] Update dependencies in the file pom.xml.
 #30 [pom] Update dependencies in pom.xml.
 #29 [deprecated] Remove deprecated packages, classes and interfaces.
