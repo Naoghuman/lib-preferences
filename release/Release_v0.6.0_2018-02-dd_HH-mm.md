@@ -20,6 +20,7 @@ Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 
 
 #### Enhancement
+#43 [doc] Tweak the message in the automatically generated file Preferences.properties.
 #36 [api] Analyse and implement new api PreferencesFactory.
 #35 [doc] Add start-year to every JavaDoc from the classes and interfaces.
 #33 [doc] Add the flag @autor to all methods.
