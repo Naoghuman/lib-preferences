@@ -33,8 +33,6 @@ public final class DefaultSimplePreferences2 implements SimplePreferences2 {
     private File file;
     private Optional<String>      optionalKey  = Optional.empty();
     private PreferencesProperties properties;
-    private PreferencesReader     reader;
-    private PreferencesWriter     writer;
     private String prefix;
     
     public DefaultSimplePreferences2() {
@@ -52,10 +50,7 @@ public final class DefaultSimplePreferences2 implements SimplePreferences2 {
         
         properties = new PreferencesProperties();
         
-        reader = new DefaultPreferencesFileReader();
-        reader.read(file, properties);
-        
-        writer = new DefaultPreferencesFileWriter();
+        PreferencesFileReader.read(file, properties);
     }
 
     @Override
@@ -215,7 +210,7 @@ public final class DefaultSimplePreferences2 implements SimplePreferences2 {
         
         if (optionalKey.isPresent()) {
             properties.put(optionalKey.get(), value);
-            writer.write(file, properties);
+            PreferencesFileWriter.write(file, properties);
         
             LoggerFacade.getDefault().own(this.getClass(), String.format("  Save " + optionalKey.get() + "=%b", value)); // NOI18N
         }
@@ -229,7 +224,7 @@ public final class DefaultSimplePreferences2 implements SimplePreferences2 {
         
         if (optionalKey.isPresent()) {
             properties.put(optionalKey.get(), value);
-            writer.write(file, properties);
+            PreferencesFileWriter.write(file, properties);
         
             LoggerFacade.getDefault().own(this.getClass(), String.format("  Save " + optionalKey.get() + "=%f", value)); // NOI18N
         }
@@ -243,7 +238,7 @@ public final class DefaultSimplePreferences2 implements SimplePreferences2 {
         
         if (optionalKey.isPresent()) {
             properties.put(optionalKey.get(), value);
-            writer.write(file, properties);
+            PreferencesFileWriter.write(file, properties);
         
             LoggerFacade.getDefault().own(this.getClass(), String.format("  Save " + optionalKey.get() + "=%d", value)); // NOI18N
         }
@@ -257,7 +252,7 @@ public final class DefaultSimplePreferences2 implements SimplePreferences2 {
         
         if (optionalKey.isPresent()) {
             properties.put(optionalKey.get(), value);
-            writer.write(file, properties);
+            PreferencesFileWriter.write(file, properties);
         
             LoggerFacade.getDefault().own(this.getClass(), String.format("  Save " + optionalKey.get() + "=%d", value)); // NOI18N
         }
@@ -271,7 +266,7 @@ public final class DefaultSimplePreferences2 implements SimplePreferences2 {
         
         if (optionalKey.isPresent()) {
             properties.put(optionalKey.get(), value);
-            writer.write(file, properties);
+            PreferencesFileWriter.write(file, properties);
         
             LoggerFacade.getDefault().own(this.getClass(), String.format("  Save " + optionalKey.get() + "=%s", value)); // NOI18N
         }
