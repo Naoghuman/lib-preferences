@@ -54,12 +54,6 @@ public final class PrefercencesFactory {
         /**
          * @author Naoghuman
          * @since  0.6.0
-         */
-        public void drop();
-        
-        /**
-         * @author Naoghuman
-         * @since  0.6.0
          * @param  clazz
          * @return 
          */
@@ -188,13 +182,6 @@ public final class PrefercencesFactory {
         
             preferences.application();
             return this;
-        }
-
-        @Override
-        public void drop() {
-            LoggerFacade.getDefault().debug(this.getClass(), "PreferencesFactory.drop()"); // NOI18N
-        
-//            preferences.drop();
         }
 
         @Override

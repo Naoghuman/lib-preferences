@@ -60,26 +60,6 @@ public final class DefaultSimplePreferences2 implements SimplePreferences2 {
         prefix = SimplePreferences2.class.getPackage().getName();
     }
 
-//    @Override
-//    public void drop() { // TODO reset only the content
-//        LoggerFacade.getDefault().debug(this.getClass(), "DefaultSimplePreferences2.drop()"); // NOI18N
-//        
-//        final File f = this.getFile();
-//        if (f.exists()) {
-//            LoggerFacade.getDefault().debug(this.getClass(), "  Delete file Preferences.properties"); // NOI18N
-//
-//            f.delete();
-//
-//            if (!properties.isEmpty()) {
-//                properties.clear();
-//            }
-//
-//            if (optionalKey.isPresent()) {
-//                optionalKey = Optional.empty();
-//            }
-//        }
-//    }
-
     @Override
     public Boolean get(final Boolean def) {
         LoggerFacade.getDefault().debug(this.getClass(), "DefaultSimplePreferences2.get(Boolean)"); // NOI18N

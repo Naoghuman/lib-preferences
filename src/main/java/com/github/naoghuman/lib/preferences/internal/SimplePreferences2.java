@@ -30,11 +30,6 @@ public interface SimplePreferences2 {
 
     /**
      * 
-     */
-//    public void drop();
-
-    /**
-     * 
      * @param def
      * @return 
      */
