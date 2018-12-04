@@ -1,6 +1,11 @@
 Lib-Preferences
 ===
 
+[![Build Status](https://travis-ci.org/Naoghuman/lib-preferences.svg?branch=master)](https://travis-ci.org/Naoghuman/lib-preferences)
+[![license: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![GitHub release](https://img.shields.io/github/release/Naoghuman/lib-preferences.svg)](https://GitHub.com/Naoghuman/lib-preferences/releases/)
+
+
 
 
 Intention
@@ -56,8 +61,8 @@ private static final String NORMAL_PATH
  * The file {@code Preferences.properties} will only generated if a last one 
  * {@code key-value} pair is written to the file.
  * <p>
- * This test will write following statement in the file:<br>
- * {@code com.github.naoghuman.lib.preferences.internal.x=x}
+ * This test will write following statement {@code com.github.naoghuman.lib.preferences.internal.x=x} 
+ *  in the file to verify this requirement.
  * 
  * @author Naoghuman
  */
@@ -76,12 +81,12 @@ public void initDefaultAndDropTrue() {
 
 ```java
 /**
- * Searching in {@code ApplicationContext} means in this case that the engine 
- * search for a {@code key=my.string.key1} with a prefix 
- * {@code com.github.naoghuman.lib.preferences.internal}. So the complete {@code key}
- * for the search is {@code com.github.naoghuman.lib.preferences.internal.my.string.key1}.
+ * Searching in {@code ApplicationContext} means in this case that the engine search for a 
+ * {@code key=my.string.key1} with a prefix {@code com.github.naoghuman.lib.preferences.internal}.<br>
+ * So the complete {@code key} for the search is 
+ * {@code com.github.naoghuman.lib.preferences.internal.my.string.key1}.
  * <p>
- * If the {@code key} is not found in the file {@code Preferences.properties}
+ * If the file {@code Preferences.properties} doesn't exists or the {@code key} isn't found 
  * then the {@code default} value will returned, in this case {@code x}.
  * 
  * @author Naoghuman
