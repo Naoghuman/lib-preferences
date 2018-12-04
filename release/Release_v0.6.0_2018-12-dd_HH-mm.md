@@ -16,20 +16,26 @@ Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 
 
 #### Feature
+#45 [ci] Connect the GitHub project with Travis CI.
 
 
 
 #### Enhancement
-#43 [doc] Tweak the message in the automatically generated file Preferences.properties.
 #36 [api] Analyse and implement new api PreferencesFactory.
-#35 [doc] Add start-year to every JavaDoc from the classes and interfaces.
-#33 [doc] Add the flag @autor to all methods.
 #31 [test] Add JUnitTests to PreferencesFacade.
 
 
 
 #### Bug
 #40 [doc] Example SimplePreferencesTest#putBooleanInModuleContext() is wrong.
+
+
+
+#### Documentation
+#43 [doc] Tweak the message in the automatically generated file Preferences.properties.
+#41 [doc] Rewrite the JavaDoc from the tests in the class SimplePreferencesTest.
+#35 [doc] Add start-year to every JavaDoc from the classes and interfaces.
+#33 [doc] Add the flag @autor to all methods.
 
 
 
@@ -51,7 +57,7 @@ Naoghuman
 
 
 [//]: # (Issues which will be integrated in this release)
-#41 [doc] Rewrite the JavaDoc from the tests in the class SimplePreferencesTest.
+#37 [doc] Update JavaDoc for the new api (factory + internal).
 
 
 
