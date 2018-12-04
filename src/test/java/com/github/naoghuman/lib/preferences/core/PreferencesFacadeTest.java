@@ -1,4 +1,4 @@
-/*
+/**
  * Copyright (C) 2018 - 2018 Naoghuman
  *
  * This program is free software: you can redistribute it and/or modify
@@ -16,7 +16,6 @@
  */
 package com.github.naoghuman.lib.preferences.core;
 
-import java.util.prefs.Preferences;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

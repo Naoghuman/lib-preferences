@@ -16,7 +16,13 @@
  */
 /**
  * Contains the {@code API} for the library {@code Lib-Preferences}.
+ * <p>
+ * With the factory {@link com.github.naoghuman.lib.preferences.core.PreferencesFactory}
+ * the developer have access to all necessary methods from the library {@code Lib-Preferences}.
  * 
- * @author Naoghuman
+ * @since   0.1.0
+ * @version 0.6.0
+ * @author  Naoghuman
+ * @see     com.github.naoghuman.lib.preferences.core.PreferencesFactory
  */
 package com.github.naoghuman.lib.preferences.core;

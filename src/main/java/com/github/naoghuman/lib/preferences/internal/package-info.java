@@ -15,8 +15,14 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 /**
- * Contains the {@code Implementation} for the library {@code Lib-Preferences}.
+ * Contains the internal {@code Implementation} for the library {@code Lib-Preferences}.
+ * <p>
+ * Normally a developer don't need access to any methods from this classes. All needed 
+ * functionalities can access with {@link com.github.naoghuman.lib.preferences.core.PreferencesFactory}.
  * 
- * @author Naoghuman
+ * @since   0.1.0
+ * @version 0.6.0
+ * @author  Naoghuman
+ * @see     com.github.naoghuman.lib.preferences.core.PreferencesFactory
  */
 package com.github.naoghuman.lib.preferences.internal;

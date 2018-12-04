@@ -65,8 +65,8 @@ public class SimplePreferencesTest {
      * The file {@code Preferences.properties} will only generated if a last one 
      * {@code key-value} pair is written to the file.
      * <p>
-     * This test will write following statement in the file:<br>
-     * {@code com.github.naoghuman.lib.preferences.internal.x=x}
+     * This test will write following statement {@code com.github.naoghuman.lib.preferences.internal.x=x} 
+     *  in the file to verify this requirement.
      * 
      * @author Naoghuman
      */
@@ -80,12 +80,12 @@ public class SimplePreferencesTest {
     }
     
     /**
-     * Searching in {@code ApplicationContext} means in this case that the engine 
-     * search for a {@code key=my.string.key1} with a prefix 
-     * {@code com.github.naoghuman.lib.preferences.internal}. So the complete {@code key}
-     * for the search is {@code com.github.naoghuman.lib.preferences.internal.my.string.key1}.
+     * Searching in {@code ApplicationContext} means in this case that the engine search for a 
+     * {@code key=my.string.key1} with a prefix {@code com.github.naoghuman.lib.preferences.internal}.<br>
+     * So the complete {@code key} for the search is 
+     * {@code com.github.naoghuman.lib.preferences.internal.my.string.key1}.
      * <p>
-     * If the {@code key} is not found in the file {@code Preferences.properties}
+     * If the file {@code Preferences.properties} doesn't exists or the {@code key} isn't found 
      * then the {@code default} value will returned, in this case {@code x}.
      * 
      * @author Naoghuman
@@ -97,15 +97,10 @@ public class SimplePreferencesTest {
     }
     
     /**
-     * Putting a {@code value} in the file {@code Preferences.properties} in 
-     * {@code ApplicationContext} will write in this case following statement in 
-     * the file:<br>
+     * Put a {@code value} in {@code ApplicationContext} means that the engine will add to the 
+     * given {@code key} the prefix {@code com.github.naoghuman.lib.preferences.internal}. 
+     * In this case following statement will be written to the file {@code Preferences.properties}: 
      * {@code com.github.naoghuman.lib.preferences.internal.my.string.key2=y}
-     * <p>
-     * Searching / writing in {@code ApplicationContext} means in this case that 
-     * the engine search / write a {@code key=my.string.key2} with a prefix 
-     * {@code com.github.naoghuman.lib.preferences.internal}. So the complete {@code key}
-     * for the search / to write is {@code com.github.naoghuman.lib.preferences.internal.my.string.key2}.
      * <p>
      * Because the search engine find the {@code key} in the file not the {@code default} 
      * value {@code x} will be returned instead the stored value {@code y} will used.

@@ -35,6 +35,7 @@ Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 #### Documentation
 #43 [doc] Tweak the message in the automatically generated file Preferences.properties.
 #41 [doc] Rewrite the JavaDoc from the tests in the class SimplePreferencesTest.
+#37 [doc] Update JavaDoc for the new api (factory + internal).
 #35 [doc] Add start-year to every JavaDoc from the classes and interfaces.
 #33 [doc] Add the flag @autor to all methods.
 
@@ -59,7 +60,6 @@ Naoghuman
 
 
 [//]: # (Issues which will be integrated in this release)
-#37 [doc] Update JavaDoc for the new api (factory + internal).
 
 
 

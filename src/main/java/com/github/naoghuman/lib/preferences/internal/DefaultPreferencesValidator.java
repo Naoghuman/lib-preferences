@@ -19,20 +19,23 @@ package com.github.naoghuman.lib.preferences.internal;
 import java.util.Objects;
 
 /**
+ * This class contains different general validation methods in context from the 
+ * library {@code Lib-Preferences}.
  *
- * @author Naoghuman
  * @since  0.6.0
+ * @author Naoghuman
  */
-public class PreferencesValidator {
+public class DefaultPreferencesValidator {
     
     /**
      * Validates if the attribute {@code value} isn't {@code NULL}.
      *
-     * @author Naoghuman
-     * @since  0.6.0
      * @param  value the attribute which should be validated.
      * @param  <T>   the type of the reference.
      * @throws NullPointerException if {@code (value == NULL)}.
+     * @since  0.6.0
+     * @author Naoghuman
+     * @see    java.lang.NullPointerException
      */
     public static <T> void requireNonNull(final T value) {
         Objects.requireNonNull(value, "The attribute [value] can't be NULL"); // NOI18N
@@ -41,11 +44,13 @@ public class PreferencesValidator {
     /**
      * Validates if the attribute {@code value} isn't {@code NULL} and not {@code EMPTY}.
      *
-     * @author Naoghuman
-     * @since  0.6.0
      * @param  value the attribute which should be validated.
-     * @throws NullPointerException     if {@code (value        == NULL)}.
      * @throws IllegalArgumentException if {@code (value.trim() == EMPTY)}.
+     * @throws NullPointerException     if {@code (value        == NULL)}.
+     * @since  0.6.0
+     * @author Naoghuman
+     * @see    java.lang.IllegalArgumentException
+     * @see    java.lang.NullPointerException
      */
     public static void requireNonNullAndNotEmpty(final String value) {
         requireNonNull(value);

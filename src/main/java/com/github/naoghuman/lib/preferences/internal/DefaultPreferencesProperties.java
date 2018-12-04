@@ -25,11 +25,24 @@ import java.util.Enumeration;
 import java.util.Properties;
 
 /**
+ * This class extend the class {@link java.util.Properties} with the goal to overwrite 
+ * the original method {@link java.util.Properties#store(java.io.OutputStream, java.lang.String)}.
+ * <p>
+ * During the overwriting a new header will be created in the overwritten method with the 
+ * following format:<br>
+ * ################################################################################<br>
+ * #<br>
+ * # {@code comment}<br>
+ * # {@code new Date().toString()}<br>
+ * #<br>
+ * ################################################################################
  *
  * @author Naoghuman
  * @since  0.6.0
+ * @see    java.util.Properties
+ * @see    java.util.Properties#store(java.io.OutputStream, java.lang.String)
  */
-final class PreferencesProperties extends Properties {
+final class DefaultPreferencesProperties extends Properties {
 
     /* A table of hex digits */
     private static final char[] hexDigit = {
@@ -41,7 +54,7 @@ final class PreferencesProperties extends Properties {
      * Converts unicodes to encoded &#92;uxxxx and escapes
      * special characters with a preceding slash
      */
-    private String saveConvert(String theString, boolean escapeSpace, boolean escapeUnicode) {
+    private String saveConvert(final String theString, final boolean escapeSpace, final boolean escapeUnicode) {
         int len = theString.length();
         int bufLen = len * 2;
         if (bufLen < 0) {
@@ -51,14 +64,13 @@ final class PreferencesProperties extends Properties {
         final StringBuilder outBuffer = new StringBuilder(bufLen);
         for(int x = 0; x < len; x++) {
             char aChar = theString.charAt(x);
-            // Handle common case first, selecting largest block that
-            // avoids the specials below
+            // Handle common case first, selecting largest block that avoids the specials below
             if (
                     (aChar > 61)
                     && (aChar < 127))
             {
                 if (aChar == '\\') { // NOI18N
-                    outBuffer.append('\\'); outBuffer.append('\\'); // NOI18N
+                    outBuffer.append('\\').append('\\'); // NOI18N
                     continue;
                 }
                 
@@ -72,20 +84,15 @@ final class PreferencesProperties extends Properties {
                         outBuffer.append('\\'); // NOI18N
                     outBuffer.append(' '); // NOI18N
                     break;
-                case '\t':outBuffer.append('\\'); outBuffer.append('t'); // NOI18N
-                          break;
-                case '\n':outBuffer.append('\\'); outBuffer.append('n'); // NOI18N
-                          break;
-                case '\r':outBuffer.append('\\'); outBuffer.append('r'); // NOI18N
-                          break;
-                case '\f':outBuffer.append('\\'); outBuffer.append('f'); // NOI18N
-                          break;
+                case '\t':outBuffer.append('\\'); outBuffer.append('t'); break; // NOI18N
+                case '\n':outBuffer.append('\\'); outBuffer.append('n'); break; // NOI18N
+                case '\r':outBuffer.append('\\'); outBuffer.append('r'); break; // NOI18N
+                case '\f':outBuffer.append('\\'); outBuffer.append('f'); break; // NOI18N
                 case '=': // NOI18N// Fall through
                 case ':': // NOI18N// Fall through
                 case '#': // NOI18N// Fall through
                 case '!': // NOI18N
-                    outBuffer.append('\\'); outBuffer.append(aChar); // NOI18N
-                    break;
+                    outBuffer.append('\\'); outBuffer.append(aChar); break; // NOI18N
                 default:
                     if (
                             (
@@ -94,7 +101,7 @@ final class PreferencesProperties extends Properties {
                             & escapeUnicode )
                     {
                         outBuffer.append('\\'); // NOI18N
-                        outBuffer.append('u'); // NOI18N
+                        outBuffer.append('u');  // NOI18N
                         outBuffer.append(toHex((aChar >> 12) & 0xF));
                         outBuffer.append(toHex((aChar >>  8) & 0xF));
                         outBuffer.append(toHex((aChar >>  4) & 0xF));
@@ -107,9 +114,11 @@ final class PreferencesProperties extends Properties {
         
         return outBuffer.toString();
     }
-
+    
     @Override
-    public void store(OutputStream out, String comments) throws IOException {
+    public void store(OutputStream out, String comment) throws IOException {
+        DefaultPreferencesValidator.requireNonNull(out);
+        DefaultPreferencesValidator.requireNonNullAndNotEmpty(comment);
         
         final BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(out, "8859_1")); // NOI18N
         writer.write("################################################################################"); // NOI18N
@@ -117,7 +126,7 @@ final class PreferencesProperties extends Properties {
         writer.write("#"); // NOI18N
         writer.newLine();
         
-        this.write(writer, comments);
+        this.write(writer, comment);
         
         writer.write("# " + new Date().toString()); // NOI18N
         writer.newLine();
@@ -127,7 +136,7 @@ final class PreferencesProperties extends Properties {
         writer.newLine();
         writer.newLine();
         
-        synchronized (PreferencesProperties.this) {
+        synchronized (DefaultPreferencesProperties.this) {
             String key;
             String value;
             for (Enumeration<?> e = keys(); e.hasMoreElements();) {
