@@ -28,6 +28,7 @@ Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 
 
 #### Bug
+#48 [test] ERROR StatusLogger No log4j2 configuration file found.
 #40 [doc] Example SimplePreferencesTest#putBooleanInModuleContext() is wrong.
 
 
