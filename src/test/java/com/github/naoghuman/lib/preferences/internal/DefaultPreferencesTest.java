@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 - 2018 Naoghuman's dream
+ * Copyright (C) 2014 - 2018 Naoghuman's dream
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,8 +16,6 @@
  */
 package com.github.naoghuman.lib.preferences.internal;
 
-import com.github.naoghuman.lib.preferences.core.PreferencesFactory;
-import dummy.module.scope.DummyModuleScope;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
