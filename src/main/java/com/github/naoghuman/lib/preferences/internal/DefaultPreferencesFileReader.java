@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2018 Naoghuman
+ * Copyright (C) 2018 - 2018 Naoghuman
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -33,13 +33,14 @@ import java.util.Properties;
  * <li>and an instance from {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferencesProperties}.</li>
  * </ul>
  *
- * @since  0.6.0
- * @author Naoghuman
- * @see    com.github.naoghuman.lib.preferences.internal.DefaultPreferences#PREFERENCES_FILE
- * @see    com.github.naoghuman.lib.preferences.internal.DefaultPreferences#SYSTEM_PROPERTY__USER_DIR
- * @see    com.github.naoghuman.lib.preferences.internal.DefaultPreferencesProperties
- * @see    java.io.File
- * @see    java.util.Properties
+ * @since   0.6.0
+ * @version 0.6.0
+ * @author  Naoghuman
+ * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferences#PREFERENCES_FILE
+ * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferences#SYSTEM_PROPERTY__USER_DIR
+ * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferencesProperties
+ * @see     java.io.File
+ * @see     java.util.Properties
  */
 final class DefaultPreferencesFileReader {
 
@@ -53,27 +54,39 @@ final class DefaultPreferencesFileReader {
      * <li>and an instance from {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferencesProperties}.</li>
      * </ul>
      * 
-     * @param  file       the {@code File} which content should be read.
-     * @param  properties the {@code Properties} which should be updated with the 
-     *                    content from the {@code File}.
-     * @throws NullPointerException if {@code (file || properties) == NULL}.
-     * @since  0.6.0
-     * @author Naoghuman
-     * @see    com.github.naoghuman.lib.preferences.internal.DefaultPreferences#PREFERENCES_FILE
-     * @see    com.github.naoghuman.lib.preferences.internal.DefaultPreferences#SYSTEM_PROPERTY__USER_DIR
-     * @see    com.github.naoghuman.lib.preferences.internal.DefaultPreferencesProperties
-     * @see    java.io.File
-     * @see    java.lang.NullPointerException
-     * @see    java.util.Properties
+     * @param   file        the {@code File} which content should be read.
+     * @param   properties  the {@code Properties} which should be updated with the content from the {@code File}.
+     * @throws  IOException if some general exceptions produced by failed or interrupted I/O operations.
+     * @throws  IllegalArgumentException if {@code (!file.isFile())}.
+     * @throws  NullPointerException if {@code (file || properties) == NULL}.
+     * @since   0.6.0
+     * @version 0.6.0
+     * @author  Naoghuman
+     * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferences#PREFERENCES_FILE
+     * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferences#SYSTEM_PROPERTY__USER_DIR
+     * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferencesProperties
+     * @see     java.io.File
+     * @see     java.io.IOException
+     * @see     java.lang.IllegalArgumentException
+     * @see     java.lang.NullPointerException
+     * @see     java.util.Properties
      */
     static void read(final File file, final Properties properties) {
         DefaultPreferencesValidator.requireNonNull(file);
         DefaultPreferencesValidator.requireNonNull(properties);
         
+        if (!file.exists()) {
+            return;
+        }
+        
+        if (!file.isFile()) {
+            throw new IllegalArgumentException("The attribute [file] must be a normal [File] (not a directory)."); // NOI18N
+        }
+        
         try(final BufferedInputStream bis = new BufferedInputStream(new FileInputStream(file))) {
             properties.load(bis);
         } catch (IOException ioe) {
-            LoggerFacade.getDefault().error(DefaultPreferencesFileWriter.class, 
+            LoggerFacade.getDefault().error(DefaultPreferencesFileReader.class, 
                     "Can't read the content the file into the properties.", ioe); // NOI18N
         }
     }

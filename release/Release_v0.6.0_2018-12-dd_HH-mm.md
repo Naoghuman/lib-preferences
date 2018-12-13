@@ -18,6 +18,7 @@ Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 #### Feature
 #46 [lib] Add badges from img.shield.io to the ReadMe.md.
 #45 [ci] Connect the GitHub project with Travis CI.
+#32 [test] Add JUnitTests to the new api (factory + internal).
 
 
 

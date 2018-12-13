@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2018 Naoghuman
+ * Copyright (C) 2018 - 2018 Naoghuman
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -28,52 +28,93 @@ import java.io.IOException;
  * In context from the library {@code Lib-Preferences} this is
  * <ul>
  * <li>an instance from {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferencesProperties} </li>
- * <li>and the file {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#PREFERENCES_FILE}
+ * <li>and the file {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#DEFAULT_PREFERENCES_FILE}
  *     with the path from {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#SYSTEM_PROPERTY__USER_DIR}.</li>
  * </ul>
  * 
- * @since  0.6.0
- * @author Naoghuman
- * @see    com.github.naoghuman.lib.preferences.internal.DefaultPreferences#PREFERENCES_FILE
- * @see    com.github.naoghuman.lib.preferences.internal.DefaultPreferences#SYSTEM_PROPERTY__USER_DIR
- * @see    com.github.naoghuman.lib.preferences.internal.DefaultPreferencesProperties
- * @see    java.io.File
- * @see    java.lang.NullPointerException
- * @see    java.util.Properties
+ * @since   0.6.0
+ * @version 0.6.0
+ * @author  Naoghuman
+ * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferences#DEFAULT_PREFERENCES_FILE
+ * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferences#SYSTEM_PROPERTY__USER_DIR
+ * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferencesProperties
+ * @see     java.io.File
+ * @see     java.lang.NullPointerException
+ * @see     java.util.Properties
  */
 final class DefaultPreferencesFileWriter {
 
     /**
-     * Writes the content from a {@link java.util.Properties} into a {@link java.io.File}.
+     * Writes the content from a {@link java.util.Properties} into a {@link java.io.File} with the constant 
+     * {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#DEFAULT_PREFERENCES_PROPERTIES_COMMANTARY} 
+     * as header.
      * <p>
      * In context from the library {@code Lib-Preferences} this is
      * <ul>
      * <li>an instance from {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferencesProperties} </li>
-     * <li>and the file {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#PREFERENCES_FILE}
+     * <li>and the file {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#DEFAULT_PREFERENCES_FILE}
      *     with the path from {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#SYSTEM_PROPERTY__USER_DIR}.</li>
      * </ul>
      * 
-     * @param  properties the {@code Properties} which content should be written into the {@code File}.
-     * @param  file       the {@code File} which should be updated.
-     * @throws NullPointerException if {@code (properties || file) == NULL}.
-     * @since  0.6.0
-     * @author Naoghuman
-     * @see    com.github.naoghuman.lib.preferences.internal.DefaultPreferences#PREFERENCES_FILE
-     * @see    com.github.naoghuman.lib.preferences.internal.DefaultPreferences#SYSTEM_PROPERTY__USER_DIR
-     * @see    com.github.naoghuman.lib.preferences.internal.DefaultPreferencesProperties
-     * @see    java.io.File
-     * @see    java.lang.NullPointerException
-     * @see    java.util.Properties
+     * @param   properties the {@code Properties} which content should be written into the {@code File}.
+     * @param   file       the {@code File} which should be updated.
+     * @param   commentary the {@code commentray} which should be written as header in the .properties file.
+     * @throws  NullPointerException if {@code (properties || file) == NULL}.
+     * @since   0.6.0
+     * @version 0.6.0
+     * @author  Naoghuman
+     * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferences#DEFAULT_PREFERENCES_FILE
+     * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferences#DEFAULT_PREFERENCES_PROPERTIES_COMMANTARY
+     * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferences#SYSTEM_PROPERTY__USER_DIR
+     * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferencesProperties
+     * @see     java.io.File
+     * @see     java.lang.NullPointerException
+     * @see     java.util.Properties
      */
     static void write(final DefaultPreferencesProperties properties, final File file) {
         DefaultPreferencesValidator.requireNonNull(properties);
         DefaultPreferencesValidator.requireNonNull(file);
         
+        DefaultPreferencesFileWriter.write(properties, file, DefaultPreferences.DEFAULT_PREFERENCES_PROPERTIES_COMMANTARY);
+    }
+    
+    /**
+     * Writes the content from a {@link java.util.Properties} into a {@link java.io.File} with the 
+     * {@code commentary} as header.
+     * <p>
+     * In context from the library {@code Lib-Preferences} this is
+     * <ul>
+     * <li>an instance from {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferencesProperties} </li>
+     * <li>and the file {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#DEFAULT_PREFERENCES_FILE}
+     *     with the path from {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#SYSTEM_PROPERTY__USER_DIR}.</li>
+     * </ul>
+     * 
+     * @param   properties the {@code Properties} which content should be written into the {@code File}.
+     * @param   file       the {@code File} which should be updated.
+     * @param   commentary the {@code commentray} which should be written as header in the .properties file.
+     * @throws  IllegalArgumentException if {@code (commentary) == EMPTY}.
+     * @throws  NullPointerException     if {@code (properties || file) == NULL}.
+     * @since   0.6.0
+     * @version 0.6.0
+     * @author  Naoghuman
+     * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferences#DEFAULT_PREFERENCES_FILE
+     * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferences#SYSTEM_PROPERTY__USER_DIR
+     * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferencesProperties
+     * @see     java.io.File
+     * @see     java.lang.IllegalArgumentException
+     * @see     java.lang.NullPointerException
+     * @see     java.util.Properties
+     */
+    static void write(final DefaultPreferencesProperties properties, final File file, final String commentary) {
+        DefaultPreferencesValidator.requireNonNull(properties);
+        DefaultPreferencesValidator.requireNonNull(file);
+        DefaultPreferencesValidator.requireNonNullAndNotEmpty(commentary);
+        
         try(final BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file))) {
-            properties.store(bos, "This file is automatically generated. Plz don't modified it manually."); // NOI18N
+            properties.store(bos, commentary);
         } catch (IOException ioe) {
             LoggerFacade.getDefault().error(DefaultPreferencesFileWriter.class, 
-                    "Can't write the content from the properties into the file.", ioe); // NOI18N
+                    "Can't write the content from the [properties] into the [file].", ioe); // NOI18N
         }
     }
     

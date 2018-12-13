@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2018 Naoghuman's dream
+ * Copyright (C) 2018 - 2018 Naoghuman's dream
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,12 +22,12 @@ import org.junit.Test;
 
 /**
  * UnitTests to test the default implementation 
- * {@link com.github.naoghuman.lib.i18n.internal.DefaultI18NValidator}.
+ * {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferencesValidator}.
  *
  * @since   0.6.0
  * @version 0.6.0
  * @author  Naoghuman
- * @see    com.github.naoghuman.lib.i18n.internal.DefaultPreferencesValidator
+ * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferencesValidator
  */
 public class DefaultPreferencesValidatorTest {
     

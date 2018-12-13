@@ -14,13 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package dummy.module.context;
+package dummy.module.scope;
 
 /**
- * This class is a dummy class for testing the module context.
+ * This class is a dummy class for testing the {@code module} scope.
  *
- * @author Naoghuman
+ * @since   0.1.0
+ * @version 0.6.0
+ * @author  Naoghuman
  */
-public class DummyModuleContext {
+public class DummyModuleScope {
     
 }

@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2018 Naoghuman
+ * Copyright (C) 2018 - 2018 Naoghuman
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,25 +20,9 @@ import com.github.naoghuman.lib.logger.core.LoggerFacade;
 import com.github.naoghuman.lib.preferences.internal.DefaultPreferences;
 import com.github.naoghuman.lib.preferences.internal.DefaultPreferencesValidator;
 
-/*
- * Example 'Usage from PreferencesFactory'
- *
- * 1) Starts the factory process.
- * 2) Activate the 'application' scope.
- * 3) Activate the 'package' scope.
- * 4) Defines the 'key'.
- * 5) Returns the 'value' from type 'T'.
- * 6) Stores the value from type 'T'.
- * PreferencesFactory.create() // 1
- *        .application(String)  // 2
- *        .module(Class)        // 3
- *        .key(final String)    // 4
- *        .get(T);              // 5
- *        .put(T);              // 6
- */
 /**
  * With this factory the developer have the possibilities to simplify the access 
- * to the file {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#PREFERENCES_FILE}.
+ * to the file {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#DEFAULT_PREFERENCES_FILE}.
  * <p>
  * After the definition from the scope the developer can specify in the second step the 
  * {@code key} which then in the third step will be used to store a new {@code value} 
@@ -48,11 +32,28 @@ import com.github.naoghuman.lib.preferences.internal.DefaultPreferencesValidator
  * <li>Application scope means that the {@code key} must be <b>unique</b> in the <i>hole</i> application.</li>
  * <li>Module scope means that the {@code key} must be <b>unique</b> in a <i>package</i> scope.</li>
  * </ul>
+ * <p>
+ * Specification: <i>Usage from PreferencesFactory</i>
+ * <pre>
+ *   1) Starts the factory process.
+ *   2) Activate the 'application' scope.
+ *   3) Activate the 'package' scope.
+ *   4) Defines the 'key'.
+ *   5) Returns the 'value' from type 'T'.
+ *   6) Stores the value from type 'T'.
+ *   PreferencesFactory.create() // 1
+ *          .application()       // 2
+ *          .module(Class)       // 3
+ *          .key(final String)   // 4
+ *          .get(T);             // 5
+ *          .put(T);             // 6
+ * </pre>
  * 
- * @since  0.6.0
- * @author Naoghuman
- * @see    com.github.naoghuman.lib.preferences.internal.DefaultPreferences#PREFERENCES_FILE
- * @see    java.util.Properties
+ * @since   0.6.0
+ * @version 0.6.0
+ * @author  Naoghuman
+ * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferences#DEFAULT_PREFERENCES_FILE
+ * @see     java.util.Properties
  */
 public final class PreferencesFactory {
     
@@ -60,9 +61,10 @@ public final class PreferencesFactory {
      * Starts the factory. Leads to the first decision from the developer, taken 
      * in the interface {@code FirstStep}.
      * 
-     * @return the first step in this factory: {@code FirstStep}
-     * @since  0.6.0
-     * @author Naoghuman
+     * @return  the first step in this factory: {@code FirstStep}
+     * @since   0.6.0
+     * @version 0.6.0
+     * @author  Naoghuman
      */
     public static FirstStep create() {
         return new PreferencesFactoryImpl();
@@ -82,8 +84,9 @@ public final class PreferencesFactory {
      * 
      * See the JavaDoc commenary from both methods in this interface for more information.
      * 
-     * @since  0.6.0
-     * @author Naoghuman
+     * @since   0.6.0
+     * @version 0.6.0
+     * @author  Naoghuman
      */
     public interface FirstStep {
         
@@ -97,11 +100,12 @@ public final class PreferencesFactory {
          * class {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences} to 
          * the given key.
          * 
-         * @return the next step in this factory: {@code SecondStep}
-         * @since  0.6.0
-         * @author Naoghuman
-         * @see    com.github.naoghuman.lib.preferences.internal.DefaultPreferences#key(String)
-         * @see    java.util.Properties
+         * @return  the next step in this factory: {@code SecondStep}
+         * @since   0.6.0
+         * @version 0.6.0
+         * @author  Naoghuman
+         * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferences#key(String)
+         * @see     java.util.Properties
          */
         public SecondStep application();
         
@@ -114,15 +118,16 @@ public final class PreferencesFactory {
          * To accomplish this behavior this method adds automatically the {@code package name} 
          * from the {@code clazz} to the given key.
          * 
-         * @param  clazz the package name from this {@code Class} defines the {@code module} scope.
-         * @return the next step in this factory: {@code SecondStep}
-         * @throws NullPointerException if {@code (clazz == NULL)}.
-         * @since  0.6.0
-         * @author Naoghuman
-         * @see    com.github.naoghuman.lib.preferences.internal.DefaultPreferences#key(String)
-         * @see    com.github.naoghuman.lib.preferences.internal.DefaultPreferencesValidator#requireNonNull(java.lang.Object)
-         * @see    java.lang.NullPointerException
-         * @see    java.util.Properties
+         * @param   clazz the package name from this {@code Class} defines the {@code module} scope.
+         * @return  the next step in this factory: {@code SecondStep}
+         * @throws  NullPointerException if {@code (clazz == NULL)}.
+         * @since   0.6.0
+         * @version 0.6.0
+         * @author  Naoghuman
+         * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferences#key(String)
+         * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferencesValidator#requireNonNull(java.lang.Object)
+         * @see     java.lang.NullPointerException
+         * @see     java.util.Properties
          */
         public SecondStep module(final Class clazz);
         
@@ -137,8 +142,9 @@ public final class PreferencesFactory {
      * Be aware about the defined scope {@code (application || module)} in the first step 
      * from this factory, especially if the {@code key} exists in different scopes.
      * 
-     * @since  0.6.0
-     * @author Naoghuman
+     * @since   0.6.0
+     * @version 0.6.0
+     * @author  Naoghuman
      */
     public interface SecondStep {
         
@@ -150,14 +156,15 @@ public final class PreferencesFactory {
          * Be aware about the defined scope {@code (application || module)} in the first step 
          * from this factory, especially if the {@code key} exists in different scopes.
          * 
-         * @param  key the {@code key}.
-         * @return the next step in this factory: {@code ThirdStep}
-         * @throws IllegalArgumentException if {@code (key.trim() == EMPTY)}.
-         * @throws NullPointerException     if {@code (key        == NULL)}.
-         * @since  0.6.0
-         * @author Naoghuman
-         * @see    java.lang.IllegalArgumentException
-         * @see    java.lang.NullPointerException
+         * @param   key the {@code key}.
+         * @return  the next step in this factory: {@code ThirdStep}
+         * @throws  IllegalArgumentException if {@code (key.trim() == EMPTY)}.
+         * @throws  NullPointerException     if {@code (key        == NULL)}.
+         * @since   0.6.0
+         * @version 0.6.0
+         * @author  Naoghuman
+         * @see     java.lang.IllegalArgumentException
+         * @see     java.lang.NullPointerException
          */
         public ThirdStep key(final String key);
         
@@ -172,8 +179,9 @@ public final class PreferencesFactory {
      * In all {@code put(T)} methods the given {@code value} will be stored associated 
      * with the {@code key} in the previous choosen scope {@code (application / module)}.
      * 
-     * @since  0.6.0
-     * @author Naoghuman
+     * @since   0.6.0
+     * @version 0.6.0
+     * @author  Naoghuman
      */
     public interface ThirdStep {
         
@@ -182,12 +190,13 @@ public final class PreferencesFactory {
          * choosen scope {@code (application / module)} or returned the {@code default} value if 
          * the key isn't found.
          * 
-         * @param  def the default value which will be returned if the {@code key} isn't found.
-         * @return the associated {@code value} or {@code def}.
-         * @throws NullPointerException if {@code (def == NULL)}.
-         * @since  0.6.0
-         * @author Naoghuman
-         * @see    java.lang.NullPointerException
+         * @param   def the default value which will be returned if the {@code key} isn't found.
+         * @return  the associated {@code value} or {@code def}.
+         * @throws  NullPointerException if {@code (def == NULL)}.
+         * @since   0.6.0
+         * @version 0.6.0
+         * @author  Naoghuman
+         * @see     java.lang.NullPointerException
          */
         public Boolean get(final Boolean def);
         
@@ -196,12 +205,13 @@ public final class PreferencesFactory {
          * choosen scope {@code (application / module)} or returned the {@code default} value if 
          * the key isn't found.
          * 
-         * @param  def the default value which will be returned if the {@code key} isn't found.
-         * @return the associated {@code value} or {@code def}.
-         * @throws NullPointerException if {@code (def == NULL)}.
-         * @since  0.6.0
-         * @author Naoghuman
-         * @see    java.lang.NullPointerException
+         * @param   def the default value which will be returned if the {@code key} isn't found.
+         * @return  the associated {@code value} or {@code def}.
+         * @throws  NullPointerException if {@code (def == NULL)}.
+         * @since   0.6.0
+         * @version 0.6.0
+         * @author  Naoghuman
+         * @see     java.lang.NullPointerException
          */
         public Double get(final Double def);
         
@@ -210,12 +220,13 @@ public final class PreferencesFactory {
          * choosen scope {@code (application / module)} or returned the {@code default} value if 
          * the key isn't found.
          * 
-         * @param  def the default value which will be returned if the {@code key} isn't found.
-         * @return the associated {@code value} or {@code def}.
-         * @throws NullPointerException if {@code (def == NULL)}.
-         * @since  0.6.0
-         * @author Naoghuman
-         * @see    java.lang.NullPointerException
+         * @param   def the default value which will be returned if the {@code key} isn't found.
+         * @return  the associated {@code value} or {@code def}.
+         * @throws  NullPointerException if {@code (def == NULL)}.
+         * @since   0.6.0
+         * @version 0.6.0
+         * @author  Naoghuman
+         * @see     java.lang.NullPointerException
          */
         public Integer get(final Integer def);
         
@@ -224,12 +235,13 @@ public final class PreferencesFactory {
          * choosen scope {@code (application / module)} or returned the {@code default} value if 
          * the key isn't found.
          * 
-         * @param  def the default value which will be returned if the {@code key} isn't found.
-         * @return the associated {@code value} or {@code def}.
-         * @throws NullPointerException if {@code (def == NULL)}.
-         * @since  0.6.0
-         * @author Naoghuman
-         * @see    java.lang.NullPointerException
+         * @param   def the default value which will be returned if the {@code key} isn't found.
+         * @return  the associated {@code value} or {@code def}.
+         * @throws  NullPointerException if {@code (def == NULL)}.
+         * @since   0.6.0
+         * @version 0.6.0
+         * @author  Naoghuman
+         * @see     java.lang.NullPointerException
          */
         public Long get(final Long def);
         
@@ -238,14 +250,15 @@ public final class PreferencesFactory {
          * choosen scope {@code (application / module)} or returned the {@code default} value if 
          * the key isn't found.
          * 
-         * @param  def the default value which will be returned if the {@code key} isn't found.
-         * @return the associated {@code value} or {@code def}.
-         * @throws IllegalArgumentException if {@code (def.trim() == EMPTY)}.
-         * @throws NullPointerException     if {@code (def == NULL)}.
-         * @since  0.6.0
-         * @author Naoghuman
-         * @see    java.lang.IllegalArgumentException
-         * @see    java.lang.NullPointerException
+         * @param   def the default value which will be returned if the {@code key} isn't found.
+         * @return  the associated {@code value} or {@code def}.
+         * @throws  IllegalArgumentException if {@code (def.trim() == EMPTY)}.
+         * @throws  NullPointerException     if {@code (def == NULL)}.
+         * @since   0.6.0
+         * @version 0.6.0
+         * @author  Naoghuman
+         * @see     java.lang.IllegalArgumentException
+         * @see     java.lang.NullPointerException
          */
         public String get(final String def);
         
@@ -253,11 +266,12 @@ public final class PreferencesFactory {
          * Stores the given {@code value} in context from the previous configured scope 
          * {@code (application / module)} and defined {@code key}.
          * 
-         * @param  value which will stored in context from the given scope {@code (application / module)}.
-         * @throws NullPointerException if {@code (value == NULL)}.
-         * @since  0.6.0
-         * @author Naoghuman
-         * @see    java.lang.NullPointerException
+         * @param   value which will stored in context from the given scope {@code (application / module)}.
+         * @throws  NullPointerException if {@code (value == NULL)}.
+         * @since   0.6.0
+         * @version 0.6.0
+         * @author  Naoghuman
+         * @see     java.lang.NullPointerException
          */
         public void put(final Boolean value);
         
@@ -265,11 +279,12 @@ public final class PreferencesFactory {
          * Stores the given {@code value} in context from the previous configured scope 
          * {@code (application / module)} and defined {@code key}.
          * 
-         * @param  value which will stored in context from the given scope {@code (application / module)}.
-         * @throws NullPointerException if {@code (value == NULL)}.
-         * @since  0.6.0
-         * @author Naoghuman
-         * @see    java.lang.NullPointerException
+         * @param   value which will stored in context from the given scope {@code (application / module)}.
+         * @throws  NullPointerException if {@code (value == NULL)}.
+         * @since   0.6.0
+         * @version 0.6.0
+         * @author  Naoghuman
+         * @see     java.lang.NullPointerException
          */
         public void put(final Double value);
         
@@ -277,11 +292,12 @@ public final class PreferencesFactory {
          * Stores the given {@code value} in context from the previous configured scope 
          * {@code (application / module)} and defined {@code key}.
          * 
-         * @param  value which will stored in context from the given scope {@code (application / module)}.
-         * @throws NullPointerException if {@code (value == NULL)}.
-         * @since  0.6.0
-         * @author Naoghuman
-         * @see    java.lang.NullPointerException
+         * @param   value which will stored in context from the given scope {@code (application / module)}.
+         * @throws  NullPointerException if {@code (value == NULL)}.
+         * @since   0.6.0
+         * @version 0.6.0
+         * @author  Naoghuman
+         * @see     java.lang.NullPointerException
          */
         public void put(final Integer value);
         
@@ -289,11 +305,12 @@ public final class PreferencesFactory {
          * Stores the given {@code value} in context from the previous configured scope 
          * {@code (application / module)} and defined {@code key}.
          * 
-         * @param  value which will stored in context from the given scope {@code (application / module)}.
-         * @throws NullPointerException if {@code (value == NULL)}.
-         * @since  0.6.0
-         * @author Naoghuman
-         * @see    java.lang.NullPointerException
+         * @param   value which will stored in context from the given scope {@code (application / module)}.
+         * @throws  NullPointerException if {@code (value == NULL)}.
+         * @since   0.6.0
+         * @version 0.6.0
+         * @author  Naoghuman
+         * @see     java.lang.NullPointerException
          */
         public void put(final Long value);
         
@@ -301,13 +318,14 @@ public final class PreferencesFactory {
          * Stores the given {@code value} in context from the previous configured scope 
          * {@code (application / module)} and defined {@code key}.
          * 
-         * @param  value which will stored in context from the given scope {@code (application / module)}.
-         * @throws IllegalArgumentException if {@code (value.trim() == EMPTY)}.
-         * @throws NullPointerException     if {@code (value        == NULL)}.
-         * @since  0.6.0
-         * @author Naoghuman
-         * @see    java.lang.IllegalArgumentException
-         * @see    java.lang.NullPointerException
+         * @param   value which will stored in context from the given scope {@code (application / module)}.
+         * @throws  IllegalArgumentException if {@code (value.trim() == EMPTY)}.
+         * @throws  NullPointerException     if {@code (value        == NULL)}.
+         * @since   0.6.0
+         * @version 0.6.0
+         * @author  Naoghuman
+         * @see     java.lang.IllegalArgumentException
+         * @see     java.lang.NullPointerException
          */
         public void put(final String value);
         

@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2018 Naoghuman
+ * Copyright (C) 2018 - 2018 Naoghuman
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -29,18 +29,21 @@ import java.util.Properties;
  * the original method {@link java.util.Properties#store(java.io.OutputStream, java.lang.String)}.
  * <p>
  * During the overwriting a new header will be created in the overwritten method with the 
- * following format:<br>
- * ################################################################################<br>
- * #<br>
- * # {@code comment}<br>
- * # {@code new Date().toString()}<br>
- * #<br>
+ * following format:
+ * <pre>
  * ################################################################################
- *
- * @author Naoghuman
- * @since  0.6.0
- * @see    java.util.Properties
- * @see    java.util.Properties#store(java.io.OutputStream, java.lang.String)
+ * #
+ * # {@code comment}
+ * # {@code new Date().toString()}
+ * #
+ * ################################################################################
+ * </pre>
+ * 
+ * @author  Naoghuman
+ * @since   0.6.0
+ * @version 0.6.0
+ * @see     java.util.Properties
+ * @see     java.util.Properties#store(java.io.OutputStream, java.lang.String)
  */
 final class DefaultPreferencesProperties extends Properties {
 

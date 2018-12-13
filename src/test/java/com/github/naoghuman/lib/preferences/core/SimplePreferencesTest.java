@@ -16,7 +16,7 @@
  */
 package com.github.naoghuman.lib.preferences.core;
 
-import dummy.module.context.DummyModuleContext;
+import dummy.module.scope.DummyModuleScope;
 import com.github.naoghuman.lib.logger.core.LoggerFacade;
 import java.io.File;
 import org.junit.After;
@@ -175,15 +175,15 @@ public class SimplePreferencesTest {
     
     @Test
     public void getDefaultStringInModuleContext() {
-        final String defaultValue = PreferencesFacade.getDefault().get(DummyModuleContext.class, "my.string.key11", "x");
+        final String defaultValue = PreferencesFacade.getDefault().get(DummyModuleScope.class, "my.string.key11", "x");
         assertEquals("x", defaultValue);
     }
     
     @Test
     public void putStringInModuleContext() {
-        PreferencesFacade.getDefault().put(DummyModuleContext.class, "my.string.key12", "y");
+        PreferencesFacade.getDefault().put(DummyModuleScope.class, "my.string.key12", "y");
         
-        final String storedValue = PreferencesFacade.getDefault().get(DummyModuleContext.class, "my.string.key12", "x");
+        final String storedValue = PreferencesFacade.getDefault().get(DummyModuleScope.class, "my.string.key12", "x");
         assertEquals("y", storedValue);
     }
     
@@ -191,7 +191,7 @@ public class SimplePreferencesTest {
      * Searching in {@code ModuleContext} means that the engine search in the package 
      * context from the given {@code class}.
      * <p>
-     * In the context from the class {@code dummy.module.context.DummyModuleContext}
+     * In the context from the class {@code dummy.module.context.DummyModuleScope}
      * the engine search for a {@code key=my.boolean.key13} with a prefix 
      * {@code dummy.module.context}. So the complete {@code key} for the search is 
      * {@code dummy.module.context.my.boolean.key13}.
@@ -203,7 +203,7 @@ public class SimplePreferencesTest {
      */
     @Test
     public void getDefaultBooleanInModuleContext() {
-        final boolean defaultValue = PreferencesFacade.getDefault().getBoolean(DummyModuleContext.class, "my.boolean.key13", true);
+        final boolean defaultValue = PreferencesFacade.getDefault().getBoolean(DummyModuleScope.class, "my.boolean.key13", true);
         assertEquals(true, defaultValue);
     }
     
@@ -214,7 +214,7 @@ public class SimplePreferencesTest {
      * <p>
      * Searching / writing in {@code ModuleContext} means that the engine search / write 
      * in the package context from the given {@code class} (in this case 
-     * {@code dummy.module.context.DummyModuleContext}).So the complete {@code key} for 
+     * {@code dummy.module.context.DummyModuleScope}).So the complete {@code key} for 
      * the search / to write is {@code dummy.module.context.my.boolean.key14}.
      * <p>
      * Because the search engine find the {@code key} in the file not the {@code default} 
@@ -224,51 +224,51 @@ public class SimplePreferencesTest {
      */
     @Test
     public void putBooleanInModuleContext() {
-        PreferencesFacade.getDefault().putBoolean(DummyModuleContext.class, "my.boolean.key14", false);
+        PreferencesFacade.getDefault().putBoolean(DummyModuleScope.class, "my.boolean.key14", false);
         
-        final boolean storedValue = PreferencesFacade.getDefault().getBoolean(DummyModuleContext.class, "my.boolean.key14", true);
+        final boolean storedValue = PreferencesFacade.getDefault().getBoolean(DummyModuleScope.class, "my.boolean.key14", true);
         assertEquals(false, storedValue);
     }
     
     @Test
     public void getDefaultDoubleInModuleContext() {
-        final double defaultValue = PreferencesFacade.getDefault().getDouble(DummyModuleContext.class, "my.double.key15", 1.23d);
+        final double defaultValue = PreferencesFacade.getDefault().getDouble(DummyModuleScope.class, "my.double.key15", 1.23d);
         assertTrue(1.23d == defaultValue);
     }
     
     @Test
     public void putDoubleInModuleContext() {
-        PreferencesFacade.getDefault().putDouble(DummyModuleContext.class, "my.double.key16", 0.0d);
+        PreferencesFacade.getDefault().putDouble(DummyModuleScope.class, "my.double.key16", 0.0d);
         
-        final double storedValue = PreferencesFacade.getDefault().getDouble(DummyModuleContext.class, "my.double.key16", 1.23d);
+        final double storedValue = PreferencesFacade.getDefault().getDouble(DummyModuleScope.class, "my.double.key16", 1.23d);
         assertTrue(0.0d == storedValue);
     }
     
     @Test
     public void getDefaultIntInModuleContext() {
-        final int defaultValue = PreferencesFacade.getDefault().getInt(DummyModuleContext.class, "my.int.key17", 1);
+        final int defaultValue = PreferencesFacade.getDefault().getInt(DummyModuleScope.class, "my.int.key17", 1);
         assertTrue(1 == defaultValue);
     }
     
     @Test
     public void putIntInModuleContext() {
-        PreferencesFacade.getDefault().putInt(DummyModuleContext.class, "my.int.key18", 0);
+        PreferencesFacade.getDefault().putInt(DummyModuleScope.class, "my.int.key18", 0);
         
-        final int storedValue = PreferencesFacade.getDefault().getInt(DummyModuleContext.class, "my.int.key18", 1);
+        final int storedValue = PreferencesFacade.getDefault().getInt(DummyModuleScope.class, "my.int.key18", 1);
         assertTrue(0 == storedValue);
     }
     
     @Test
     public void getDefaultLongInModuleContext() {
-        final long defaultValue = PreferencesFacade.getDefault().getLong(DummyModuleContext.class, "my.long.key19", 1L);
+        final long defaultValue = PreferencesFacade.getDefault().getLong(DummyModuleScope.class, "my.long.key19", 1L);
         assertTrue(1L == defaultValue);
     }
     
     @Test
     public void putLongInModuleContext() {
-        PreferencesFacade.getDefault().putLong(DummyModuleContext.class, "my.long.key20", 0L);
+        PreferencesFacade.getDefault().putLong(DummyModuleScope.class, "my.long.key20", 0L);
         
-        final long storedValue = PreferencesFacade.getDefault().getLong(DummyModuleContext.class, "my.long.key20", 1L);
+        final long storedValue = PreferencesFacade.getDefault().getLong(DummyModuleScope.class, "my.long.key20", 1L);
         assertTrue(0L == storedValue);
     }
     
