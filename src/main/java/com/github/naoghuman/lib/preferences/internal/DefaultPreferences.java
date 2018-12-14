@@ -383,7 +383,7 @@ public final class DefaultPreferences {
      * @version 0.6.0
      * @author  Naoghuman
      * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferences#key(String)
-     * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferencesValidator#requireNonNullAndNotEmpty(T)
+     * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferencesValidator#requireNonNullAndNotEmpty(java.lang.String)
      * @see     java.lang.IllegalArgumentException
      * @see     java.lang.NullPointerException
      * @see     java.lang.String
@@ -437,7 +437,7 @@ public final class DefaultPreferences {
      * @author  Naoghuman
      * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferences#application()
      * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferences#module(Class)
-     * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferencesValidator#requireNonNullAndNotEmpty(T)
+     * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferencesValidator#requireNonNullAndNotEmpty(java.lang.String)
      * @see     java.lang.IllegalArgumentException
      * @see     java.lang.NullPointerException
      */
@@ -683,7 +683,7 @@ public final class DefaultPreferences {
      * @version 0.6.0
      * @author  Naoghuman
      * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferences#key(String)
-     * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferencesValidator#requireNonNullAndNotEmpty(T)
+     * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferencesValidator#requireNonNullAndNotEmpty(java.lang.String)
      * @see     java.lang.IllegalArgumentException
      * @see     java.lang.NullPointerException
      * @see     java.lang.String
