@@ -42,7 +42,7 @@ import java.io.IOException;
  * @see     java.lang.NullPointerException
  * @see     java.util.Properties
  */
-final class DefaultPreferencesFileWriter {
+public final class DefaultPreferencesFileWriter {
 
     /**
      * Writes the content from a {@link java.util.Properties} into a {@link java.io.File} with the constant 
@@ -58,7 +58,6 @@ final class DefaultPreferencesFileWriter {
      * 
      * @param   properties the {@code Properties} which content should be written into the {@code File}.
      * @param   file       the {@code File} which should be updated.
-     * @param   commentary the {@code commentray} which should be written as header in the .properties file.
      * @throws  NullPointerException if {@code (properties || file) == NULL}.
      * @since   0.6.0
      * @version 0.6.0
@@ -71,7 +70,7 @@ final class DefaultPreferencesFileWriter {
      * @see     java.lang.NullPointerException
      * @see     java.util.Properties
      */
-    static void write(final DefaultPreferencesProperties properties, final File file) {
+    public static void write(final DefaultPreferencesProperties properties, final File file) {
         DefaultPreferencesValidator.requireNonNull(properties);
         DefaultPreferencesValidator.requireNonNull(file);
         
@@ -105,7 +104,7 @@ final class DefaultPreferencesFileWriter {
      * @see     java.lang.NullPointerException
      * @see     java.util.Properties
      */
-    static void write(final DefaultPreferencesProperties properties, final File file, final String commentary) {
+    public static void write(final DefaultPreferencesProperties properties, final File file, final String commentary) {
         DefaultPreferencesValidator.requireNonNull(properties);
         DefaultPreferencesValidator.requireNonNull(file);
         DefaultPreferencesValidator.requireNonNullAndNotEmpty(commentary);

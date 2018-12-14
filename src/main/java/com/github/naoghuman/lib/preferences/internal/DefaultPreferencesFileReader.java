@@ -28,7 +28,7 @@ import java.util.Properties;
  * <p>
  * In context from the library {@code Lib-Preferences} this is
  * <ul>
- * <li>the file {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#PREFERENCES_FILE}
+ * <li>the file {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#DEFAULT_PREFERENCES_FILE}
  *     with the path from {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#SYSTEM_PROPERTY__USER_DIR}</li>
  * <li>and an instance from {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferencesProperties}.</li>
  * </ul>
@@ -36,33 +36,32 @@ import java.util.Properties;
  * @since   0.6.0
  * @version 0.6.0
  * @author  Naoghuman
- * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferences#PREFERENCES_FILE
+ * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferences#DEFAULT_PREFERENCES_FILE
  * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferences#SYSTEM_PROPERTY__USER_DIR
  * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferencesProperties
  * @see     java.io.File
  * @see     java.util.Properties
  */
-final class DefaultPreferencesFileReader {
+public final class DefaultPreferencesFileReader {
 
     /**
      * Reads the content from a {@link java.io.File} into a {@link java.util.Properties}.
      * <p>
      * In context from the library {@code Lib-Preferences} this is
      * <ul>
-     * <li>the file {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#PREFERENCES_FILE}
+     * <li>the file {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#DEFAULT_PREFERENCES_FILE}
      *     with the path from {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#SYSTEM_PROPERTY__USER_DIR}</li>
      * <li>and an instance from {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferencesProperties}.</li>
      * </ul>
      * 
      * @param   file        the {@code File} which content should be read.
      * @param   properties  the {@code Properties} which should be updated with the content from the {@code File}.
-     * @throws  IOException if some general exceptions produced by failed or interrupted I/O operations.
      * @throws  IllegalArgumentException if {@code (!file.isFile())}.
      * @throws  NullPointerException if {@code (file || properties) == NULL}.
      * @since   0.6.0
      * @version 0.6.0
      * @author  Naoghuman
-     * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferences#PREFERENCES_FILE
+     * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferences#DEFAULT_PREFERENCES_FILE
      * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferences#SYSTEM_PROPERTY__USER_DIR
      * @see     com.github.naoghuman.lib.preferences.internal.DefaultPreferencesProperties
      * @see     java.io.File
@@ -71,7 +70,7 @@ final class DefaultPreferencesFileReader {
      * @see     java.lang.NullPointerException
      * @see     java.util.Properties
      */
-    static void read(final File file, final Properties properties) {
+    public static void read(final File file, final Properties properties) {
         DefaultPreferencesValidator.requireNonNull(file);
         DefaultPreferencesValidator.requireNonNull(properties);
         

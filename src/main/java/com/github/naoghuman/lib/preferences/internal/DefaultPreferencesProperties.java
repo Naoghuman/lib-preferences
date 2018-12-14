@@ -45,7 +45,7 @@ import java.util.Properties;
  * @see     java.util.Properties
  * @see     java.util.Properties#store(java.io.OutputStream, java.lang.String)
  */
-final class DefaultPreferencesProperties extends Properties {
+public final class DefaultPreferencesProperties extends Properties {
 
     /* A table of hex digits */
     private static final char[] hexDigit = {
