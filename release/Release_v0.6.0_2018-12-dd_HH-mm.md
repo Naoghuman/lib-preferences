@@ -35,6 +35,7 @@ Preferences.[properties] file in a Java(FX) &amp; [Maven] desktop application.
 
 
 #### Documentation
+#53 [doc] Check the JavaDoc from the sight through the generated html files.
 #50 [doc] Move the "api" section to new folder `docs`.
 #49 [doc] Add template for a concept paper to the folder 'concept'.
 #43 [doc] Tweak the message in the automatically generated file Preferences.properties.

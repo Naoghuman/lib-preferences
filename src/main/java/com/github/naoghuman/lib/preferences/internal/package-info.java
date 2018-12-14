@@ -18,7 +18,8 @@
  * Contains the internal {@code Implementation} for the library {@code Lib-Preferences}.
  * <p>
  * Normally a developer don't need access to any methods from this classes. All needed 
- * functionalities can access with {@link com.github.naoghuman.lib.preferences.core.PreferencesFactory}.
+ * functionalities can access over the factory 
+ * {@link com.github.naoghuman.lib.preferences.core.PreferencesFactory}.
  * 
  * @since   0.1.0
  * @version 0.6.0
