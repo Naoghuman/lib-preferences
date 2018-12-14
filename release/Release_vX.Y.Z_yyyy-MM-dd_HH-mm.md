@@ -1,7 +1,7 @@
 Welcome to `Lib-Preferences` with the new release `vX.Y.Z`.
 
 Lib-Preferences is a library for `easy` storing simple data to a 
-Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
+Preferences.[properties] file in a Java(FX) &amp; [Maven] desktop application.
 
 
 
@@ -45,7 +45,6 @@ Naoghuman
 
 
 [//]: # (Links)
-[JavaFX]:http://docs.oracle.com/javase/8/javase-clienttechnologies.htm
 [Maven]:http://maven.apache.org/
 [properties]:http://en.wikipedia.org/wiki/.properties
 

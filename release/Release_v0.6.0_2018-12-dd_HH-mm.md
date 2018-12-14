@@ -1,7 +1,7 @@
 Welcome to `Lib-Preferences` with the new release `v0.6.0`.
 
 Lib-Preferences is a library for `easy` storing simple data to a 
-Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
+Preferences.[properties] file in a Java(FX) &amp; [Maven] desktop application.
 
 
 
@@ -46,6 +46,7 @@ Preferences.[properties] file in a [JavaFX] &amp; [Maven] desktop application.
 
 
 #### Refactoring
+#52 [doc] Check project if description can be changed to '...Java(FX)...'.
 #51 [api] Remove old deprecated api completly.
 #47 [ci] Deprecation: Container-Based Linux Build Environments.
 #44 [api] Deprecated hole old api from v0.5.0.
@@ -69,7 +70,6 @@ Naoghuman
 
 
 [//]: # (Links)
-[JavaFX]:http://docs.oracle.com/javase/8/javase-clienttechnologies.htm
 [Maven]:http://maven.apache.org/
 [properties]:http://en.wikipedia.org/wiki/.properties
 
