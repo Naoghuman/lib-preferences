@@ -35,6 +35,7 @@ Preferences.[properties] file in a Java(FX) &amp; [Maven] desktop application.
 
 
 #### Documentation
+#56 [doc] Add new concept for 'Conventions' in the library Lib-Preferences.
 #53 [doc] Check the JavaDoc from the sight through the generated html files.
 #50 [doc] Move the "api" section to new folder `docs`.
 #49 [doc] Add template for a concept paper to the folder 'concept'.
@@ -67,6 +68,7 @@ Naoghuman
 
 
 [//]: # (Issues which will be integrated in this release)
+#34 [doc] Rewrite ReadMe complete to reflect the changes in v0.6.0.
 
 
 

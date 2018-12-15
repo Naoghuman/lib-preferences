@@ -1,0 +1,50 @@
+--------------------------------------------------------------------------------
+CONCEPT Conventions
+--------------------------------------------------------------------------------
+INTENTION
+During the completely rewriting from the ReadMe in v0.6.0 a new section 'Conventions' 
+will be added to the ReadMe.
+
+In this new section all 'conventions' from the library 'Lib-Preferences' are listed.
+
+--------------------------------------------------------------------------------
+SPECIFICATION
+The new section 'Conventions' will be added after the section 'Examples' and before 
+'Features'.
+* [Examples](#Examples)
+* [Conventions](#Conventions)
+* [Features](#Features)
+
+Conventions<a name="Conventions" />
+---
+
+In this chapter, the interested developer can find out about all the conventions in 
+the library `Lib-Preferences`.
+* Lib-Preferences allowed to store simple data in a file `Preferences.properties`.
+* The file 'Preferences.properties' will be automatically generated in the `user.dir` 
+  (application folder) if needed.
+* The stored data can be from type: Boolean, Double, Integer, Long and String.
+* The data can be saved in two different scopes (application and module scope):
+    * `Application` scope means
+    * `Module` scope means
+* Over the factory [PreferencesFactory] the developer have access to all functionalities 
+  to store and access the data.
+
+--------------------------------------------------------------------------------
+LINKS
+ - ...
+
+--------------------------------------------------------------------------------
+EXTRAS
+ - ...
+
+--------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
