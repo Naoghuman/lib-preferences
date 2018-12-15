@@ -126,6 +126,9 @@ public final class DefaultPreferences {
      * Be aware about the methods {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#application()}
      * and {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#module(java.lang.Class)}.
      * If one of them isn't used before then the {@code value} won't be found (missing prefix from the key).
+     * <p>
+     * Hint:<br>
+     * Executing this method reset the previously defined {@code key}.
      * 
      * @param   def the default value if the {@code key} doesn't exists.
      * @return  the associated {@code value} or {@code def}.
@@ -188,6 +191,9 @@ public final class DefaultPreferences {
      * Be aware about the methods {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#application()}
      * and {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#module(java.lang.Class)}.
      * If one of them isn't used before then the {@code value} won't be found (missing prefix from the key).
+     * <p>
+     * Hint:<br>
+     * Executing this method reset the previously defined {@code key}.
      * 
      * @param   def the default value if the {@code key} doesn't exists.
      * @return  the associated {@code value} or {@code def}.
@@ -250,6 +256,9 @@ public final class DefaultPreferences {
      * Be aware about the methods {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#application()}
      * and {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#module(java.lang.Class)}.
      * If one of them isn't used before then the {@code value} won't be found (missing prefix from the key).
+     * <p>
+     * Hint:<br>
+     * Executing this method reset the previously defined {@code key}.
      * 
      * @param   def the default value if the {@code key} doesn't exists.
      * @return  the associated {@code value} or {@code def}.
@@ -312,6 +321,9 @@ public final class DefaultPreferences {
      * Be aware about the methods {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#application()}
      * and {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#module(java.lang.Class)}.
      * If one of them isn't used before then the {@code value} won't be found (missing prefix from the key).
+     * <p>
+     * Hint:<br>
+     * Executing this method reset the previously defined {@code key}.
      * 
      * @param   def the default value if the {@code key} doesn't exists.
      * @return  the associated {@code value} or {@code def}.
@@ -374,6 +386,9 @@ public final class DefaultPreferences {
      * Be aware about the methods {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#application()}
      * and {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#module(java.lang.Class)}.
      * If one of them isn't used before then the {@code value} won't be found (missing prefix from the key).
+     * <p>
+     * Hint:<br>
+     * Executing this method reset the previously defined {@code key}.
      * 
      * @param   def the default value if the {@code key} doesn't exists.
      * @return  the associated {@code value} or {@code def}.
@@ -499,6 +514,9 @@ public final class DefaultPreferences {
      * and {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#module(java.lang.Class)}.
      * If one of them isn't used before then the {@code key} havn't the right {@code prefix} which means that 
      * in the {@code get(..)} methods the key won't be found.
+     * <p>
+     * Hint:<br>
+     * Executing this method reset the previously defined {@code key}.
      * 
      * @param   value the {@code value} which should be saved.
      * @throws  IllegalArgumentException if {@code (key   == NULL)}.
@@ -543,6 +561,9 @@ public final class DefaultPreferences {
      * and {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#module(java.lang.Class)}.
      * If one of them isn't used before then the {@code key} havn't the right {@code prefix} which means that 
      * in the {@code get(..)} methods the key won't be found.
+     * <p>
+     * Hint:<br>
+     * Executing this method reset the previously defined {@code key}.
      * 
      * @param   value the {@code value} which should be saved.
      * @throws  IllegalArgumentException if {@code (key   == NULL)}.
@@ -587,6 +608,9 @@ public final class DefaultPreferences {
      * and {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#module(java.lang.Class)}.
      * If one of them isn't used before then the {@code key} havn't the right {@code prefix} which means that 
      * in the {@code get(..)} methods the key won't be found.
+     * <p>
+     * Hint:<br>
+     * Executing this method reset the previously defined {@code key}.
      * 
      * @param   value the {@code value} which should be saved.
      * @throws  IllegalArgumentException if {@code (key   == NULL)}.
@@ -631,6 +655,9 @@ public final class DefaultPreferences {
      * and {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#module(java.lang.Class)}.
      * If one of them isn't used before then the {@code key} havn't the right {@code prefix} which means that 
      * in the {@code get(..)} methods the key won't be found.
+     * <p>
+     * Hint:<br>
+     * Executing this method reset the previously defined {@code key}.
      * 
      * @param   value the {@code value} which should be saved.
      * @throws  IllegalArgumentException if {@code (key   == NULL)}.
@@ -675,6 +702,9 @@ public final class DefaultPreferences {
      * and {@link com.github.naoghuman.lib.preferences.internal.DefaultPreferences#module(java.lang.Class)}.
      * If one of them isn't used before then the {@code key} havn't the right {@code prefix} which means that 
      * in the {@code get(..)} methods the key won't be found.
+     * <p>
+     * Hint:<br>
+     * Executing this method reset the previously defined {@code key}.
      * 
      * @param   value the {@code value} which should be saved.
      * @throws  IllegalArgumentException if {@code (def.trim() == EMPTY) || (key == NULL)}.

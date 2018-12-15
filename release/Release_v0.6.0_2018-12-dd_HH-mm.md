@@ -38,6 +38,7 @@ Preferences.[properties] file in a Java(FX) &amp; [Maven] desktop application.
 #58 [doc] Add new concept for 'Examples' in the library Lib-Preferences.
 #57 [doc] Add new concept for 'Features' in the library Lib-Preferences.
 #56 [doc] Add new concept for 'Conventions' in the library Lib-Preferences.
+#54 [doc] Missing hint for 'resetKey()' in the JavaDoc from the class DefaultPreferences.
 #53 [doc] Check the JavaDoc from the sight through the generated html files.
 #50 [doc] Move the "api" section to new folder `docs`.
 #49 [doc] Add template for a concept paper to the folder 'concept'.
