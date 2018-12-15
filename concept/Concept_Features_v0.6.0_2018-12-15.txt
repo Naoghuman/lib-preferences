@@ -1,0 +1,70 @@
+--------------------------------------------------------------------------------
+CONCEPT Features
+--------------------------------------------------------------------------------
+INTENTION
+During the completely rewriting from the ReadMe in v0.6.0 a new section 'Features' 
+will be added to the ReadMe.
+
+In this new section all 'features' from the library 'Lib-Preferences' are listed.
+
+--------------------------------------------------------------------------------
+SPECIFICATION
+The new section 'Features' will be added after the section 'Conventions':
+* [Conventions](#Conventions)
+* [Features](#Features)
+
+vom allgemeinen ins spezielle
+
+Features<a name="Features" />
+---
+
+`Lib-Preferencs` have many nice features which simplify the developers task to 
+store and access simple data in a Java(FX) application:
+* `Lib-Preferences` allowed to store and access simple data (Boolean, Double, Integer,
+   Long and String) in a `Preferences.properties` file.
+* The file 'Preferences.properties' will be automatically generated in the `application` 
+  folder (user.dir) if needed.
+* The data can be saved and received in two scopes. The `application` scope means 
+  that the `key` must be __unique__ in the _hole_ application while the `module` scope 
+  specified that the `key` must __unique__ in a _package_ scope (for more information 
+  about this topic see the JavaDoc .
+* Over the factory [PreferencesFactory] all needed functionalities in context from 
+  this library can be access from the developer.
+
+* Every `parameter` in all functionalities will be verified against minimal conditions 
+  with the internal validator [DefaultPreferencesValidator]. For example a `String`
+  can't be `NULL` or `EMPTY`.
+* All functionalities from the classes in the `core` and `internal` packages are 
+  tested with `Unittests`.
+
+* The documentation is done very well with an extended `ReadMe` and well written 
+  [JavaDoc] commentaries.
+* The library is `open source` and licensed under [General Public License 3.0].
+* `Lib-Preferences` is a `Java 8` library and can also be used in a [JavaFX] 8
+   application.
+* The library is programmed with the IDE [NetBeans] as a [Maven] library.
+* The library can easily integrated in a foreign project over [Maven Central].
+* During the connection from the project with `Travis CI` automatically a build 
+  is performed with every commit.
+* During the integration from different `badges` from `img.shield.io` the interested 
+  reader can easily inform himself about the `build` state, acutal release and which 
+  license is taken for this library.
+
+--------------------------------------------------------------------------------
+LINKS
+ - ...
+
+--------------------------------------------------------------------------------
+EXTRAS
+ - ...
+
+--------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+

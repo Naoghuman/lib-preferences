@@ -10,7 +10,7 @@ In this new section all 'conventions' from the library 'Lib-Preferences' are lis
 --------------------------------------------------------------------------------
 SPECIFICATION
 The new section 'Conventions' will be added after the section 'Examples' and before 
-'Features'.
+'Features':
 * [Examples](#Examples)
 * [Conventions](#Conventions)
 * [Features](#Features)
@@ -25,10 +25,10 @@ the library `Lib-Preferences`.
   (application folder) if needed.
 * The stored data can be from type: Boolean, Double, Integer, Long and String.
 * The data can be saved in two different scopes (application and module scope):
-    * `Application` scope means
-    * `Module` scope means
+    * `Application` scope means that the `key` must be __unique__ in the _hole_ application.
+    * `Module` scope means that the `key` must be __unique__ in a _package_ scope.
 * Over the factory [PreferencesFactory] the developer have access to all functionalities 
-  to store and access the data.
+  to store and access the data in context from this library.
 
 --------------------------------------------------------------------------------
 LINKS
