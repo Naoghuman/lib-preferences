@@ -35,6 +35,7 @@ Preferences.[properties] file in a Java(FX) &amp; [Maven] desktop application.
 
 
 #### Documentation
+#58 [doc] Add new concept for 'Examples' in the library Lib-Preferences.
 #57 [doc] Add new concept for 'Features' in the library Lib-Preferences.
 #56 [doc] Add new concept for 'Conventions' in the library Lib-Preferences.
 #53 [doc] Check the JavaDoc from the sight through the generated html files.

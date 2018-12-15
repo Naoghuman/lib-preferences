@@ -1,0 +1,148 @@
+--------------------------------------------------------------------------------
+CONCEPT Examples
+--------------------------------------------------------------------------------
+INTENTION
+During the completely rewriting from the ReadMe in v0.6.0 the section 'Examples' 
+will also rewriten in the ReadMe.
+
+--------------------------------------------------------------------------------
+SPECIFICATION
+The new section 'Examples' is the first section after the section 'Contents':
+* [Examples](#Examples)
+    * [Specification: _Usage from PreferencesFactory_](#SpeUsaFroPre)
+    * [How to save, access data in an _application_ scope](#HowSaAcAppSco)
+    * [How to save, access data in a _module_ scope](#HowSaAcModSco)
+* [Conventions](#Conventions)
+
+Examples<a name="Examples" />
+---
+
+### Specification: _Usage from PreferencesFactory_<a name="SpeUsaFroPre" />
+
+```java
+/**
+ * 1) Starts the factory process.
+ * 2) Activate the 'application' scope.
+ * 3) Activate the 'package' scope.
+ * 4) Defines the 'key'.
+ * 5) Returns the 'value' from type 'T'.
+ * 6) Stores the value from type 'T'.
+ */
+PreferencesFactory.create() // 1
+        .application()      // 2
+        .module(Class)      // 3
+        .key(final String)  // 4
+        .get(T);            // 5
+        .put(T);            // 6
+```
+
+### How to save, access data in an _application_ scope<a name="HowSaAcAppSco" />
+
+#### Double
+```java
+@Test
+public void thirdStepPutGetDoubleReturnsValue() {
+    PreferencesFactory.create()
+            .application()
+            .key("dummy.key6")
+            .put(1.2345d);
+
+    double result = PreferencesFactory.create()
+            .application()
+            .key("dummy.key6")
+            .get(5.4321d);
+    assertEquals(1.2345d, result, 0);
+}
+```
+
+Preferences.properties
+```java
+com.github.naoghuman.lib.preferences.internal.dummy.key6=1.2345
+```
+
+#### Integer
+```java
+@Test
+public void thirdStepPutGetIntegerReturnsValue() {
+    PreferencesFactory.create()
+            .application()
+            .key("dummy.key8")
+            .put(123456);
+
+    int result = PreferencesFactory.create()
+            .application()
+            .key("dummy.key8")
+            .get(654321);
+    assertTrue(123456 == result);
+}
+```
+
+Preferences.properties
+```java
+com.github.naoghuman.lib.preferences.internal.dummy.key8=123456
+```
+
+### How to save, access data in a _module_ scope<a name="HowSaAcModSco" />
+
+#### Boolean
+```java
+@Test
+public void thirdStepPutGetBooleanReturnsValueTrue() {
+    PreferencesFactory.create()
+            .module(DummyModuleScope.class)
+            .key("dummy.key3")
+            .put(Boolean.TRUE);
+
+    assertTrue(PreferencesFactory.create()
+            .module(DummyModuleScope.class)
+            .key("dummy.key3")
+            .get(Boolean.TRUE));
+}
+```
+
+Preferences.properties
+```java
+dummy.module.scope.dummy.key3=true
+```
+
+#### String
+```java
+@Test
+public void thirdStepPutGetStringReturnsValue() {
+    PreferencesFactory.create()
+            .module(DummyModuleScope.class)
+            .key("dummy.key12")
+            .put("hello world");
+
+    String result = PreferencesFactory.create()
+            .module(DummyModuleScope.class)
+            .key("dummy.key12")
+            .get("world hello");
+    assertEquals("hello world", result);
+}
+```
+
+Preferences.properties
+```java
+dummy.module.scope.dummy.key12=hello world
+```
+
+
+--------------------------------------------------------------------------------
+LINKS
+ - ...
+
+--------------------------------------------------------------------------------
+EXTRAS
+ - ...
+
+--------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
