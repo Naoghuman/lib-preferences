@@ -23,6 +23,7 @@ Preferences.[properties] file in a Java(FX) &amp; [Maven] desktop application.
 
 
 #### Enhancement
+#55 [test] Add more Unittests in DefaultPreferencesTest for 'resetKey()'.
 #36 [api] Analyse and implement new api PreferencesFactory.
 #31 [test] Add JUnitTests to PreferencesFacade.
 

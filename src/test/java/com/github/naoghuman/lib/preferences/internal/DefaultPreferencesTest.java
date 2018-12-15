@@ -120,6 +120,110 @@ public class DefaultPreferencesTest {
     
     // #########################################################################
     
+    @Test(expected = IllegalArgumentException.class)
+    public void thirdStepGetTwoTimesBooleanThrowsIllegalArgumentException() {
+        DefaultPreferences instance = new DefaultPreferences();
+        instance.application();
+        instance.key("dummy.key100");
+        
+        instance.get(Boolean.TRUE);
+        instance.get(Boolean.TRUE); // throws
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void thirdStepGetTwoTimesDoubleThrowsIllegalArgumentException() {
+        DefaultPreferences instance = new DefaultPreferences();
+        instance.application();
+        instance.key("dummy.key101");
+        
+        instance.get(1.2345d);
+        instance.get(1.2345d); // throws
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void thirdStepGetTwoTimesIntegerThrowsIllegalArgumentException() {
+        DefaultPreferences instance = new DefaultPreferences();
+        instance.application();
+        instance.key("dummy.key102");
+        
+        instance.get(123456);
+        instance.get(123456); // throws
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void thirdStepGetTwoTimesLongThrowsIllegalArgumentException() {
+        DefaultPreferences instance = new DefaultPreferences();
+        instance.application();
+        instance.key("dummy.key103");
+        
+        instance.get(123L);
+        instance.get(123L); // throws
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void thirdStepGetTwoTimesStringThrowsIllegalArgumentException() {
+        DefaultPreferences instance = new DefaultPreferences();
+        instance.application();
+        instance.key("dummy.key104");
+        
+        instance.get("hello world");
+        instance.get("hello world"); // throws
+    }
+    
+    // #########################################################################
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void thirdStepPutTwoTimesBooleanThrowsIllegalArgumentException() {
+        DefaultPreferences instance = new DefaultPreferences();
+        instance.application();
+        instance.key("dummy.key110");
+        
+        instance.put(Boolean.TRUE);
+        instance.put(Boolean.TRUE); // throws
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void thirdStepPutTwoTimesDoubleThrowsIllegalArgumentException() {
+        DefaultPreferences instance = new DefaultPreferences();
+        instance.application();
+        instance.key("dummy.key111");
+        
+        instance.put(1.2345d);
+        instance.put(1.2345d); // throws
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void thirdStepPutTwoTimesIntegerThrowsIllegalArgumentException() {
+        DefaultPreferences instance = new DefaultPreferences();
+        instance.application();
+        instance.key("dummy.key112");
+        
+        instance.put(123456);
+        instance.put(123456); // throws
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void thirdStepPutTwoTimesLongThrowsIllegalArgumentException() {
+        DefaultPreferences instance = new DefaultPreferences();
+        instance.application();
+        instance.key("dummy.key113");
+        
+        instance.put(123L);
+        instance.put(123L); // throws
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void thirdStepPutTwoTimesStringThrowsIllegalArgumentException() {
+        DefaultPreferences instance = new DefaultPreferences();
+        instance.application();
+        instance.key("dummy.key114");
+        
+        instance.put("hello world");
+        instance.put("hello world"); // throws
+    }
+    
+    // #########################################################################
+    
     @Test
     public void thirdStepGetBooleanReturnsDefaultValueTrue() {
         DefaultPreferences instance = new DefaultPreferences();
