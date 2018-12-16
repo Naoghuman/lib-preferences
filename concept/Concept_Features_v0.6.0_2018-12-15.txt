@@ -13,8 +13,6 @@ The new section 'Features' will be added after the section 'Conventions':
 * [Conventions](#Conventions)
 * [Features](#Features)
 
-vom allgemeinen ins spezielle
-
 Features<a name="Features" />
 ---
 

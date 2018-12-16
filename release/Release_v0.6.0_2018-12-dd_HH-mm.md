@@ -1,13 +1,17 @@
 Welcome to `Lib-Preferences` with the new release `v0.6.0`.
 
-Lib-Preferences is a library for `easy` storing simple data to a 
+Lib-Preferences is a library for `easy` storing simple data in a 
 Preferences.[properties] file in a Java(FX) &amp; [Maven] desktop application.
 
 
 
 #### Summary
-* ...
-* ...
+* The hole library is rewritten to simplify the developers task to store and access 
+  simple data from a automatically generated [properties] file.
+* The ReadMe from this library is also completely rewritten which contains now new 
+  sections like `Examples`, `Conventions` and `Features` from this library.
+* The `JavaDoc` from this library is uploaded to the GitHub project and can now 
+  received online.
 
 
 
@@ -47,6 +51,7 @@ Preferences.[properties] file in a Java(FX) &amp; [Maven] desktop application.
 #41 [doc] Rewrite the JavaDoc from the tests in the class SimplePreferencesTest.
 #37 [doc] Update JavaDoc for the new api (factory + internal).
 #35 [doc] Add start-year to every JavaDoc from the classes and interfaces.
+#34 [doc] Rewrite ReadMe complete to reflect the changes in v0.6.0.
 #33 [doc] Add the flag @autor to all methods.
 
 
@@ -72,11 +77,9 @@ Naoghuman
 
 
 [//]: # (Issues which will be integrated in this release)
-#34 [doc] Rewrite ReadMe complete to reflect the changes in v0.6.0.
 
 
 
 [//]: # (Links)
 [Maven]:http://maven.apache.org/
 [properties]:http://en.wikipedia.org/wiki/.properties
-

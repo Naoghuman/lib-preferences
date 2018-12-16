@@ -1,6 +1,6 @@
 Welcome to `Lib-Preferences` with the new release `vX.Y.Z`.
 
-Lib-Preferences is a library for `easy` storing simple data to a 
+Lib-Preferences is a library for `easy` storing simple data in a 
 Preferences.[properties] file in a Java(FX) &amp; [Maven] desktop application.
 
 
