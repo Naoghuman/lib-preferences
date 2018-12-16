@@ -50,7 +50,7 @@ With the factory [PreferencesFactory] the developer have all tools to do the 3 m
  3. Let the developer define the `key` which allowed to store or receive a value.
  4. And finally the decision if a `value` should be saved or received.
 
-> `Application` scope means that the `key` must be **unique** in the _hole_ application.
+> `Application` scope means that the `key` must be **unique** in the _hole_ application.  
 > `Module` scope means that the `key` must be **unique** in a _package_ scope.
 
 #### _Usage of PreferencesFactory_
