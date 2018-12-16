@@ -4,7 +4,7 @@
     
     <groupId>com.github.naoghuman</groupId>
     <artifactId>lib-preferences</artifactId>
-    <version>0.6.0-SNAPSHOT</version> <!-- -SNAPSHOT -PRERELEASE -->
+    <version>0.6.0</version> <!-- -SNAPSHOT -->
     <packaging>jar</packaging>
     <description>Lib-Preferences is a library for easy storing simple data in a Preferences.properties file in a Java(FX) &amp; Maven desktop application. See https://github.com/Naoghuman/lib-preferences for more details.</description>
     <name>Lib-Preferences</name>
@@ -75,7 +75,7 @@
                 <configuration>
                     <additionalparam>-Xdoclint:none</additionalparam>
                 </configuration>
-                <!-- for RELEASE 
+                <!-- for RELEASE -->
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
@@ -84,7 +84,7 @@
                         </goals>
                     </execution>
                 </executions>
-                -->
+                <!-- -->
             </plugin>
             <!-- for RELEASE 
             <plugin>
